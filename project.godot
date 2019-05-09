@@ -16,8 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Labyrinth1"
-run/main_scene="res://player/player.tscn"
+run/main_scene="res://areas/test.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+dir="*res://engine/directions.gd"
+
+[debug]
+
+gdscript/warnings/unused_variable=false
 
 [display]
 
