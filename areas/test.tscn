@@ -10,7 +10,7 @@
 [node name="Maze1v2" parent="." instance=ExtResource( 1 )]
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 46.8119, 33.5428 )
+position = Vector2( 91.5427, 35.5727 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
@@ -21,5 +21,6 @@ __meta__ = {
 }
 
 [node name="stalfos" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 107.803, 44.6315 )
 

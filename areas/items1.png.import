@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/medievalTile_37.png-3d7928ef05f2a6570e45d4cded4ba16d.stex"
+path="res://.import/items1.png-e401b3f4ec21c51a6e302d65bb9e755d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/tileset/medievalTile_37.png"
-dest_files=[ "res://.import/medievalTile_37.png-3d7928ef05f2a6570e45d4cded4ba16d.stex" ]
+source_file="res://areas/items1.png"
+dest_files=[ "res://.import/items1.png-e401b3f4ec21c51a6e302d65bb9e755d.stex" ]
 
 [params]
 

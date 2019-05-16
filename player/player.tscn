@@ -189,6 +189,7 @@ tracks/0/keys = {
 extents = Vector2( 6, 7 )
 
 [node name="player" type="KinematicBody2D"]
+visible = false
 position = Vector2( 20.069, 13.7497 )
 script = ExtResource( 1 )
 __meta__ = {
