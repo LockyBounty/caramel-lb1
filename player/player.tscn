@@ -191,7 +191,6 @@ extents = Vector2( 6, 7 )
 [node name="player" type="KinematicBody2D" groups=[
 "Players",
 ]]
-visible = false
 position = Vector2( 20.069, 13.7497 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -223,7 +222,6 @@ scale = Vector2( 0.513, 0.513 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 8
-frame = 15
 __meta__ = {
 "_edit_lock_": true
 }
