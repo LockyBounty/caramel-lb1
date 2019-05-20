@@ -7,6 +7,8 @@
 [node name="Main" type="Node"]
 
 [node name="Maze1v2" parent="." instance=ExtResource( 1 )]
+texture = null
+generate = false
 
 [node name="BackgroundStaticObjects" type="Node2D" parent="."]
 
@@ -14,13 +16,7 @@
 
 [node name="Portail1" parent="BackgroundStaticObjects/Entree" instance=ExtResource( 2 )]
 position = Vector2( 367.565, 95.9651 )
-teleport_target = NodePath("../../Sortie/Portail2")
-
-[node name="Sortie" type="Node2D" parent="BackgroundStaticObjects"]
-
-[node name="Portail2" parent="BackgroundStaticObjects/Sortie" instance=ExtResource( 2 )]
-position = Vector2( 457.612, 310.069 )
-teleport_target = NodePath("../../Entree/Portail1")
+world_scene = "res://areas/ZoneFinale.tscn"
 
 [node name="Player2" parent="." groups=[
 "Players",
@@ -28,4 +24,3 @@ teleport_target = NodePath("../../Entree/Portail1")
 position = Vector2( 330.996, 129.238 )
 scale = Vector2( 0.7, 0.7 )
 
-[connection signal="body_entered" from="BackgroundStaticObjects/Entree/Portail1" to="BackgroundStaticObjects/Entree/Portail1" method="_on_Portail1_body_entered"]

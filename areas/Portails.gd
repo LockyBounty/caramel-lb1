@@ -1,26 +1,14 @@
 extends Area2D
 
-export (NodePath) var teleport_target = null
 
-var playerInDoor = false
+export(String, FILE, "*.tscn") var world_scene
 
-func _ready():
-	pass
+
+
+func _physics_process(delta):
+	var bodies = get_overlapping_bodies()
 	
-func _process(delta):
-	if Input.is_action_just_pressed("enter_door") and playerInDoor == true:
-		get_tree().call_group("Players", "teleport_to", get_node(teleport_target.position))
-		
-		
-
-func _on_PortailA_body_entered(body):
-	if body.is_in_group("Players"):
-		playerInDoor = true
-
-
-func _on_PortailA_body_exited(body):
-	if body.is_in_group("Players"):
-		playerInDoor =false
-
-
-
+	for body in bodies:
+		if body.name == "Player2":
+			get_tree().change_scene(world_scene)
+			print(bodies)
