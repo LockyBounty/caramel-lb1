@@ -9,6 +9,6 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	
 	for body in bodies:
-		if body.name == "Player2":
+		if body.is_in_group("Players"):  #old--> if body.name == "Player2": 
 			get_tree().change_scene(world_scene)
 			print(bodies)
