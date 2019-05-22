@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grimoire.png-b7304d82e7663ebd645731d610000a0a.stex"
+path="res://.import/grimoire.png-b29a7b5bb89a9fde3de4be68e1b2e0dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grimoire.png"
-dest_files=[ "res://.import/grimoire.png-b7304d82e7663ebd645731d610000a0a.stex" ]
+source_file="res://items/grimoire.png"
+dest_files=[ "res://.import/grimoire.png-b29a7b5bb89a9fde3de4be68e1b2e0dd.stex" ]
 
 [params]
 

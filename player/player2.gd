@@ -2,7 +2,7 @@
 extends "res://engine/entity.gd"
 
 #const SPEED = 70
-var cpt = 0
+
 
 func teleport_to(target_pos):
 	position = target_pos

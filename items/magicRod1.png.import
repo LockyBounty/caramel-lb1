@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shadow-PNG-Image-File.png-f9244dacc2d0a820b7006288b531557d.stex"
+path="res://.import/magicRod1.png-e1f958d0a478e3d4fd9fc996819b196c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shadow-PNG-Image-File.png"
-dest_files=[ "res://.import/Shadow-PNG-Image-File.png-f9244dacc2d0a820b7006288b531557d.stex" ]
+source_file="res://items/magicRod1.png"
+dest_files=[ "res://.import/magicRod1.png-e1f958d0a478e3d4fd9fc996819b196c.stex" ]
 
 [params]
 
