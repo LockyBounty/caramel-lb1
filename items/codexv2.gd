@@ -1,17 +1,18 @@
 extends "res://engine/itemEntity.gd"
 
-enum Items {health, ammo}
-
-export (Items) var type = Items.health
+#enum Items {health, ammo}
+#
+#export (Items) var type = Items.health
 
 
 #var cptHeal = 0
 
-func _on_baguetteArea_body_entered(body):
-	cptbag +=1
-	print("You got a magic wand!")
+
+func _on_codexv2_body_entered(body):
+	cptcodex +=1
+	print("You got the codex!")
 	
-	#emit_signal("cpt_baguette", cptbag)
+	#emit_signal("cptcodex_changed", cptcodex)
 	
 #	match type:
 #		Items.health:
@@ -21,5 +22,3 @@ func _on_baguetteArea_body_entered(body):
 #		Items.ammo:
 #			pass
 	queue_free()
-	
-	

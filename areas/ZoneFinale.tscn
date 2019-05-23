@@ -3,8 +3,8 @@
 [ext_resource path="res://areas/mazemap.tres" type="TileSet" id=1]
 [ext_resource path="res://areas/Portail.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/player2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/codex.tscn" type="PackedScene" id=4]
-[ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/codexv2.tscn" type="PackedScene" id=5]
 
 [node name="ZoneFinale" type="Node"]
 
@@ -33,9 +33,9 @@ world_scene = "res://areas/test.tscn"
 position = Vector2( 270.711, 173.244 )
 scale = Vector2( 1, 1 )
 
-[node name="codex" parent="." instance=ExtResource( 4 )]
-position = Vector2( 273.044, 282.934 )
-
-[node name="baguette2" parent="." instance=ExtResource( 5 )]
+[node name="baguette2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 364.739, 227.147 )
+
+[node name="codexv2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 219.092, 296.418 )
 
