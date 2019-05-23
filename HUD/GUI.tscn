@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="GUI" type="MarginContainer"]
+margin_right = 703.0
+margin_bottom = 101.0
+
+[node name="MainContainer" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 685.0
+margin_bottom = 101.0
+
+[node name="block1" type="VBoxContainer" parent="MainContainer"]
+margin_right = 330.0
+margin_bottom = 81.0
+size_flags_horizontal = 3
+
+[node name="blockCpt" type="VBoxContainer" parent="MainContainer"]
+margin_left = 334.0
+margin_right = 665.0
+margin_bottom = 81.0
+size_flags_horizontal = 3
+
