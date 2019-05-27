@@ -9,7 +9,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="iconmenu" type="Sprite" parent="."]
-position = Vector2( 42.9926, 31.9943 )
-scale = Vector2( 0.315538, 0.284508 )
+position = Vector2( 46.9306, 28.3083 )
+scale = Vector2( 0.390547, 0.352141 )
 texture = ExtResource( 1 )
 

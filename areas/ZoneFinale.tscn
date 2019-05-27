@@ -58,12 +58,16 @@ world_scene = "res://areas/test.tscn"
 [node name="Player2" parent="." groups=[
 "Players",
 ] instance=ExtResource( 5 )]
-position = Vector2( -368.098, -19.2322 )
+position = Vector2( -198.67, 31.1051 )
 scale = Vector2( 1, 1 )
 
 [node name="GUI" parent="Player2" instance=ExtResource( 6 )]
-margin_left = 2.0
-margin_top = 1.0
+margin_top = 22.8571
+margin_bottom = 59.8571
+
+[node name="Camera2D" type="Camera2D" parent="Player2"]
+anchor_mode = 0
+current = true
 
 [node name="baguette2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 364.739, 227.147 )
