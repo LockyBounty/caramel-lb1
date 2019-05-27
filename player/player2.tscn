@@ -3,7 +3,6 @@
 [ext_resource path="res://player/player2.gd" type="Script" id=1]
 [ext_resource path="res://player/george.png" type="Texture" id=2]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "idledown"
 tracks/0/type = "value"
@@ -130,12 +129,11 @@ extents = Vector2( 13.4576, 17.2703 )
 position = Vector2( 0.213776, 0.318223 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, 0.291985 )
+anchor_mode = 0
+rotating = true
 current = true
 
 [node name="anim" type="AnimationPlayer" parent="."]
@@ -150,11 +148,11 @@ anims/walkright = SubResource( 7 )
 anims/walkup = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.500545, 0.458843 )
+position = Vector2( 409.923, 219.874 )
 shape = SubResource( 9 )
 
 [node name="george" type="Sprite" parent="."]
-position = Vector2( 0.166836, 4.76837e-06 )
+position = Vector2( 409.852, 219.452 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
