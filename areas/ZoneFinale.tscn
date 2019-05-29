@@ -53,7 +53,7 @@ texture = ExtResource( 3 )
 
 [node name="PortailA" parent="." instance=ExtResource( 4 )]
 position = Vector2( 30.8152, 138.036 )
-world_scene = "res://areas/test.tscn"
+world_scene = "res://areas/main.tscn"
 
 [node name="Player2" parent="." groups=[
 "Players",

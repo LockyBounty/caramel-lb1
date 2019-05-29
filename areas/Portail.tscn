@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://areas/Portails.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Portails.gd" type="Script" id=1]
 [ext_resource path="res://tiles/portal1v2.png" type="Texture" id=2]
 [ext_resource path="res://areas/Portail.tres" type="Animation" id=3]
+
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.49861

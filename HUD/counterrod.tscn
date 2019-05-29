@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://HUD/opa50.png" type="Texture" id=1]
-[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 11
+size = 21
 font_data = ExtResource( 2 )
 
 [node name="counterrod" type="MarginContainer"]
@@ -19,8 +19,9 @@ size_flags_vertical = 4
 margin_right = 90.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
+draw_center = false
 
-[node name="number" type="Label" parent="background"]
+[node name="numberrod" type="Label" parent="background"]
 margin_left = 8.33658
 margin_right = 88.3366
 margin_bottom = 40.0
@@ -29,11 +30,11 @@ text = "0/1"
 valign = 1
 
 [node name="icon" type="TextureRect" parent="background"]
-margin_left = 33.8344
-margin_top = -30.5173
-margin_right = 98.8344
-margin_bottom = 61.4827
-rect_scale = Vector2( 0.9, 0.9 )
+margin_left = 47.1029
+margin_top = -24.5466
+margin_right = 112.103
+margin_bottom = 67.4534
+rect_scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
 stretch_mode = 4
 
