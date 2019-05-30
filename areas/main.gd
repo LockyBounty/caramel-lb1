@@ -13,7 +13,7 @@ func _ready():
 
 func _on_baguette2_hit():
 	cptbag +=1
-	$HUD/GUI.updatetest(cptbag)
+	#$HUD/GUI.updatetest(cptbag)
 
 #func _on_codexv2_body_entered(body):# test de changement de scene
 #	get_tree().change_scene_to(next_scene)

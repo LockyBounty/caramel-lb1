@@ -36,7 +36,6 @@ gdscript/warnings/return_value_discarded=false
 
 window/size/width=704
 window/size/height=400
-window/size/fullscreen=true
 window/size/test_width=640
 window/size/test_height=576
 window/per_pixel_transparency/enabled=true

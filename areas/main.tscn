@@ -1,27 +1,20 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://areas/main.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
-[ext_resource path="res://HUD/GUI.tscn" type="PackedScene" id=3]
-[ext_resource path="res://areas/Maze01v2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://areas/Portail.tscn" type="PackedScene" id=5]
-[ext_resource path="res://player/player2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://items/codexv2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://areas/Overworld_Theme.ogg" type="AudioStream" id=9]
+[ext_resource path="res://areas/Maze01v2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://areas/Portail.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player/player2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/codexv2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://areas/Overworld_Theme.ogg" type="AudioStream" id=8]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 
 [node name="HUD" parent="." instance=ExtResource( 2 )]
 
-[node name="GUI" parent="HUD" instance=ExtResource( 3 )]
-margin_left = 1.42621
-margin_top = -34.2918
-margin_right = 663.426
-margin_bottom = 22.7082
-
-[node name="Maze1v2" parent="." instance=ExtResource( 4 )]
+[node name="Maze1v2" parent="." instance=ExtResource( 3 )]
 texture = null
 generate = false
 
@@ -29,45 +22,45 @@ generate = false
 
 [node name="Entree" type="Node2D" parent="BackgroundStaticObjects"]
 
-[node name="Portail1" parent="BackgroundStaticObjects/Entree" instance=ExtResource( 5 )]
+[node name="Portail1" parent="BackgroundStaticObjects/Entree" instance=ExtResource( 4 )]
 position = Vector2( 367.565, 95.9651 )
 world_scene = "res://areas/ZoneFinale.tscn"
 
 [node name="Player2" parent="." groups=[
 "Players",
-] instance=ExtResource( 6 )]
+] instance=ExtResource( 5 )]
 position = Vector2( -1.00395, -46.7364 )
 scale = Vector2( 0.7, 0.7 )
-
-[node name="Button" type="Button" parent="Player2"]
-margin_left = 1.43421
-margin_top = 66.7663
-margin_right = 42.4342
-margin_bottom = 86.7663
-text = "Start"
-
-[node name="Buttonstop" type="Button" parent="Player2"]
-margin_left = 1.43421
-margin_top = 98.1949
-margin_right = 41.4342
-margin_bottom = 118.195
-text = "Stop"
 
 [node name="Camera2D2" type="Camera2D" parent="Player2"]
 anchor_mode = 0
 current = true
 zoom = Vector2( 0.7, 0.7 )
 
-[node name="baguette2" parent="." instance=ExtResource( 7 )]
+[node name="baguette2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 390.335, 165.506 )
 
-[node name="codexv2" parent="." instance=ExtResource( 8 )]
+[node name="codexv2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 217.183, 141.064 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 8 )
 
-[connection signal="pressed" from="Player2/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Player2/Buttonstop" to="." method="_on_Buttonstop_pressed"]
+[node name="Buttonstop" type="Button" parent="."]
+visible = false
+margin_top = 22.0
+margin_right = 40.0
+margin_bottom = 42.0
+text = "Stop"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_top = -3.8147e-06
+margin_right = 41.0
+margin_bottom = 20.0
+text = "Start"
+
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]
+[connection signal="pressed" from="Buttonstop" to="." method="_on_Buttonstop_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
