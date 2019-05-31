@@ -22,6 +22,8 @@ config/icon="res://icon.png"
 [autoload]
 
 dir="*res://engine/directions.gd"
+MainGlobal="*res://engine/MainG.gd"
+itemEntity="*res://engine/itemEntity.gd"
 
 [debug]
 
