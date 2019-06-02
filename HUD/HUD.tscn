@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/opa50.png" type="Texture" id=2]
@@ -8,13 +8,16 @@
 [ext_resource path="res://items/grimoire.png" type="Texture" id=6]
 [ext_resource path="res://items/menu custom.png" type="Texture" id=7]
 
+[sub_resource type="DynamicFont" id=1]
+size = 21
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=2]
 size = 21
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 21
-font_data = ExtResource( 3 )
+[sub_resource type="CircleShape2D" id=3]
+radius = 49.6384
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -26,13 +29,13 @@ size_flags_horizontal = 3
 
 [node name="MainC" type="HBoxContainer" parent="HUDMC"]
 margin_right = 705.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="H1" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_right = 114.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -44,10 +47,10 @@ texture = ExtResource( 2 )
 
 [node name="Etoilelabel" type="Label" parent="HUDMC/MainC/H1"]
 margin_left = 39.0
-margin_top = 35.0
+margin_top = 46.0
 margin_right = 74.0
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
 text = "0/5"
 
 [node name="Spriteetoile" type="Sprite" parent="HUDMC/MainC/H1"]
@@ -58,16 +61,16 @@ texture = ExtResource( 4 )
 [node name="H2" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 118.0
 margin_right = 232.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="Baguettelabel" type="Label" parent="HUDMC/MainC/H2"]
 margin_left = 41.0
-margin_top = 35.0
+margin_top = 46.0
 margin_right = 73.0
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 1 )
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
 text = "0/1"
 valign = 1
 
@@ -79,16 +82,16 @@ texture = ExtResource( 5 )
 [node name="H3" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 236.0
 margin_right = 350.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="Codexlabel" type="Label" parent="HUDMC/MainC/H3"]
 margin_left = 41.0
-margin_top = 35.0
+margin_top = 46.0
 margin_right = 73.0
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
 text = "0/1"
 
 [node name="Spritecodex" type="Sprite" parent="HUDMC/MainC/H3"]
@@ -99,26 +102,31 @@ texture = ExtResource( 6 )
 [node name="H4" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 354.0
 margin_right = 468.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 
 [node name="H5" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 472.0
 margin_right = 586.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 
 [node name="menu" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 590.0
 margin_right = 705.0
-margin_bottom = 92.0
+margin_bottom = 115.0
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="Sprite" type="Sprite" parent="HUDMC/MainC/menu"]
+[node name="Spritemenu" type="Sprite" parent="HUDMC/MainC/menu"]
 position = Vector2( 77.8447, 37.202 )
 scale = Vector2( 0.511746, 0.48921 )
 texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="HUDMC/MainC/menu/Spritemenu"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUDMC/MainC/menu/Spritemenu/Area2D"]
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="HUDMC/MainC/menu"]
 visible = false

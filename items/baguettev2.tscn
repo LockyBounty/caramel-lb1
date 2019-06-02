@@ -51,7 +51,7 @@ tracks/2/keys = {
 script = ExtResource( 1 )
 
 [node name="magicRod1" type="Sprite" parent="."]
-position = Vector2( 0, -4.42279 )
+position = Vector2( 0, -8 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
@@ -59,9 +59,9 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="ombreB" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.440618 )
+modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( 9.13593, 35.5471 )
-scale = Vector2( 0.0235772, 0.04 )
+scale = Vector2( 0.02, 0.04 )
 texture = ExtResource( 3 )
 
 [node name="animbag2" type="AnimationPlayer" parent="."]

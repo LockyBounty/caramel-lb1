@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://areas/main.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://items/codexv2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://areas/Overworld_Theme.ogg" type="AudioStream" id=8]
+[ext_resource path="res://items/etoile.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -22,8 +23,8 @@ generate = false
 
 [node name="Entree" type="Node2D" parent="BackgroundStaticObjects"]
 
-[node name="Portail1" parent="BackgroundStaticObjects/Entree" instance=ExtResource( 4 )]
-position = Vector2( 367.565, 95.9651 )
+[node name="PortailA" parent="BackgroundStaticObjects/Entree" instance=ExtResource( 4 )]
+position = Vector2( 333.505, 95.7636 )
 world_scene = "res://areas/ZoneFinale.tscn"
 
 [node name="Player2" parent="." groups=[
@@ -38,9 +39,7 @@ anchor_mode = 0
 current = true
 zoom = Vector2( 0.7, 0.7 )
 
-[node name="codexv2" parent="." groups=[
-"item3",
-] instance=ExtResource( 6 )]
+[node name="codexv2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 217.183, 141.064 )
 scale = Vector2( 0.7, 0.7 )
 
@@ -66,6 +65,11 @@ margin_right = 47.5861
 margin_bottom = 108.613
 text = "Start"
 
+[node name="etoile" parent="." instance=ExtResource( 9 )]
+position = Vector2( 297, 154 )
+
+[connection signal="hit" from="codexv2" to="." method="_on_codexv2_hit"]
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]
 [connection signal="pressed" from="Buttonstop" to="." method="_on_Buttonstop_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="hit" from="etoile" to="." method="_on_etoile_hit"]
