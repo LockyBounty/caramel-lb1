@@ -22,7 +22,6 @@ func _process(delta):
 script = SubResource( 1 )
 
 [node name="maze page" type="Sprite" parent="."]
-visible = false
 position = Vector2( 488.787, 377.661 )
 scale = Vector2( 1.18905, 1.22583 )
 texture = ExtResource( 1 )
