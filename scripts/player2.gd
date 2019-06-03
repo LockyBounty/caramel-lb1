@@ -1,12 +1,23 @@
 
 extends "res://engine/entity.gd"
 
-#const SPEED = 70
+const MAX_ZOOM = Vector2(0.6,0.6)
+const MIN_ZOOM = Vector2(1,1)
 
-var cptbag = 0
+#export (int) var SPEED
+#var velocity
+var screensize
+var screenHeight = ProjectSettings.get_setting("display/window/size/height")
+var screenWidth = ProjectSettings.get_setting("display/window/size/width")
+var movement = Vector2(0,0)
 
-func teleport_to(target_pos):
-	position = target_pos
+func _ready():
+	screensize = get_viewport_rect().size
+	
+func _process(delta):
+	move_player_virtual_stick(delta)
+
+
 
 func _physics_process(delta):
 	controls_loop()
@@ -27,7 +38,6 @@ func _physics_process(delta):
 	else : 
 		anim_switch("idle")
 	
-	cptbag = min(cptbag, 2)
 
 func controls_loop():
 	var LEFT	= Input.is_action_pressed("ui_left")
@@ -38,3 +48,6 @@ func controls_loop():
 	movedir.x= -int(LEFT) + int(RIGHT)
 	movedir.y = -int(UP) + int(DOWN)
 	
+
+func move_player_virtual_stick(delta):
+	position += $Analog.stick_vector * $Analog.stick_speed * 2 * delta

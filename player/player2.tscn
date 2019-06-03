@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/player2.gd" type="Script" id=1]
 [ext_resource path="res://player/george.png" type="Texture" id=2]
+[ext_resource path="res://HUD/Analog.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idledown"
@@ -126,7 +127,7 @@ tracks/0/keys = {
 extents = Vector2( 13.4576, 17.2703 )
 
 [node name="Player2" type="KinematicBody2D"]
-position = Vector2( 0.213776, 0.318223 )
+position = Vector2( 1.72113, 0.318207 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
 
@@ -151,4 +152,6 @@ texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
 frame = 15
+
+[node name="Analog" parent="." instance=ExtResource( 3 )]
 
