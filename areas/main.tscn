@@ -28,14 +28,20 @@ world_scene = "res://areas/ZoneFinale.tscn"
 [node name="Player2" parent="." groups=[
 "Players",
 ] instance=ExtResource( 5 )]
-position = Vector2( 0.801042, 0.193619 )
+position = Vector2( -1.19896, 1.19362 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player2"]
-position = Vector2( 0, 1.28927 )
-anchor_mode = 0
+position = Vector2( 227.143, 161.289 )
 current = true
 zoom = Vector2( 0.7, 0.7 )
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
 
 [node name="codexv2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 217.183, 141.064 )

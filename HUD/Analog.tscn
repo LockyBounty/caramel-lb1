@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 
 [node name="JoystickBG" type="Sprite" parent="."]
 self_modulate = Color( 1, 1, 1, 0.886275 )
-position = Vector2( 642.846, 337.007 )
+position = Vector2( 598.636, 289.639 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
