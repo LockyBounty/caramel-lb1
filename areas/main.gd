@@ -31,6 +31,10 @@ func _on_etoile_hit():
 
 func _on_Button_pressed():
 	$Music.play()
+	get_tree().reload_current_scene()
+	MainGlobal.cptbag =0
+	MainGlobal.cptcodex =0
+	MainGlobal.cptetoile =0
 
 func _on_Buttonstop_pressed():
 	$Music.stop()

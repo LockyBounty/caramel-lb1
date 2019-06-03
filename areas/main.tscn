@@ -28,11 +28,11 @@ world_scene = "res://areas/ZoneFinale.tscn"
 [node name="Player2" parent="." groups=[
 "Players",
 ] instance=ExtResource( 5 )]
-position = Vector2( -1.19896, 1.19362 )
+position = Vector2( 260.906, 108.562 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player2"]
-position = Vector2( 227.143, 161.289 )
+position = Vector2( -1.42859, 1.89081 )
 current = true
 zoom = Vector2( 0.7, 0.7 )
 drag_margin_h_enabled = false
@@ -54,7 +54,6 @@ position = Vector2( 390.335, 165.506 )
 stream = ExtResource( 8 )
 
 [node name="Buttonstop" type="Button" parent="."]
-visible = false
 margin_left = 7.78358
 margin_top = 121.39
 margin_right = 47.7836
@@ -62,7 +61,6 @@ margin_bottom = 141.39
 text = "Stop"
 
 [node name="Button" type="Button" parent="."]
-visible = false
 margin_left = 6.58611
 margin_top = 88.6131
 margin_right = 47.5861

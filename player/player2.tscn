@@ -143,11 +143,11 @@ anims/walkright = SubResource( 7 )
 anims/walkup = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 229.672, 157.77 )
+position = Vector2( -0.448669, 1.00655 )
 shape = SubResource( 9 )
 
 [node name="george" type="Sprite" parent="."]
-position = Vector2( 229.6, 156.006 )
+position = Vector2( -0.520721, 1.25238 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4

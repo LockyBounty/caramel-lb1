@@ -16,7 +16,14 @@ func _ready():
 	
 func _process(delta):
 	move_player_virtual_stick(delta)
-
+	
+	
+func move_player_virtual_stick(delta):
+	position += $Analog.stick_vector * $Analog.stick_speed * 2 * delta
+	if movedir != Vector2(0,0):
+		anim_switch("walk")
+	else : 
+		anim_switch("idle")
 
 
 func _physics_process(delta):
@@ -49,5 +56,3 @@ func controls_loop():
 	movedir.y = -int(UP) + int(DOWN)
 	
 
-func move_player_virtual_stick(delta):
-	position += $Analog.stick_vector * $Analog.stick_speed * 2 * delta
