@@ -34,3 +34,7 @@ func _on_Buttonreset_pressed():
 	MainGlobal.cptcodex =0
 	MainGlobal.cptetoile =0
 	
+
+
+func _on_Buttonaudio_pressed():
+	$"/root/MusicMainZone".play()

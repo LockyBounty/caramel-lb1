@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/opa50.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=12]
 [ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=13]
 [ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=14]
+[ext_resource path="res://player/mage1.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -281,6 +282,12 @@ margin_bottom = 57.8244
 icon = ExtResource( 14 )
 flat = true
 
+[node name="BossUltime" type="Sprite" parent="POPUPMC/close"]
+position = Vector2( -336.902, 301.957 )
+scale = Vector2( 1.35913, 1.35913 )
+texture = ExtResource( 15 )
+
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
+[connection signal="pressed" from="POPUPMC/audio/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
 [connection signal="pressed" from="POPUPMC/close/Buttonclose" to="." method="_on_Buttonclose_pressed"]
