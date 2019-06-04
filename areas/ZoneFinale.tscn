@@ -72,6 +72,14 @@ drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
 
+[node name="Button" type="Button" parent="Player2"]
+visible = false
+margin_left = 265.548
+margin_top = -104.941
+margin_right = 352.548
+margin_bottom = -84.9415
+text = "Reset game"
+
 [node name="baguette2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 364.739, 227.147 )
 
@@ -80,4 +88,5 @@ position = Vector2( 364.739, 227.147 )
 ] instance=ExtResource( 9 )]
 position = Vector2( 219.092, 296.418 )
 
+[connection signal="pressed" from="Player2/Button" to="Player2" method="_on_Button_pressed"]
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]

@@ -3,9 +3,17 @@ Caramel - Labyrinth 1
 
 ## Tools :
 
-Game Engine : Godot 3.1
+Game Engine :
+- Godot 3.1
 
-Adobe Photoshop
+Images :
+
+- Adobe Photoshop
+- GIMP
+
+Music : 
+
+- Soon...
 
 
  

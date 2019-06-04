@@ -1,6 +1,8 @@
 extends "res://engine/MainG.gd"
 
 
+
+
 func _ready():
 	#Garde la valeur entre les scenes au sinon reset 
 	$HUD.update_baguette(MainGlobal.cptbag) 

@@ -5,7 +5,7 @@ extends CanvasLayer
 
 
 func _ready():
-	pass # Replace with function body.
+	$POPUPMC.hide()
 
 func update_baguette(cptbag):
 	$HUDMC/MainC/H2/Baguettelabel.text =str(MainGlobal.cptbag)+"/1"
@@ -18,5 +18,19 @@ func update_codex(cptcodex):
 func update_etoile(cptetoile):
 	$HUDMC/MainC/H1/Etoilelabel.text = str(MainGlobal.cptetoile)+"/5"
 	
-	
 
+
+#Bouton du menu
+func _on_Buttonclose_pressed():
+	$POPUPMC.hide()
+	
+func _on_Buttonopenmenu_pressed():
+	$POPUPMC.show()
+
+
+func _on_Buttonreset_pressed():
+	get_tree().change_scene("res://areas/main.tscn")
+	MainGlobal.cptbag =0
+	MainGlobal.cptcodex =0
+	MainGlobal.cptetoile =0
+	

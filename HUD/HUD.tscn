@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/opa50.png" type="Texture" id=2]
@@ -6,7 +6,14 @@
 [ext_resource path="res://items/starsCustom.png" type="Texture" id=4]
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
 [ext_resource path="res://items/grimoire.png" type="Texture" id=6]
-[ext_resource path="res://items/menu custom.png" type="Texture" id=7]
+[ext_resource path="res://HUD/menu custom.png" type="Texture" id=7]
+[ext_resource path="res://HUD/popupmenuBGv1.png" type="Texture" id=8]
+[ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=9]
+[ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=10]
+[ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=11]
+[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=12]
+[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=13]
+[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -19,6 +26,10 @@ font_data = ExtResource( 3 )
 [sub_resource type="CircleShape2D" id=3]
 radius = 49.6384
 
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 3 )
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
 
@@ -29,13 +40,13 @@ size_flags_horizontal = 3
 
 [node name="MainC" type="HBoxContainer" parent="HUDMC"]
 margin_right = 705.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="H1" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_right = 114.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -47,9 +58,9 @@ texture = ExtResource( 2 )
 
 [node name="Etoilelabel" type="Label" parent="HUDMC/MainC/H1"]
 margin_left = 39.0
-margin_top = 46.0
+margin_top = 35.0
 margin_right = 74.0
-margin_bottom = 68.0
+margin_bottom = 57.0
 custom_fonts/font = SubResource( 1 )
 text = "0/5"
 
@@ -61,15 +72,15 @@ texture = ExtResource( 4 )
 [node name="H2" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 118.0
 margin_right = 232.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="Baguettelabel" type="Label" parent="HUDMC/MainC/H2"]
 margin_left = 41.0
-margin_top = 46.0
+margin_top = 35.0
 margin_right = 73.0
-margin_bottom = 68.0
+margin_bottom = 57.0
 custom_fonts/font = SubResource( 2 )
 text = "0/1"
 valign = 1
@@ -82,15 +93,15 @@ texture = ExtResource( 5 )
 [node name="H3" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 236.0
 margin_right = 350.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="Codexlabel" type="Label" parent="HUDMC/MainC/H3"]
 margin_left = 41.0
-margin_top = 46.0
+margin_top = 35.0
 margin_right = 73.0
-margin_bottom = 68.0
+margin_bottom = 57.0
 custom_fonts/font = SubResource( 1 )
 text = "0/1"
 
@@ -102,19 +113,19 @@ texture = ExtResource( 6 )
 [node name="H4" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 354.0
 margin_right = 468.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="H5" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 472.0
 margin_right = 586.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="menu" type="HBoxContainer" parent="HUDMC/MainC"]
 margin_left = 590.0
 margin_right = 705.0
-margin_bottom = 115.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -128,11 +139,148 @@ texture = ExtResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUDMC/MainC/menu/Spritemenu/Area2D"]
 shape = SubResource( 3 )
 
+[node name="Buttonopenmenu" type="Button" parent="HUDMC/MainC/menu/Spritemenu"]
+margin_left = -59.335
+margin_top = -57.2732
+margin_right = 57.665
+margin_bottom = 57.7268
+icon = ExtResource( 7 )
+flat = true
+
 [node name="TextureRect" type="TextureRect" parent="HUDMC/MainC/menu"]
 visible = false
-margin_left = 18.0
-margin_right = 123.0
+margin_left = 5.0
+margin_right = 110.0
 margin_bottom = 109.0
 texture = ExtResource( 7 )
 stretch_mode = 4
 
+[node name="POPUPMC" type="MarginContainer" parent="."]
+margin_left = 151.621
+margin_top = 116.217
+margin_right = 551.621
+margin_bottom = 316.217
+
+[node name="NinePatchRect" type="NinePatchRect" parent="POPUPMC"]
+modulate = Color( 1, 1, 0.988235, 0.803922 )
+margin_right = 399.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="border" type="Sprite" parent="POPUPMC"]
+position = Vector2( 198.919, 100.54 )
+scale = Vector2( 0.831354, 0.995088 )
+texture = ExtResource( 9 )
+
+[node name="objective" type="Sprite" parent="POPUPMC"]
+position = Vector2( 154.271, 61.6309 )
+scale = Vector2( 0.611328, 0.603037 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="POPUPMC/objective"]
+margin_left = -59.4627
+margin_top = -77.2193
+margin_right = 61.5373
+margin_bottom = -51.2193
+custom_fonts/font = SubResource( 4 )
+text = "OBJECTIVE"
+align = 1
+valign = 1
+
+[node name="Buttonobj" type="Button" parent="POPUPMC/objective"]
+margin_left = -57.0
+margin_top = -52.0
+margin_right = 55.0
+margin_bottom = 51.0
+icon = ExtResource( 10 )
+flat = true
+
+[node name="audio" type="Sprite" parent="POPUPMC"]
+position = Vector2( 100.675, 144.276 )
+scale = Vector2( 0.635349, 0.635971 )
+texture = ExtResource( 11 )
+
+[node name="Label2" type="Label" parent="POPUPMC/audio"]
+margin_left = -60.0
+margin_top = -79.0
+margin_right = 64.0
+margin_bottom = -47.0
+custom_fonts/font = SubResource( 4 )
+text = "Audio"
+align = 1
+valign = 1
+
+[node name="Buttonaudio" type="Button" parent="POPUPMC/audio"]
+margin_left = -58.0884
+margin_top = -51.9568
+margin_right = 55.9116
+margin_bottom = 51.0432
+icon = ExtResource( 11 )
+flat = true
+
+[node name="reset" type="Sprite" parent="POPUPMC"]
+position = Vector2( 255.942, 61.1415 )
+scale = Vector2( 0.559485, 0.54233 )
+texture = ExtResource( 12 )
+
+[node name="Label3" type="Label" parent="POPUPMC/reset"]
+margin_left = -54.5797
+margin_top = -85.6743
+margin_right = 66.4203
+margin_bottom = -59.6743
+custom_fonts/font = SubResource( 4 )
+text = "RESET"
+align = 1
+valign = 1
+
+[node name="Buttonreset" type="Button" parent="POPUPMC/reset"]
+margin_left = -61.5573
+margin_top = -57.2233
+margin_right = 61.4427
+margin_bottom = 56.7767
+icon = ExtResource( 12 )
+flat = true
+
+[node name="home" type="Sprite" parent="POPUPMC"]
+position = Vector2( 302.309, 141.709 )
+scale = Vector2( 0.599208, 0.565656 )
+texture = ExtResource( 13 )
+
+[node name="Label4" type="Label" parent="POPUPMC/home"]
+margin_left = -78.95
+margin_top = -91.383
+margin_right = 67.05
+margin_bottom = -55.383
+custom_fonts/font = SubResource( 4 )
+text = "HOME"
+align = 1
+valign = 1
+
+[node name="Buttonhome" type="Button" parent="POPUPMC/home"]
+margin_left = -63.0
+margin_top = -56.0
+margin_right = 58.0
+margin_bottom = 59.0
+icon = ExtResource( 13 )
+flat = true
+
+[node name="close" type="Sprite" parent="POPUPMC"]
+position = Vector2( 355.017, 8.62626 )
+scale = Vector2( 0.453169, 0.453169 )
+texture = ExtResource( 14 )
+
+[node name="Buttonclose" type="Button" parent="POPUPMC/close"]
+margin_left = -60.0222
+margin_top = -57.1756
+margin_right = 55.9778
+margin_bottom = 57.8244
+icon = ExtResource( 14 )
+flat = true
+
+[connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
+[connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
+[connection signal="pressed" from="POPUPMC/close/Buttonclose" to="." method="_on_Buttonclose_pressed"]

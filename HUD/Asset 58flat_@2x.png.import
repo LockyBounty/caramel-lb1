@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu custom.png-30116ad49f7a62125e8284ea84eb64f4.stex"
+path="res://.import/Asset 58flat_@2x.png-0c9ea8430fb8534819e08e11253f72e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/menu custom.png"
-dest_files=[ "res://.import/menu custom.png-30116ad49f7a62125e8284ea84eb64f4.stex" ]
+source_file="res://HUD/Asset 58flat_@2x.png"
+dest_files=[ "res://.import/Asset 58flat_@2x.png-0c9ea8430fb8534819e08e11253f72e6.stex" ]
 
 [params]
 

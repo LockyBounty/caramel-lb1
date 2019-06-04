@@ -1,0 +1,12 @@
+{
+    "001" : {"name":"Mathilda", "text":"Hey, you!"},
+    "002" : {"name":"George", "text":"Me?"},
+    "003" : {"name":"Mathilda", "text":"Are you going to the tower?"},
+    "004" : {"name":"George", "text":"yeah"},
+    "005" : {"name":"Mathilda", "text":"Great, we can go there together."},
+    "006" : {"name":"George", "text":"Sure, I don't mind."},
+    "007" : {"name":"Mathilda", "text":"To be honest, I get lost..."},
+    "008" : {"name":"Mathilda", "text":"My name is Mathilda and you?"},
+    "009" : {"name":"George", "text":"George, nice to meet you."},
+    
+}
