@@ -41,7 +41,3 @@ func _on_Buttonstop_pressed():
 
 
 
-
-
-
-

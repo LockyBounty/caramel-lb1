@@ -57,6 +57,7 @@ position = Vector2( 390.335, 165.506 )
 stream = ExtResource( 8 )
 
 [node name="Buttonstop" type="Button" parent="."]
+visible = false
 margin_left = 7.78358
 margin_top = 121.39
 margin_right = 47.7836
@@ -64,6 +65,7 @@ margin_bottom = 141.39
 text = "Stop"
 
 [node name="Button" type="Button" parent="."]
+visible = false
 margin_left = 6.58611
 margin_top = 88.6131
 margin_right = 47.5861

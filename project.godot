@@ -30,6 +30,7 @@ dir="*res://engine/directions.gd"
 MainGlobal="*res://engine/MainG.gd"
 itemEntity="*res://engine/itemEntity.gd"
 MusicMainZone="*res://music/MusicMainZone.tscn"
+sceneCH="*res://engine/sceneChanger.tscn"
 
 [debug]
 

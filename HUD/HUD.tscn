@@ -157,6 +157,7 @@ texture = ExtResource( 7 )
 stretch_mode = 4
 
 [node name="POPUPMC" type="MarginContainer" parent="."]
+visible = false
 margin_left = 151.621
 margin_top = 116.217
 margin_right = 551.621

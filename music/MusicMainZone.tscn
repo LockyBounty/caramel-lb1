@@ -4,5 +4,4 @@
 
 [node name="MusicMainZone" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
-volume_db = 4.0
 
