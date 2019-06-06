@@ -8,9 +8,9 @@ onready var sprite = get_node("codex")
 func _ready():
 	#Effets de transition de l'objets ".interpolate_property" de "Tween" prend 7 paramètres
 	
-	effect.interpolate_property(sprite, 'position', Vector2(0,0), Vector2(0,-31), 1.8, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
+	effect.interpolate_property(sprite, 'position', Vector2(0,0), Vector2(0,-31), 1.2, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
 	#effect.interpolate_property(sprite, 'scale', sprite.get_scale(), Vector2(.3,.3), .9,Tween.TRANS_QUAD, Tween.EASE_OUT)
-	effect.interpolate_property(sprite, 'modulate', Color(1,1,1,1), Color(1,1,1,0.9), 1.8, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	effect.interpolate_property(sprite, 'modulate', Color(1,1,1,1), Color(1,1,1,0.9), 1.2, Tween.TRANS_QUAD, Tween.EASE_OUT)
 
 
 func _on_codexv2_body_entered(body):

@@ -53,7 +53,7 @@ alignment = 1
 
 [node name="bgcpt" type="Sprite" parent="HUDMC/MainC/H1"]
 modulate = Color( 1, 1, 1, 0.572549 )
-position = Vector2( 85.2955, 51.7752 )
+position = Vector2( 84.6968, 42.7941 )
 scale = Vector2( 0.871244, 0.772544 )
 texture = ExtResource( 2 )
 

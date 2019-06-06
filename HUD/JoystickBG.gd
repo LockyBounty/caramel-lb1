@@ -9,11 +9,14 @@ var evt_index = -1
 func _init():
 	stick_pos = position
 	
+	
 func _input(event):
+	
 	if event is InputEventScreenTouch:
 		if event.is_pressed():
 			if stick_pos.distance_to(event.position) < RADIUS :
 				evt_index = event.index
+				
 		elif evt_index != -1:
 			if evt_index == event.index:
 				evt_index = -1

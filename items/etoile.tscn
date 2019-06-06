@@ -81,4 +81,7 @@ texture = ExtResource( 3 )
 autoplay = "animstar"
 anims/animstar = SubResource( 2 )
 
+[node name="Tweenetoile" type="Tween" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_etoile_body_entered"]
+[connection signal="tween_completed" from="Tweenetoile" to="." method="_on_Tweenetoile_tween_completed"]
