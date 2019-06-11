@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fit-to-width-256.png-d6e8ef0964e5f9b21191c295a3a8cecf.stex"
+path="res://.import/magicienv3.png-c71b3b2164e15e7fc190422388378227.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUD/fit-to-width-256.png"
-dest_files=[ "res://.import/fit-to-width-256.png-d6e8ef0964e5f9b21191c295a3a8cecf.stex" ]
+source_file="res://titlescreen/magicienv3.png"
+dest_files=[ "res://.import/magicienv3.png-c71b3b2164e15e7fc190422388378227.stex" ]
 
 [params]
 
