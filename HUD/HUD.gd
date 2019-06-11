@@ -38,3 +38,6 @@ func _on_Buttonreset_pressed():
 
 func _on_Buttonaudio_pressed():
 	$"/root/MusicMainZone".play()
+
+
+

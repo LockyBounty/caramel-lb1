@@ -89,4 +89,3 @@ position = Vector2( 364.739, 227.147 )
 position = Vector2( 219.092, 296.418 )
 
 [connection signal="pressed" from="Player2/Button" to="Player2" method="_on_Button_pressed"]
-[connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]

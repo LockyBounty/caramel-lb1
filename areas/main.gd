@@ -8,7 +8,10 @@ func _ready():
 	
 	
 	#$Music.play()
+	
 	#pass # Replace with function body.
+
+	
 
 func _on_baguette2_hit():
 	MainGlobal.cptbag +=1
@@ -39,5 +42,8 @@ func _on_Button_pressed():
 func _on_Buttonstop_pressed():
 	$Music.stop()
 
-
+	
+	OS.window_fullscreen = !OS.window_fullscreen
+	print("it works")
+	
 

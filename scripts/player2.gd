@@ -14,6 +14,7 @@ var movement = Vector2(0,0)
 func _ready():
 	screensize = get_viewport_rect().size
 	
+	
 func move_player_virtual_stick(delta):
 	movement_loop()
 	spritedir_loop()

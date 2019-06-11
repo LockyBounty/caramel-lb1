@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
-[ext_resource path="res://HUD/opa50.png" type="Texture" id=2]
+[ext_resource path="res://HUD/trapeze1.png" type="Texture" id=2]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://items/starsCustom.png" type="Texture" id=4]
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
@@ -51,10 +51,10 @@ margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="bgcpt" type="Sprite" parent="HUDMC/MainC/H1"]
+[node name="bgcpt1" type="Sprite" parent="HUDMC/MainC/H1"]
 modulate = Color( 1, 1, 1, 0.572549 )
-position = Vector2( 84.6968, 42.7941 )
-scale = Vector2( 0.871244, 0.772544 )
+position = Vector2( 74.8801, 43.1433 )
+scale = Vector2( 0.596274, 0.644224 )
 texture = ExtResource( 2 )
 
 [node name="Etoilelabel" type="Label" parent="HUDMC/MainC/H1"]
@@ -66,7 +66,7 @@ custom_fonts/font = SubResource( 1 )
 text = "0/5"
 
 [node name="Spriteetoile" type="Sprite" parent="HUDMC/MainC/H1"]
-position = Vector2( 108.01, 40.1409 )
+position = Vector2( 103.82, 40.8392 )
 scale = Vector2( 0.363395, 0.363054 )
 texture = ExtResource( 4 )
 
@@ -76,6 +76,12 @@ margin_right = 232.0
 margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
+
+[node name="bgcpt2" type="Sprite" parent="HUDMC/MainC/H2"]
+modulate = Color( 1, 1, 1, 0.572549 )
+position = Vector2( 73.8917, 43.1433 )
+scale = Vector2( 0.561357, 0.644224 )
+texture = ExtResource( 2 )
 
 [node name="Baguettelabel" type="Label" parent="HUDMC/MainC/H2"]
 margin_left = 41.0
@@ -87,7 +93,7 @@ text = "0/1"
 valign = 1
 
 [node name="Spritebaguette" type="Sprite" parent="HUDMC/MainC/H2"]
-position = Vector2( 101.482, 36.9266 )
+position = Vector2( 98.6887, 36.9266 )
 scale = Vector2( 0.811117, 0.811117 )
 texture = ExtResource( 5 )
 
@@ -98,6 +104,12 @@ margin_bottom = 92.0
 size_flags_horizontal = 3
 alignment = 1
 
+[node name="bgcpt3" type="Sprite" parent="HUDMC/MainC/H3"]
+modulate = Color( 1, 1, 1, 0.572549 )
+position = Vector2( 72.5141, 43.1432 )
+scale = Vector2( 0.543898, 0.644224 )
+texture = ExtResource( 2 )
+
 [node name="Codexlabel" type="Label" parent="HUDMC/MainC/H3"]
 margin_left = 41.0
 margin_top = 35.0
@@ -107,7 +119,7 @@ custom_fonts/font = SubResource( 1 )
 text = "0/1"
 
 [node name="Spritecodex" type="Sprite" parent="HUDMC/MainC/H3"]
-position = Vector2( 118.446, 40.8611 )
+position = Vector2( 112.859, 40.8611 )
 scale = Vector2( 0.173638, 0.163409 )
 texture = ExtResource( 6 )
 
