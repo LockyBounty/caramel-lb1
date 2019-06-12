@@ -29,7 +29,9 @@ config/icon="res://icon.png"
 dir="*res://engine/directions.gd"
 MainGlobal="*res://engine/MainG.gd"
 itemEntity="*res://engine/itemEntity.gd"
-MusicMainZone="*res://music/MusicMainZone.tscn"
+mMainZone="*res://music/MusicMainZone.tscn"
+mCredits="*res://music/musicCredits.tscn"
+mMenu="*res://music/musicMenu.tscn"
 
 [debug]
 

@@ -4,7 +4,8 @@ var world1 = preload("res://areas/main.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
+	mMenu.play()
 
 
 func _on_play_pressed():
@@ -13,3 +14,12 @@ func _on_play_pressed():
 
 func _on_Buttonfull1_pressed():
 	MainGlobal.fonctionFullscreen()
+
+
+func _on_Buttonsound1_pressed():
+	if MainGlobal.enableAudio1 == true:
+		mMenu.stop()
+		MainGlobal.enableAudio1 = false
+	else :
+		mMenu.play()
+		MainGlobal.enableAudio1 = true

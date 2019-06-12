@@ -179,4 +179,5 @@ flat = true
 
 [connection signal="pressed" from="Menu/otherParts/ButtonsList/ls/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="Menu/otherParts/secondzone/sound1" method="_on_Buttonsound1_pressed"]
+[connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="." method="_on_Buttonsound1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/fullscreen1/Buttonfull1" to="." method="_on_Buttonfull1_pressed"]

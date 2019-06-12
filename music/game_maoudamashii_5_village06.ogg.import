@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/game_maoudamashii_5_village06.ogg-65b55afe5f40b1ffaf775f2215b4dfb9.oggstr"
+
+[deps]
+
+source_file="res://music/game_maoudamashii_5_village06.ogg"
+dest_files=[ "res://.import/game_maoudamashii_5_village06.ogg-65b55afe5f40b1ffaf775f2215b4dfb9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

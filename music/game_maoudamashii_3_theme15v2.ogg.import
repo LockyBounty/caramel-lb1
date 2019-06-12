@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/game_maoudamashii_3_theme15v2.ogg-d584a08e43e17d50bd8b58c2016ee69f.oggstr"
+
+[deps]
+
+source_file="res://music/game_maoudamashii_3_theme15v2.ogg"
+dest_files=[ "res://.import/game_maoudamashii_3_theme15v2.ogg-d584a08e43e17d50bd8b58c2016ee69f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

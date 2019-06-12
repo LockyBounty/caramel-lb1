@@ -4,6 +4,7 @@ extends Node
 var texture1 = load("res://titlescreen/audio1whv1.png")
 var texture2 = load("res://titlescreen/audio2whv1.png")
 
+var enableAudio1 = true
 var boolsound1 = true
 
 

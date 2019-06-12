@@ -6,8 +6,8 @@ func _ready():
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
 	
-	
-	#$Music.play()
+	mMenu.stop()
+	mMainZone.play()
 	
 	#pass # Replace with function body.
 
