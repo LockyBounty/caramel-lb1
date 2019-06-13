@@ -46,3 +46,10 @@ func _on_Buttonaudio_pressed():
 		MainGlobal.enableAudio = true
 
 
+func _on_Buttonhome_pressed():
+	#temporaire
+	get_tree().change_scene_to(MainGlobal.menuTitle)
+
+
+func _on_Buttonwindow_pressed():
+	MainGlobal.fonctionFullscreen()

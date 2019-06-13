@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://titlescreen/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://HUD/arrow-135-128.png" type="Texture" id=4]
+[ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=4]
 size = 25
@@ -12,8 +13,8 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 12
-extra_spacing_top = 25
-extra_spacing_bottom = 15
+extra_spacing_top = 18
+extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -47,12 +48,12 @@ valign = 1
 [node name="secondblock" type="HBoxContainer" parent="mainblock"]
 margin_top = 40.0
 margin_right = 609.0
-margin_bottom = 321.0
+margin_bottom = 325.0
 size_flags_vertical = 0
 
 [node name="creditsblock1" type="HBoxContainer" parent="mainblock/secondblock"]
 margin_right = 302.0
-margin_bottom = 226.0
+margin_bottom = 202.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
@@ -60,53 +61,53 @@ alignment = 1
 [node name="listcredits1" type="VBoxContainer" parent="mainblock/secondblock/creditsblock1"]
 margin_left = 53.0
 margin_right = 249.0
-margin_bottom = 226.0
+margin_bottom = 202.0
 
 [node name="creditdevelopper" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
 margin_right = 196.0
-margin_bottom = 53.0
+margin_bottom = 41.0
 custom_fonts/font = SubResource( 2 )
 text = "developer"
 align = 1
 uppercase = true
 
 [node name="greatLeader" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
-margin_top = 57.0
+margin_top = 45.0
 margin_right = 196.0
-margin_bottom = 82.0
+margin_bottom = 70.0
 custom_fonts/font = SubResource( 3 )
 text = "Locky Bounthieng"
 align = 1
 
 [node name="creditart" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
-margin_top = 86.0
+margin_top = 74.0
 margin_right = 196.0
-margin_bottom = 139.0
+margin_bottom = 115.0
 custom_fonts/font = SubResource( 2 )
 text = "artwork"
 align = 1
 uppercase = true
 
 [node name="art1" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
-margin_top = 143.0
+margin_top = 119.0
 margin_right = 196.0
-margin_bottom = 168.0
+margin_bottom = 144.0
 custom_fonts/font = SubResource( 3 )
 text = "Kenney.nl (Map elements)"
 align = 1
 
 [node name="art2" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
-margin_top = 172.0
+margin_top = 148.0
 margin_right = 196.0
-margin_bottom = 197.0
+margin_bottom = 173.0
 custom_fonts/font = SubResource( 3 )
 text = "Caramel Publishing (Items)"
 align = 1
 
 [node name="art3" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
-margin_top = 201.0
+margin_top = 177.0
 margin_right = 196.0
-margin_bottom = 226.0
+margin_bottom = 202.0
 custom_fonts/font = SubResource( 3 )
 text = "Radomir Dopieralski (Sprites)"
 align = 1
@@ -114,73 +115,67 @@ align = 1
 [node name="creditsblock2" type="HBoxContainer" parent="mainblock/secondblock"]
 margin_left = 306.0
 margin_right = 609.0
-margin_bottom = 281.0
+margin_bottom = 285.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
 
 [node name="listcredits2" type="VBoxContainer" parent="mainblock/secondblock/creditsblock2"]
-margin_left = 61.0
-margin_right = 241.0
-margin_bottom = 281.0
+margin_left = 52.0
+margin_right = 251.0
+margin_bottom = 285.0
 
 [node name="creditmusic" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_right = 180.0
-margin_bottom = 53.0
+margin_right = 199.0
+margin_bottom = 41.0
 custom_fonts/font = SubResource( 2 )
 text = "music"
 align = 1
 uppercase = true
 
 [node name="mus1" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_top = 57.0
-margin_right = 180.0
-margin_bottom = 82.0
+margin_top = 45.0
+margin_right = 199.0
+margin_bottom = 70.0
 custom_fonts/font = SubResource( 3 )
 text = "David Vitas"
 align = 1
 
 [node name="mus2" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_top = 86.0
-margin_right = 180.0
-margin_bottom = 111.0
+margin_top = 74.0
+margin_right = 199.0
+margin_bottom = 99.0
 custom_fonts/font = SubResource( 3 )
 text = "Kouichi Morita"
 align = 1
 
 [node name="creditsp" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_top = 115.0
-margin_right = 180.0
-margin_bottom = 168.0
+margin_top = 103.0
+margin_right = 199.0
+margin_bottom = 144.0
 custom_fonts/font = SubResource( 2 )
 text = "special thanks"
 align = 1
 uppercase = true
 
 [node name="sp1" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_top = 172.0
-margin_right = 180.0
-margin_bottom = 281.0
+margin_top = 148.0
+margin_right = 199.0
+margin_bottom = 285.0
 custom_fonts/font = SubResource( 3 )
 text = "Silvia B., Michel D.,
-  Jean-Michel D., Mathilde,
- Killian B., Corlienne, 
-Cécile, Loïc, ..."
+  Jean-Michel D., Mathilde B.,
+ Killian B., Colienne D., 
+Tania D., Cécile M., 
+Loïc, Lisanne, Quentin,..."
 align = 1
 
-[node name="ReturnButton" type="Button" parent="."]
-margin_left = 1.05263
-margin_right = 91.0526
-margin_bottom = 77.0
-flat = true
-__meta__ = {
-"_edit_group_": true
-}
+[node name="ReturnButton" parent="." instance=ExtResource( 4 )]
 
-[node name="ReturnIcon" type="Sprite" parent="ReturnButton"]
-position = Vector2( 45.3633, 36.1761 )
-rotation = -1.5708
-scale = Vector2( 0.350275, 0.340932 )
-texture = ExtResource( 4 )
+[node name="fadeIn" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_left = 1.05263
+margin_right = 1.05261
 
 [connection signal="pressed" from="ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]

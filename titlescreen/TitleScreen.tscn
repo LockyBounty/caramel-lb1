@@ -1,25 +1,25 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://titlescreen/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://titlescreen/play.tscn" type="PackedScene" id=3]
 [ext_resource path="res://titlescreen/rules.tscn" type="PackedScene" id=4]
-[ext_resource path="res://titlescreen/options.tscn" type="PackedScene" id=5]
-[ext_resource path="res://titlescreen/credits.tscn" type="PackedScene" id=6]
-[ext_resource path="res://fonts/Gumela.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://titlescreen/magicienv3.png" type="Texture" id=8]
-[ext_resource path="res://titlescreen/audio1whv1.png" type="Texture" id=9]
-[ext_resource path="res://titlescreen/sound1.gd" type="Script" id=10]
-[ext_resource path="res://titlescreen/fit-to-width-256.png" type="Texture" id=11]
-[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=12]
+[ext_resource path="res://titlescreen/credits.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/Gumela.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://titlescreen/magicienv3.png" type="Texture" id=7]
+[ext_resource path="res://titlescreen/audio1whv1.png" type="Texture" id=8]
+[ext_resource path="res://titlescreen/sound1.gd" type="Script" id=9]
+[ext_resource path="res://titlescreen/fit-to-width-256.png" type="Texture" id=10]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
+extra_spacing_bottom = 5
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
-font_data = ExtResource( 7 )
+font_data = ExtResource( 6 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -39,35 +39,35 @@ size_flags_vertical = 3
 
 [node name="titleCt" type="VBoxContainer" parent="Menu"]
 margin_right = 615.0
-margin_bottom = 61.0
+margin_bottom = 66.0
 alignment = 1
 
 [node name="Title" type="Label" parent="Menu/titleCt"]
 margin_right = 615.0
-margin_bottom = 61.0
+margin_bottom = 66.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0.694118, 0.360784, 0.0901961, 1 )
+custom_colors/font_color_shadow = Color( 0.866667, 0.0627451, 0.172549, 0.670588 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 5
 text = "LABYRINTHS MASTER"
 align = 1
 
 [node name="otherParts" type="HBoxContainer" parent="Menu"]
-margin_top = 65.0
+margin_top = 70.0
 margin_right = 615.0
-margin_bottom = 328.0
+margin_bottom = 326.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonsList" type="HBoxContainer" parent="Menu/otherParts"]
 margin_right = 305.0
-margin_bottom = 263.0
+margin_bottom = 256.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ls" type="VBoxContainer" parent="Menu/otherParts/ButtonsList"]
 margin_right = 305.0
-margin_bottom = 263.0
+margin_bottom = 256.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -79,31 +79,28 @@ margin_bottom = 14.0
 [node name="play" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 3 )]
 margin_top = 18.0
 margin_right = 305.0
-margin_bottom = 55.0
+margin_bottom = 66.0
 size_flags_horizontal = 3
 script = null
 
 [node name="rules" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 4 )]
-margin_top = 59.0
+margin_top = 70.0
 margin_right = 305.0
-margin_bottom = 96.0
+margin_bottom = 118.0
 size_flags_horizontal = 3
 script = null
 
-[node name="options" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 5 )]
+[node name="credits" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 5 )]
+margin_top = 122.0
 margin_right = 305.0
-margin_bottom = 137.0
-
-[node name="credits" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 6 )]
-margin_top = 141.0
-margin_right = 305.0
+margin_bottom = 170.0
 size_flags_horizontal = 3
 script = null
 
 [node name="version" type="Label" parent="Menu/otherParts/ButtonsList/ls"]
-margin_top = 182.0
+margin_top = 174.0
 margin_right = 305.0
-margin_bottom = 263.0
+margin_bottom = 255.0
 custom_fonts/font = SubResource( 2 )
 text = "
 CARAMEL PUBLISHING
@@ -120,14 +117,14 @@ size_flags_vertical = 3
 [node name="secondzone" type="HBoxContainer" parent="Menu/otherParts"]
 margin_left = 309.0
 margin_right = 615.0
-margin_bottom = 263.0
+margin_bottom = 256.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="mage" type="Sprite" parent="Menu/otherParts/secondzone"]
 position = Vector2( 104.989, 120.258 )
 scale = Vector2( 0.496686, 0.491281 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 flip_h = true
 __meta__ = {
 "_edit_group_": true
@@ -137,7 +134,7 @@ __meta__ = {
 self_modulate = Color( 0, 0, 0, 0.239216 )
 show_behind_parent = true
 position = Vector2( 6.48396, 14.1833 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 offset = Vector2( 2, 4 )
 flip_h = true
 
@@ -146,8 +143,8 @@ modulate = Color( 0.976471, 0.976471, 0.976471, 1 )
 self_modulate = Color( 0.964706, 0.933333, 0.933333, 1 )
 position = Vector2( 265.408, 107.984 )
 scale = Vector2( 0.466979, 0.491507 )
-texture = ExtResource( 9 )
-script = ExtResource( 10 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -164,7 +161,7 @@ flat = true
 [node name="fullscreen1" type="Sprite" parent="Menu/otherParts/secondzone"]
 position = Vector2( 265.767, 188.02 )
 scale = Vector2( 0.200467, 0.200467 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -185,7 +182,7 @@ margin_right = 94.0
 margin_bottom = -3.0
 text = "changer1234"
 
-[node name="fadeIn" parent="." instance=ExtResource( 12 )]
+[node name="fadeIn" parent="." instance=ExtResource( 11 )]
 visible = false
 
 [connection signal="pressed" from="Menu/otherParts/ButtonsList/ls/play" to="." method="_on_play_pressed"]

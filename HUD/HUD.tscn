@@ -13,8 +13,8 @@
 [ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=11]
 [ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=12]
 [ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=13]
-[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=14]
-[ext_resource path="res://player/mage1.png" type="Texture" id=15]
+[ext_resource path="res://HUD/customFull.png" type="Texture" id=14]
+[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -169,7 +169,6 @@ texture = ExtResource( 7 )
 stretch_mode = 4
 
 [node name="POPUPMC" type="MarginContainer" parent="."]
-visible = false
 margin_left = 151.621
 margin_top = 116.217
 margin_right = 551.621
@@ -262,7 +261,9 @@ flat = true
 [node name="home" type="Sprite" parent="POPUPMC"]
 position = Vector2( 302.309, 141.709 )
 scale = Vector2( 0.599208, 0.565656 )
-texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label4" type="Label" parent="POPUPMC/home"]
 margin_left = -78.95
@@ -282,25 +283,48 @@ margin_bottom = 59.0
 icon = ExtResource( 13 )
 flat = true
 
+[node name="Window" type="Sprite" parent="POPUPMC"]
+position = Vector2( 205.91, 142.817 )
+scale = Vector2( 0.599208, 0.565656 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label5" type="Label" parent="POPUPMC/Window"]
+margin_left = -78.95
+margin_top = -91.383
+margin_right = 67.05
+margin_bottom = -55.383
+custom_fonts/font = SubResource( 4 )
+text = "window"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Buttonwindow" type="Button" parent="POPUPMC/Window"]
+margin_left = -63.0
+margin_top = -56.0
+margin_right = 58.0
+margin_bottom = 59.0
+icon = ExtResource( 14 )
+flat = true
+
 [node name="close" type="Sprite" parent="POPUPMC"]
 position = Vector2( 355.017, 8.62626 )
 scale = Vector2( 0.453169, 0.453169 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Buttonclose" type="Button" parent="POPUPMC/close"]
 margin_left = -60.0222
 margin_top = -57.1756
 margin_right = 55.9778
 margin_bottom = 57.8244
-icon = ExtResource( 14 )
+icon = ExtResource( 15 )
 flat = true
-
-[node name="BossUltime" type="Sprite" parent="POPUPMC/close"]
-position = Vector2( -336.902, 301.957 )
-scale = Vector2( 1.35913, 1.35913 )
-texture = ExtResource( 15 )
 
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
 [connection signal="pressed" from="POPUPMC/audio/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
+[connection signal="pressed" from="POPUPMC/home/Buttonhome" to="." method="_on_Buttonhome_pressed"]
+[connection signal="pressed" from="POPUPMC/Window/Buttonwindow" to="." method="_on_Buttonwindow_pressed"]
 [connection signal="pressed" from="POPUPMC/close/Buttonclose" to="." method="_on_Buttonclose_pressed"]

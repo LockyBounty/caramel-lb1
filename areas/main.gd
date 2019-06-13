@@ -11,9 +11,6 @@ func _ready():
 	
 	if MainGlobal.enableAudio==true:
 		mMainZone.play()
-	
-	
-	#pass 
 
 func _on_baguette2_hit():
 	MainGlobal.cptbag +=1
@@ -23,13 +20,11 @@ func _on_baguette2_hit():
 func _on_codexv2_hit():
 	MainGlobal.cptcodex +=1
 	$HUD.update_codex(MainGlobal.cptcodex)
-		
 
 func _on_etoile_hit():
 	MainGlobal.cptetoile+=1
 	#On lance la fonction qu'on aura ecrit dans le HUD
 	$HUD.update_etoile(MainGlobal.cptetoile)
-	
 
 #func _on_codexv2_body_entered(body):# test de changement de scene
 #	get_tree().change_scene_to(next_scene)
