@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/player2.gd" type="Script" id=1]
-[ext_resource path="res://player/george.png" type="Texture" id=2]
+[ext_resource path="res://player/PLAYERSPRITE.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD/Analog.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idledown"
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -22,7 +22,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=2]
 resource_name = "idleleft"
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -37,7 +37,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=3]
 resource_name = "idleright"
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -52,7 +52,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=4]
 resource_name = "idleup"
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -67,7 +67,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -82,7 +82,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=6]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -97,7 +97,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=7]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -111,7 +111,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=8]
 tracks/0/type = "value"
-tracks/0/path = NodePath("george:frame")
+tracks/0/path = NodePath("PLAYERSPRITE:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -146,12 +146,7 @@ anims/walkup = SubResource( 8 )
 position = Vector2( -0.448669, 1.00655 )
 shape = SubResource( 9 )
 
-[node name="george" type="Sprite" parent="."]
-position = Vector2( -0.520721, 1.25238 )
-texture = ExtResource( 2 )
-vframes = 4
-hframes = 4
-frame = 4
+[node name="PLAYERSPRITE" parent="." instance=ExtResource( 2 )]
 
 [node name="Analog" parent="." instance=ExtResource( 3 )]
 

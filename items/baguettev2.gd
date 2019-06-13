@@ -12,6 +12,9 @@ func _on_baguette2_body_entered(body):
 	
 	emit_signal("hit")
 	print("You got the Apprentice Magic Wand!")
+	#Collision A desactiver après prise sinon le joueur
+	#pourra la retoucher pendant l'animation de la prise
+	$Collisionbag2.set_disabled(true) 
 	effect.start()
 	
 func _on_Tweenbag_tween_completed(object, key):

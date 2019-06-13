@@ -80,3 +80,5 @@ func _process(delta):
 #func _on_Button_pressed():
 #	get_tree().change_scene("res://areas/main.tscn")
 #	get_tree().reload_current_scene()
+
+

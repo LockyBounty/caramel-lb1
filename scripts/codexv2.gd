@@ -15,8 +15,8 @@ func _ready():
 
 func _on_codexv2_body_entered(body):
 	print("You got the codex!")
-	
 	emit_signal("hit")
+	$Collisioncodex.set_disabled(true) 
 	effect.start()
 
 

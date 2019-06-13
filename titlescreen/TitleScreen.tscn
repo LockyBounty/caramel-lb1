@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://titlescreen/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
@@ -11,12 +11,13 @@
 [ext_resource path="res://titlescreen/audio1whv1.png" type="Texture" id=9]
 [ext_resource path="res://titlescreen/sound1.gd" type="Script" id=10]
 [ext_resource path="res://titlescreen/fit-to-width-256.png" type="Texture" id=11]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 20
 font_data = ExtResource( 7 )
 
@@ -103,7 +104,7 @@ script = null
 margin_top = 182.0
 margin_right = 305.0
 margin_bottom = 263.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "
 CARAMEL PUBLISHING
 Version 1.0"
@@ -177,7 +178,19 @@ margin_right = -128.0
 margin_bottom = -128.0
 flat = true
 
+[node name="ButtonLOL" type="Button" parent="Menu/otherParts/secondzone/fullscreen1"]
+visible = false
+margin_top = -266.0
+margin_right = 94.0
+margin_bottom = -3.0
+text = "changer1234"
+
+[node name="fadeIn" parent="." instance=ExtResource( 12 )]
+visible = false
+
 [connection signal="pressed" from="Menu/otherParts/ButtonsList/ls/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="Menu/otherParts/secondzone/sound1" method="_on_Buttonsound1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="." method="_on_Buttonsound1_pressed"]
+[connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="Menu/otherParts/secondzone/sound1" method="_on_Buttonsound1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/fullscreen1/Buttonfull1" to="." method="_on_Buttonfull1_pressed"]
+[connection signal="pressed" from="Menu/otherParts/secondzone/fullscreen1/ButtonLOL" to="." method="_on_ButtonLOL_pressed"]
+[connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]
