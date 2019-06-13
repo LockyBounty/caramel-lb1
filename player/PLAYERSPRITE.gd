@@ -6,6 +6,7 @@ extends Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	set_texture(MainGlobal.charSelected)
 	#pass # Replace with function body.
 

@@ -1,20 +1,23 @@
 extends Node
 
-#var main_world = preload("res://areas/main.tscn")
+#Audio section :
 var texture1 = load("res://titlescreen/audio1whv1.png")
 var texture2 = load("res://titlescreen/audio2whv1.png")
-var textureChoice1 = load("res://player/george.png")
-var textureChoice2 = load("res://player/betty.png")
+
+var enableAudio = true #mute on/off
+var boolsound1 = true #texture switching
+
+#Character selection:
+var textureChoice1 = load("res://player/george.png") #male
+var textureChoice2 = load("res://player/betty.png") #female
+var charSelected = textureChoice1 #default
+#get_tree("res://player/PLAYERSPRITE").texture = set_texture(charSelected)
+
+#Gamezone:
+var menuTitle = load("res://titlescreen/TitleScreen.tscn")
+var menuCredits = load("res://titlescreen/CreditScreen.tscn")
 var world1 = load("res://areas/main.tscn")
- 
-
-var charSelected = textureChoice1
-
-
 var sceneSelected
-
-var enableAudio1 = true
-var boolsound1 = true
 
 
 

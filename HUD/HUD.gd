@@ -37,7 +37,12 @@ func _on_Buttonreset_pressed():
 
 
 func _on_Buttonaudio_pressed():
-	$"/root/MusicMainZone".play()
-
+	
+	if MainGlobal.enableAudio == true:
+		mMainZone.set_stream_paused(MainGlobal.enableAudio) 
+		MainGlobal.enableAudio = false
+	else :
+		mMainZone.set_stream_paused(MainGlobal.enableAudio)
+		MainGlobal.enableAudio = true
 
 

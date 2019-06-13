@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "MapAction",
+"base": "Reference",
 "class": "DialogueAction",
 "language": "GDScript",
 "path": "res://data/dialogAction.gd"
@@ -32,7 +32,6 @@ itemEntity="*res://engine/itemEntity.gd"
 mMainZone="*res://music/MusicMainZone.tscn"
 mCredits="*res://music/musicCredits.tscn"
 mMenu="*res://music/musicMenu.tscn"
-PL="*res://player/PLAYERSPRITE.tscn"
 
 [debug]
 

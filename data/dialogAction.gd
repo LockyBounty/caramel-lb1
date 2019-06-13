@@ -1,4 +1,4 @@
-extends MapAction
+#extends MapAction
 class_name DialogueAction
 
 export (String, FILE, "*.json") var chemin_dialogue : String
