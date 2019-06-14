@@ -48,6 +48,7 @@ func _on_Buttonaudio_pressed():
 
 func _on_Buttonhome_pressed():
 	#temporaire
+	mMainZone.stop()
 	get_tree().change_scene_to(MainGlobal.menuTitle)
 
 

@@ -11,7 +11,7 @@ func _ready():
 func _on_play_pressed():
 	$fadeIn.show()
 	$fadeIn.fade_in()
-	MainGlobal.sceneSelected = MainGlobal.world1
+	MainGlobal.sceneSelected = MainGlobal.menuSelection
 	
 func _on_credits_pressed():
 	$fadeIn.show()

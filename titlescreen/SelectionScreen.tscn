@@ -1,0 +1,144 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://titlescreen/SelectionScreen.gd" type="Script" id=1]
+[ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+extra_spacing_bottom = 10
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+extra_spacing_top = 10
+extra_spacing_bottom = 10
+font_data = ExtResource( 4 )
+
+[node name="SelectionScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="mainCont" type="MarginContainer" parent="."]
+margin_left = 31.208
+margin_top = 23.0
+margin_right = 677.208
+margin_bottom = 376.0
+
+[node name="titleselection" type="VBoxContainer" parent="mainCont"]
+margin_right = 646.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Labelselect" type="Label" parent="mainCont/titleselection"]
+margin_right = 646.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 5
+text = "Select your apprentice"
+align = 1
+uppercase = true
+
+[node name="sndpart" type="HBoxContainer" parent="mainCont"]
+margin_right = 646.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="selection1" type="HBoxContainer" parent="mainCont/sndpart"]
+margin_right = 321.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="male" type="Sprite" parent="mainCont/sndpart/selection1"]
+position = Vector2( 136.842, 106.315 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="mainCont/sndpart/selection1/male"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="ButtonMale" type="Button" parent="mainCont/sndpart/selection1/male"]
+margin_left = -0.420547
+margin_top = -0.789108
+margin_right = 75.5795
+margin_bottom = 69.2109
+icon = ExtResource( 3 )
+flat = true
+
+[node name="selection2" type="HBoxContainer" parent="mainCont/sndpart"]
+margin_left = 325.0
+margin_right = 646.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="female" type="Sprite" parent="mainCont/sndpart/selection2"]
+position = Vector2( 91.5786, 107.368 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="mainCont/sndpart/selection2/female"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="ButtonFemale" type="Button" parent="mainCont/sndpart/selection2/female"]
+margin_left = 1.05264
+margin_right = 77.0526
+margin_bottom = 70.0
+icon = ExtResource( 3 )
+flat = true
+
+[node name="selectplay" type="VBoxContainer" parent="mainCont"]
+margin_right = 646.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Spriteplay" type="Sprite" parent="mainCont/selectplay"]
+position = Vector2( 298.946, 319.999 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buttontoplay" type="Button" parent="mainCont/selectplay/Spriteplay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -63.5789
+margin_top = -36.4212
+margin_right = 124.421
+margin_bottom = 29.5788
+
+[node name="play" type="Label" parent="mainCont/selectplay/Spriteplay"]
+margin_left = -9.47366
+margin_top = -19.9999
+margin_right = 70.5263
+margin_bottom = 35.0001
+custom_fonts/font = SubResource( 2 )
+text = "play"
+align = 1
+uppercase = true
+
+[node name="Spritereturn" type="Sprite" parent="mainCont/selectplay"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ReturnButton" parent="mainCont/selectplay/Spritereturn" instance=ExtResource( 5 )]
+margin_left = -28.0
+margin_top = -24.0
+margin_right = 67.0
+margin_bottom = 51.0
+
+[connection signal="pressed" from="mainCont/selectplay/Spriteplay/Buttontoplay" to="." method="_on_Buttontoplay_pressed"]
+[connection signal="pressed" from="mainCont/selectplay/Spritereturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]

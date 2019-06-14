@@ -16,6 +16,7 @@ var charSelected = textureChoice1 #default
 #Gamezone:
 var menuTitle = load("res://titlescreen/TitleScreen.tscn")
 var menuCredits = load("res://titlescreen/CreditScreen.tscn")
+var menuSelection = load("res://titlescreen/SelectionScreen.tscn")
 var world1 = load("res://areas/main.tscn")
 var sceneSelected
 

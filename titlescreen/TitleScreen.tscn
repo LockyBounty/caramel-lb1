@@ -187,8 +187,8 @@ visible = false
 
 [connection signal="pressed" from="Menu/otherParts/ButtonsList/ls/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/otherParts/ButtonsList/ls/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="." method="_on_Buttonsound1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="Menu/otherParts/secondzone/sound1" method="_on_Buttonsound1_pressed"]
+[connection signal="pressed" from="Menu/otherParts/secondzone/sound1/Buttonsound1" to="." method="_on_Buttonsound1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/fullscreen1/Buttonfull1" to="." method="_on_Buttonfull1_pressed"]
 [connection signal="pressed" from="Menu/otherParts/secondzone/fullscreen1/ButtonLOL" to="." method="_on_ButtonLOL_pressed"]
 [connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]
