@@ -48,6 +48,7 @@ window/size/width=704
 window/size/height=400
 window/size/test_width=704
 window/size/test_height=400
+window/vsync/use_vsync=false
 window/per_pixel_transparency/enabled=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
@@ -67,10 +68,14 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
-quality/intended_usage/framebuffer_allocation=0
-quality/intended_usage/framebuffer_allocation.mobile=0
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/directional_shadow/size=256
+quality/directional_shadow/size.mobile=256
+quality/shadow_atlas/size=256
+quality/shadow_atlas/size.mobile=256
 quality/reflections/texture_array_reflections=false
 quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"

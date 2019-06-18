@@ -4,6 +4,9 @@ extends Node
 var texture1 = load("res://titlescreen/audio1whv1.png")
 var texture2 = load("res://titlescreen/audio2whv1.png")
 
+var sound1HUD = load("res://HUD/Asset 43flat_@2x.png")
+var sound2HUD = load("res://HUD/customAudioDisabled.png")
+
 var enableAudio = true #mute on/off
 var boolsound1 = true #texture switching
 
@@ -15,12 +18,14 @@ var charSelected = textureChoice1 #default
 
 #Gamezone:
 var menuTitle = load("res://titlescreen/TitleScreen.tscn")
+var menuRules = load("res://titlescreen/RulesScreen.tscn")
 var menuCredits = load("res://titlescreen/CreditScreen.tscn")
 var menuSelection = load("res://titlescreen/SelectionScreen.tscn")
 var world1 = load("res://areas/main.tscn")
 var sceneSelected
 
 
+var cptMenuSound = 0
 
 var cptcodex = 0
 var cptbag = 0
@@ -33,3 +38,7 @@ func _ready():
 func fonctionFullscreen():
 	OS.window_fullscreen = !OS.window_fullscreen
 
+func fonctionResetCpt():
+	cptbag =0
+	cptcodex =0
+	cptetoile =0

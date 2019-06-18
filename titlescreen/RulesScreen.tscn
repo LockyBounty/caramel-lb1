@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://titlescreen/RulesScreen.gd" type="Script" id=1]
+[ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 3 )
+
+[node name="RulesScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="mainCont" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 46.0
+margin_top = 24.0
+margin_right = -32.0
+margin_bottom = -33.0
+
+[node name="titlepart" type="VBoxContainer" parent="mainCont"]
+margin_right = 692.0
+margin_bottom = 343.0
+
+[node name="title" type="Label" parent="mainCont/titlepart"]
+margin_right = 692.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+text = "Rules"
+align = 1
+uppercase = true
+
+[node name="text" type="Label" parent="mainCont/titlepart"]
+margin_top = 80.0
+margin_right = 692.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 2 )
+text = "Try to find a way through the labyrinth, 
+the great mage is waiting!"
+
+[node name="rest1" type="VBoxContainer" parent="mainCont"]
+margin_right = 692.0
+margin_bottom = 343.0
+
+[node name="returnbutton" type="Sprite" parent="mainCont/rest1"]
+position = Vector2( -44.4267, -23.8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ReturnButton" parent="mainCont/rest1/returnbutton" instance=ExtResource( 4 )]
+margin_left = 1.0
+margin_right = 95.0
+
+[connection signal="pressed" from="mainCont/rest1/returnbutton/ReturnButton" to="." method="_on_ReturnButton_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/trapeze1.png" type="Texture" id=2]
@@ -11,10 +11,11 @@
 [ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=9]
 [ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=10]
 [ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=11]
-[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=12]
-[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=13]
-[ext_resource path="res://HUD/customFull.png" type="Texture" id=14]
-[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=15]
+[ext_resource path="res://HUD/audio.gd" type="Script" id=12]
+[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=13]
+[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=14]
+[ext_resource path="res://HUD/customFull.png" type="Texture" id=15]
+[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -169,7 +170,6 @@ texture = ExtResource( 7 )
 stretch_mode = 4
 
 [node name="POPUPMC" type="MarginContainer" parent="."]
-visible = false
 margin_left = 151.621
 margin_top = 116.217
 margin_right = 551.621
@@ -213,12 +213,13 @@ margin_bottom = 51.0
 icon = ExtResource( 10 )
 flat = true
 
-[node name="audio" type="Sprite" parent="POPUPMC"]
+[node name="audioHUD" type="Sprite" parent="POPUPMC"]
 position = Vector2( 100.675, 144.276 )
 scale = Vector2( 0.635349, 0.635971 )
 texture = ExtResource( 11 )
+script = ExtResource( 12 )
 
-[node name="Label2" type="Label" parent="POPUPMC/audio"]
+[node name="Label2" type="Label" parent="POPUPMC/audioHUD"]
 margin_left = -60.0
 margin_top = -79.0
 margin_right = 64.0
@@ -228,18 +229,17 @@ text = "Audio"
 align = 1
 valign = 1
 
-[node name="Buttonaudio" type="Button" parent="POPUPMC/audio"]
+[node name="Buttonaudio" type="Button" parent="POPUPMC/audioHUD"]
 margin_left = -58.0884
 margin_top = -51.9568
 margin_right = 55.9116
 margin_bottom = 51.0432
-icon = ExtResource( 11 )
 flat = true
 
 [node name="reset" type="Sprite" parent="POPUPMC"]
 position = Vector2( 255.942, 61.1415 )
 scale = Vector2( 0.559485, 0.54233 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="Label3" type="Label" parent="POPUPMC/reset"]
 margin_left = -54.5797
@@ -256,7 +256,7 @@ margin_left = -61.5573
 margin_top = -57.2233
 margin_right = 61.4427
 margin_bottom = 56.7767
-icon = ExtResource( 12 )
+icon = ExtResource( 13 )
 flat = true
 
 [node name="home" type="Sprite" parent="POPUPMC"]
@@ -281,7 +281,7 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 13 )
+icon = ExtResource( 14 )
 flat = true
 
 [node name="Window" type="Sprite" parent="POPUPMC"]
@@ -307,24 +307,25 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 14 )
+icon = ExtResource( 15 )
 flat = true
 
 [node name="close" type="Sprite" parent="POPUPMC"]
 position = Vector2( 355.017, 8.62626 )
 scale = Vector2( 0.453169, 0.453169 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="Buttonclose" type="Button" parent="POPUPMC/close"]
 margin_left = -60.0222
 margin_top = -57.1756
 margin_right = 55.9778
 margin_bottom = 57.8244
-icon = ExtResource( 15 )
+icon = ExtResource( 16 )
 flat = true
 
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
-[connection signal="pressed" from="POPUPMC/audio/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
+[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
+[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
 [connection signal="pressed" from="POPUPMC/home/Buttonhome" to="." method="_on_Buttonhome_pressed"]
 [connection signal="pressed" from="POPUPMC/Window/Buttonwindow" to="." method="_on_Buttonwindow_pressed"]

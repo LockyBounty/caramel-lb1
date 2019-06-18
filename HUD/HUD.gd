@@ -30,9 +30,7 @@ func _on_Buttonopenmenu_pressed():
 
 func _on_Buttonreset_pressed():
 	get_tree().change_scene("res://areas/main.tscn")
-	MainGlobal.cptbag =0
-	MainGlobal.cptcodex =0
-	MainGlobal.cptetoile =0
+	MainGlobal.fonctionResetCpt()
 	
 
 
@@ -49,6 +47,8 @@ func _on_Buttonaudio_pressed():
 func _on_Buttonhome_pressed():
 	#temporaire
 	mMainZone.stop()
+	MainGlobal.cptMenuSound=0
+	MainGlobal.fonctionResetCpt()
 	get_tree().change_scene_to(MainGlobal.menuTitle)
 
 

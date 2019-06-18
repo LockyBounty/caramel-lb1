@@ -1,11 +1,19 @@
 extends Control
 
+var colors = Gradient.new()
 
+var colors_array = [Color(1, .5, .5), Color(.5, .5, 1), Color(.5,.5,1)]
+var box_size = Vector2.ZERO
+
+onready var box  = $BGcolor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	
-	mMenu.play()
+	if MainGlobal.cptMenuSound == 0:
+		mMenu.play()
+		MainGlobal.cptMenuSound+=1
 
 
 func _on_play_pressed():
@@ -13,9 +21,15 @@ func _on_play_pressed():
 	$fadeIn.fade_in()
 	MainGlobal.sceneSelected = MainGlobal.menuSelection
 	
+func _on_rules_pressed():
+	$fadeIn.show()
+	$fadeIn.fade_in()
+	MainGlobal.sceneSelected = MainGlobal.menuRules
+	
 func _on_credits_pressed():
 	$fadeIn.show()
 	$fadeIn.fade_in()
+	mMenu.stop()
 	MainGlobal.sceneSelected = MainGlobal.menuCredits
 
 func _on_Buttonfull1_pressed():
@@ -41,7 +55,9 @@ func _on_Buttonsound1_pressed():
 
 
 func _on_fadeIn_fadeIn_finished():
-	mMenu.stop()
+	
 	get_tree().change_scene_to(MainGlobal.sceneSelected)
+
+
 
 
