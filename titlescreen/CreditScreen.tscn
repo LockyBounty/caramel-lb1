@@ -59,7 +59,7 @@ size_flags_vertical = 0
 
 [node name="creditsblock1" type="HBoxContainer" parent="mainblock/secondblock"]
 margin_right = 302.0
-margin_bottom = 202.0
+margin_bottom = 231.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
@@ -67,7 +67,7 @@ alignment = 1
 [node name="listcredits1" type="VBoxContainer" parent="mainblock/secondblock/creditsblock1"]
 margin_left = 53.0
 margin_right = 249.0
-margin_bottom = 202.0
+margin_bottom = 231.0
 
 [node name="creditdevelopper" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
 margin_right = 196.0
@@ -99,7 +99,7 @@ margin_top = 119.0
 margin_right = 196.0
 margin_bottom = 144.0
 custom_fonts/font = SubResource( 3 )
-text = "Kenney.nl (Map elements)"
+text = "kenney.nl (Map elements)"
 align = 1
 
 [node name="art2" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
@@ -116,6 +116,14 @@ margin_right = 196.0
 margin_bottom = 202.0
 custom_fonts/font = SubResource( 3 )
 text = "Radomir Dopieralski (Sprites)"
+align = 1
+
+[node name="art4" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
+margin_top = 206.0
+margin_right = 196.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 3 )
+text = "charat.me (Selection Char)"
 align = 1
 
 [node name="creditsblock2" type="HBoxContainer" parent="mainblock/secondblock"]

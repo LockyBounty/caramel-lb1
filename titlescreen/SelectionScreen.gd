@@ -13,8 +13,8 @@ func _on_ReturnButton_pressed():
 
 func _on_ButtonMale_pressed():
 	MainGlobal.charSelected = MainGlobal.textureChoice1
-	print("char1")
+	#print("char1")
 
 func _on_ButtonFemale_pressed():
 	MainGlobal.charSelected = MainGlobal.textureChoice2
-	print("char2")
+	#print("char2")

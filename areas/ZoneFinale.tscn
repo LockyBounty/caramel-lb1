@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://areas/ZoneFinale.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://player/player2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://items/codexv2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://player/finalBoss.tscn" type="PackedScene" id=10]
 
 [node name="ZoneFinale" type="Node"]
 script = ExtResource( 1 )
@@ -88,4 +89,9 @@ position = Vector2( 364.739, 227.147 )
 ] instance=ExtResource( 9 )]
 position = Vector2( 219.092, 296.418 )
 
+[node name="finalBoss" parent="." instance=ExtResource( 10 )]
+position = Vector2( 664.354, 148.925 )
+
 [connection signal="pressed" from="Player2/Button" to="Player2" method="_on_Button_pressed"]
+[connection signal="body_entered" from="finalBoss" to="." method="_on_finalBoss_body_entered"]
+[connection signal="body_exited" from="finalBoss" to="." method="_on_finalBoss_body_exited"]

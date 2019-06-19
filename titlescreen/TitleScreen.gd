@@ -53,9 +53,7 @@ func _on_Buttonsound1_pressed():
 #	PL.set_texture(MainGlobal.charSelected)
 
 
-
-func _on_fadeIn_fadeIn_finished():
-	
+func _on_fadeIn_fadeIn_finished():	
 	get_tree().change_scene_to(MainGlobal.sceneSelected)
 
 

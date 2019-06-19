@@ -61,8 +61,6 @@ func _process(delta):
 #		anim_switch("idle")
 
 
-
-
 #func controls_loop():
 	#control directionnel pour clavier
 ##	var LEFT	= Input.is_action_pressed("ui_left")
