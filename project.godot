@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Labyrinth1"
-run/main_scene="res://areas/main.tscn"
+run/main_scene="res://titlescreen/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

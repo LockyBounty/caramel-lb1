@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://titlescreen/SelectionScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://titlescreen/chibi_george_custom_lockyv4-crop+res.png" type="Texture" id=5]
+[ext_resource path="res://titlescreen/chibi_betty_custom_lockyv2-crop+res.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -12,15 +13,20 @@ extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 20
+size = 18
 extra_spacing_top = 10
 extra_spacing_bottom = 10
-font_data = ExtResource( 4 )
+font_data = ExtResource( 3 )
 
 [node name="SelectionScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0901961, 0.533333, 0.192157, 1 )
 
 [node name="mainCont" type="MarginContainer" parent="."]
 margin_left = 31.208
@@ -45,85 +51,26 @@ text = "Select your apprentice"
 align = 1
 uppercase = true
 
-[node name="sndpart" type="HBoxContainer" parent="mainCont"]
-margin_right = 646.0
-margin_bottom = 353.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="selection1" type="HBoxContainer" parent="mainCont/sndpart"]
-margin_right = 321.0
-margin_bottom = 353.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="male" type="Sprite" parent="mainCont/sndpart/selection1"]
-position = Vector2( 136.842, 106.315 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Label" type="Label" parent="mainCont/sndpart/selection1/male"]
-margin_right = 40.0
-margin_bottom = 14.0
-
-[node name="ButtonMale" type="Button" parent="mainCont/sndpart/selection1/male"]
-margin_left = -0.420547
-margin_top = -0.789108
-margin_right = 75.5795
-margin_bottom = 69.2109
-icon = ExtResource( 3 )
-flat = true
-
-[node name="selection2" type="HBoxContainer" parent="mainCont/sndpart"]
-margin_left = 325.0
-margin_right = 646.0
-margin_bottom = 353.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="female" type="Sprite" parent="mainCont/sndpart/selection2"]
-position = Vector2( 91.5786, 107.368 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Label" type="Label" parent="mainCont/sndpart/selection2/female"]
-margin_right = 40.0
-margin_bottom = 14.0
-
-[node name="ButtonFemale" type="Button" parent="mainCont/sndpart/selection2/female"]
-margin_left = 1.05264
-margin_right = 77.0526
-margin_bottom = 70.0
-icon = ExtResource( 3 )
-flat = true
-
 [node name="selectplay" type="VBoxContainer" parent="mainCont"]
 margin_right = 646.0
-margin_bottom = 353.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 
 [node name="Spriteplay" type="Sprite" parent="mainCont/selectplay"]
-position = Vector2( 298.946, 319.999 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 301.81, 322.863 )
 
 [node name="Buttontoplay" type="Button" parent="mainCont/selectplay/Spriteplay"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -63.5789
-margin_top = -36.4212
-margin_right = 124.421
-margin_bottom = 29.5788
+margin_left = -34.5264
+margin_top = -8.94736
+margin_right = 104.474
+margin_bottom = 39.0526
 
 [node name="play" type="Label" parent="mainCont/selectplay/Spriteplay"]
-margin_left = -9.47366
-margin_top = -19.9999
-margin_right = 70.5263
-margin_bottom = 35.0001
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -5.82007
+margin_top = -2.2142
+margin_right = 73.1799
+margin_bottom = 37.7858
 custom_fonts/font = SubResource( 2 )
 text = "play"
 align = 1
@@ -134,11 +81,65 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ReturnButton" parent="mainCont/selectplay/Spritereturn" instance=ExtResource( 5 )]
+[node name="ReturnButton" parent="mainCont/selectplay/Spritereturn" instance=ExtResource( 4 )]
 margin_left = -28.0
 margin_top = -24.0
 margin_right = 67.0
 margin_bottom = 51.0
 
+[node name="sndpart" type="HBoxContainer" parent="mainCont"]
+margin_right = 646.0
+size_flags_vertical = 0
+
+[node name="selection1" type="HBoxContainer" parent="mainCont/sndpart"]
+margin_right = 321.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="male" type="Sprite" parent="mainCont/sndpart/selection1"]
+position = Vector2( 114.102, 72.5608 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="mainCont/sndpart/selection1/male"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="ButtonMale" type="Button" parent="mainCont/sndpart/selection1/male"]
+margin_top = -1.0
+margin_right = 612.0
+margin_bottom = 605.0
+rect_scale = Vector2( 0.33, 0.33 )
+icon = ExtResource( 5 )
+flat = true
+
+[node name="selection2" type="HBoxContainer" parent="mainCont/sndpart"]
+margin_left = 325.0
+margin_right = 646.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="female" type="Sprite" parent="mainCont/sndpart/selection2"]
+position = Vector2( 48.7327, 75.6024 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="mainCont/sndpart/selection2/female"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="ButtonFemale" type="Button" parent="mainCont/sndpart/selection2/female"]
+margin_left = 1.0
+margin_top = -8.0
+margin_right = 613.0
+margin_bottom = 626.0
+rect_scale = Vector2( 0.33, 0.33 )
+icon = ExtResource( 6 )
+flat = true
+
 [connection signal="pressed" from="mainCont/selectplay/Spriteplay/Buttontoplay" to="." method="_on_Buttontoplay_pressed"]
 [connection signal="pressed" from="mainCont/selectplay/Spritereturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="pressed" from="mainCont/sndpart/selection1/male/ButtonMale" to="." method="_on_ButtonMale_pressed"]
+[connection signal="pressed" from="mainCont/sndpart/selection2/female/ButtonFemale" to="." method="_on_ButtonFemale_pressed"]

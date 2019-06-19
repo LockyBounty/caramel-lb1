@@ -12,9 +12,11 @@ var boolsound1 = true #texture switching
 
 #Character selection:
 var textureChoice1 = load("res://player/george.png") #male
-var textureChoice2 = load("res://player/betty.png") #female
+var textureChoice2 = load("res://player/betty-customized-pink.png") #female
 var charSelected = textureChoice1 #default
-#get_tree("res://player/PLAYERSPRITE").texture = set_texture(charSelected)
+
+#func changeChar(selection):
+#	get_tree("res://player/PLAYERSPRITE").texture = set_texture(charSelected)
 
 #Gamezone:
 var menuTitle = load("res://titlescreen/TitleScreen.tscn")
