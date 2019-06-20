@@ -1,21 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://data/DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="DialogBox" type="Polygon2D"]
 position = Vector2( 103.179, 84.4503 )
 scale = Vector2( 0.707317, 0.707317 )
 color = Color( 0.211765, 0.211765, 0.211765, 1 )
 polygon = PoolVector2Array( 0.773857, 302.351, 704.268, 301.123, 704.268, 401.798, 0.773857, 401.798 )
+script = ExtResource( 1 )
 
-[node name="jsonGetter" type="RichTextLabel" parent="."]
+[node name="DialogGetter" type="RichTextLabel" parent="."]
 margin_left = 81.8378
 margin_top = 322.962
 margin_right = 598.838
 margin_bottom = 386.962
 custom_fonts/normal_font = SubResource( 1 )
-text = "Hello there, I have candies for you."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
 
