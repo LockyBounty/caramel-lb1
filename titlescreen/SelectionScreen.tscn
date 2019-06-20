@@ -100,7 +100,6 @@ size_flags_vertical = 3
 position = Vector2( 161.569, 179.301 )
 scale = Vector2( 0.442674, 0.442674 )
 texture = ExtResource( 5 )
-flip_h = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -129,6 +128,7 @@ size_flags_vertical = 3
 position = Vector2( 156.582, 178.652 )
 scale = Vector2( 0.465544, 0.457952 )
 texture = ExtResource( 6 )
+flip_h = true
 __meta__ = {
 "_edit_group_": true
 }
