@@ -1,4 +1,4 @@
-{"id1":{"name":"Mathilda","text":["Hey, you!","Yes, you!","I'm lost", "Are you going to the magic tower, too ?!", "Can I come with you?"] },
+{"id1":{"name":"Mathilda","text1":["Hey, you!","Yes, you!","I'm lost", "Are you going to the magic tower, too ?!", "Can I come with you?"], "choice":["Yes","No"], "text2":["Hum, kay...", "What's your name, again?"] },
     "id2":{"name":"George", "text":"Me?"},
     "id3":{"name":"Mathilda", "text":"Are you going to the tower?"} 
 }
