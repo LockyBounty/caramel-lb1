@@ -12,12 +12,14 @@ func _on_Buttonsound1_pressed():
 	_loadSoundIcon()
 
 func _loadSoundIcon():
-	if MainGlobal.boolsound1==false:
+	MainGlobal.boolsound1 = !MainGlobal.boolsound1
+	
+	if MainGlobal.boolsound1:
 		set_texture(MainGlobal.texture1)
-		MainGlobal.boolsound1=true
+		
 		#print("opened")
 	else:
 		set_texture(MainGlobal.texture2)
-		MainGlobal.boolsound1=false 
+		
 		#print("closed")
 	

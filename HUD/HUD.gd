@@ -36,18 +36,25 @@ func _on_Buttonreset_pressed():
 
 func _on_Buttonaudio_pressed():
 	
+	MainGlobal.enableAudio = !MainGlobal.enableAudio
+	
 	if MainGlobal.enableAudio == true:
-		mMainZone.set_stream_paused(MainGlobal.enableAudio) 
-		MainGlobal.enableAudio = false
+		mMainZone.set_stream_paused(false) 
+		#print(MainGlobal.enableAudio)
+		
+		if mMainZone.is_playing()==false: 
+			mMainZone.play()
+			#evite le non-chargement d'audio après des changements de scenes
 	else :
-		mMainZone.set_stream_paused(MainGlobal.enableAudio)
-		MainGlobal.enableAudio = true
-
+		mMainZone.set_stream_paused(true)
+#
+		
+	
 
 func _on_Buttonhome_pressed():
 	#temporaire
 	mMainZone.stop()
-	MainGlobal.cptMenuSound=0
+	MainGlobal.boolMenuSound = true
 	MainGlobal.fonctionResetCpt()
 	get_tree().change_scene_to(MainGlobal.menuTitle)
 

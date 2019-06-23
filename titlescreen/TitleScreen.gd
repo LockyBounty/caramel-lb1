@@ -11,9 +11,11 @@ onready var box  = $BGcolor
 func _ready():
 
 	
-	if MainGlobal.cptMenuSound == 0:
+	if MainGlobal.boolMenuSound && MainGlobal.enableAudio:
 		mMenu.play()
-		MainGlobal.cptMenuSound+=1
+	
+	
+		
 
 
 func _on_play_pressed():
@@ -37,15 +39,18 @@ func _on_Buttonfull1_pressed():
 
 
 func _on_Buttonsound1_pressed():
-	if MainGlobal.enableAudio == true:
+	
+	if MainGlobal.enableAudio == false:
 		#pause Audio
-		mMenu.set_stream_paused(MainGlobal.enableAudio) 
-		#set then global var to false to switch
-		MainGlobal.enableAudio = false
+		mMenu.set_stream_paused(MainGlobal.enableAudio)  
+		if mMenu.is_playing()==false:
+			mMenu.play()
 	else :
-		mMenu.set_stream_paused(MainGlobal.enableAudio)
-		#set then global var to true to switch
-		MainGlobal.enableAudio = true
+		#unpause Audio
+		mMenu.set_stream_paused(MainGlobal.enableAudio) 
+		
+	
+	MainGlobal.enableAudio = !MainGlobal.enableAudio #(switch true false)
 
 
 #func _on_ButtonLOL_pressed():

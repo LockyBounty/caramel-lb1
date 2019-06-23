@@ -7,7 +7,7 @@ func _ready():
 func _on_ReturnButton_pressed():
 	$fadeIn.show()
 	$fadeIn.fade_in()
-	MainGlobal.cptMenuSound = 0
+	MainGlobal.boolMenuSound = true
 	
 
 func _on_fadeIn_fadeIn_finished():

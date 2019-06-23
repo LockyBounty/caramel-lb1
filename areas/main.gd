@@ -8,9 +8,12 @@ func _ready():
 	
 	#stop menu music
 	mMenu.stop()
+	print(MainGlobal.enableAudio)
 	
-	if MainGlobal.enableAudio==true:
+	if MainGlobal.enableAudio:
 		mMainZone.play()
+		
+	
 
 func _on_baguette2_hit():
 	MainGlobal.cptbag +=1

@@ -34,7 +34,7 @@ var sceneSelected
 #var charSexSelected = selectedBoy #default
 
 
-var cptMenuSound = 0
+var boolMenuSound = true
 
 var cptcodex = 0
 var cptbag = 0
