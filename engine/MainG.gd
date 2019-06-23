@@ -26,6 +26,13 @@ var menuSelection = load("res://titlescreen/SelectionScreen.tscn")
 var world1 = load("res://areas/main.tscn")
 var sceneSelected
 
+#character selection:
+
+#var selectedBoy = true
+#var selectedGirl = true
+#
+#var charSexSelected = selectedBoy #default
+
 
 var cptMenuSound = 0
 
