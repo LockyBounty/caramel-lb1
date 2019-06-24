@@ -4,8 +4,8 @@
 [ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=5]
-[ext_resource path="res://items/500px-Godot-white.png" type="Texture" id=6]
+[ext_resource path="res://titlescreen/ReturnButtonRight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -31,20 +31,20 @@ script = ExtResource( 1 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.603922, 0.105882, 0.780392, 1 )
+color = Color( 0.513726, 0.0313726, 0.686275, 1 )
 
 [node name="mainblock" type="VBoxContainer" parent="."]
-margin_left = 49.0
+margin_left = 22.0
 margin_top = 37.0
-margin_right = 658.0
-margin_bottom = 372.0
+margin_right = 677.0
+margin_bottom = 418.0
 
 [node name="firstblock" type="VBoxContainer" parent="mainblock"]
-margin_right = 609.0
+margin_right = 655.0
 margin_bottom = 36.0
 
 [node name="credittitle" type="Label" parent="mainblock/firstblock"]
-margin_right = 609.0
+margin_right = 655.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 1 )
 text = "CREDITS"
@@ -53,20 +53,20 @@ valign = 1
 
 [node name="secondblock" type="HBoxContainer" parent="mainblock"]
 margin_top = 40.0
-margin_right = 609.0
-margin_bottom = 325.0
+margin_right = 655.0
+margin_bottom = 353.0
 size_flags_vertical = 0
 
 [node name="creditsblock1" type="HBoxContainer" parent="mainblock/secondblock"]
-margin_right = 302.0
+margin_right = 325.0
 margin_bottom = 231.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
 
 [node name="listcredits1" type="VBoxContainer" parent="mainblock/secondblock/creditsblock1"]
-margin_left = 53.0
-margin_right = 249.0
+margin_left = 64.0
+margin_right = 260.0
 margin_bottom = 231.0
 
 [node name="creditdevelopper" type="Label" parent="mainblock/secondblock/creditsblock1/listcredits1"]
@@ -127,20 +127,20 @@ text = "charat.me (Selection Char)"
 align = 1
 
 [node name="creditsblock2" type="HBoxContainer" parent="mainblock/secondblock"]
-margin_left = 306.0
-margin_right = 609.0
-margin_bottom = 285.0
+margin_left = 329.0
+margin_right = 655.0
+margin_bottom = 313.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
 
 [node name="listcredits2" type="VBoxContainer" parent="mainblock/secondblock/creditsblock2"]
-margin_left = 52.0
-margin_right = 251.0
-margin_bottom = 285.0
+margin_left = 48.0
+margin_right = 277.0
+margin_bottom = 313.0
 
 [node name="creditmusic" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
-margin_right = 199.0
+margin_right = 229.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 2 )
 text = "music"
@@ -149,7 +149,7 @@ uppercase = true
 
 [node name="mus1" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
 margin_top = 45.0
-margin_right = 199.0
+margin_right = 229.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 3 )
 text = "David Vitas"
@@ -157,7 +157,7 @@ align = 1
 
 [node name="mus2" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
 margin_top = 74.0
-margin_right = 199.0
+margin_right = 229.0
 margin_bottom = 99.0
 custom_fonts/font = SubResource( 3 )
 text = "Kouichi Morita"
@@ -165,7 +165,7 @@ align = 1
 
 [node name="creditsp" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
 margin_top = 103.0
-margin_right = 199.0
+margin_right = 229.0
 margin_bottom = 144.0
 custom_fonts/font = SubResource( 2 )
 text = "special thanks"
@@ -174,26 +174,30 @@ uppercase = true
 
 [node name="sp1" type="Label" parent="mainblock/secondblock/creditsblock2/listcredits2"]
 margin_top = 148.0
-margin_right = 199.0
-margin_bottom = 285.0
+margin_right = 229.0
+margin_bottom = 313.0
 custom_fonts/font = SubResource( 3 )
 text = "Silvia B., Michel D.,
   Jean-Michel D., Mathilde B.,
  Killian B., Colienne D., 
 Tania D., Cécile M., 
-Loïc, Lisanne, Quentin,..."
+Loïc S., Lisanne M.,
+ Quentin B., Mannon G, Maeva T."
 align = 1
 
 [node name="ReturnButton" parent="." instance=ExtResource( 4 )]
 
-[node name="fadeIn" parent="." instance=ExtResource( 5 )]
+[node name="ReturnButton2" parent="." instance=ExtResource( 5 )]
+margin_left = 703.0
+margin_top = 72.0
+margin_right = 789.0
+margin_bottom = 142.0
+
+[node name="fadeIn" parent="." instance=ExtResource( 6 )]
 visible = false
 margin_left = 1.05263
 margin_right = 1.05261
 
-[node name="GodotLogo" type="Sprite" parent="."]
-position = Vector2( 206.721, 344.798 )
-scale = Vector2( 0.538, 0.518 )
-texture = ExtResource( 6 )
 [connection signal="pressed" from="ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="pressed" from="ReturnButton2" to="." method="_on_ReturnButton2_pressed"]
 [connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]
