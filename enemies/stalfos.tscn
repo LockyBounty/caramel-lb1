@@ -42,3 +42,4 @@ __meta__ = {
 visible = false
 scale = Vector2( 0.76, 0.8 )
 shape = SubResource( 2 )
+

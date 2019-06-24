@@ -29,6 +29,11 @@ func _on_etoile_hit():
 	#On lance la fonction qu'on aura ecrit dans le HUD
 	$HUD.update_etoile(MainGlobal.cptetoile)
 
+func _on_etoile2_hit():
+	MainGlobal.cptetoile+=1
+	#On lance la fonction qu'on aura ecrit dans le HUD
+	$HUD.update_etoile(MainGlobal.cptetoile)
+
 #func _on_codexv2_body_entered(body):# test de changement de scene
 #	get_tree().change_scene_to(next_scene)
 
@@ -44,6 +49,8 @@ func _on_Button_pressed():
 #	OS.window_fullscreen = !OS.window_fullscreen
 #	print("it works")
 	
+
+
 
 
 

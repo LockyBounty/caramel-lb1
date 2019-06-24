@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://areas/main.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://areas/Overworld_Theme.ogg" type="AudioStream" id=8]
 [ext_resource path="res://items/etoile.tscn" type="PackedScene" id=9]
 [ext_resource path="res://player/player3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://enemies/Slime.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -78,8 +79,16 @@ position = Vector2( 297, 154 )
 [node name="npc" parent="." instance=ExtResource( 10 )]
 position = Vector2( 325.932, 190.845 )
 scale = Vector2( 0.7, 0.7 )
+
+[node name="Slime" parent="." instance=ExtResource( 11 )]
+position = Vector2( 81.8737, 175.143 )
+
+[node name="etoile2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 133.361, 132.63 )
+
 [connection signal="hit" from="codexv2" to="." method="_on_codexv2_hit"]
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]
 [connection signal="pressed" from="Buttonstop" to="." method="_on_Buttonstop_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="hit" from="etoile" to="." method="_on_etoile_hit"]
+[connection signal="hit" from="etoile2" to="." method="_on_etoile2_hit"]

@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Slime.gd" type="Script" id=1]
+[ext_resource path="res://enemies/slimeGreen.png" type="Texture" id=2]
+[ext_resource path="res://enemies/slimeGreen_walk.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "goLeft"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("slimeA:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "goRight"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("slimeA:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("slimeA:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 10.1117
+height = 9.32068
+
+[node name="Slime" type="KinematicBody2D"]
+position = Vector2( 312.75, 193.963 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="slimeA" type="Sprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="animSlime" type="AnimationPlayer" parent="."]
+anims/goLeft = SubResource( 1 )
+anims/goRight = SubResource( 2 )
+anims/idle = SubResource( 4 )
+
+[node name="CollisionSlime" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 5 )
+

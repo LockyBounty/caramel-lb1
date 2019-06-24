@@ -205,6 +205,7 @@ flat = true
 
 [node name="AnimFemale" type="AnimationPlayer" parent="mainCont/sndpart/selection2"]
 anims/animTurnFemale = SubResource( 4 )
+
 [connection signal="pressed" from="mainCont/selectplay/Spriteplay/Buttontoplay" to="." method="_on_Buttontoplay_pressed"]
 [connection signal="pressed" from="mainCont/selectplay/Spritereturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="mainCont/sndpart/selection1/male/ButtonMale" to="." method="_on_ButtonMale_pressed"]
