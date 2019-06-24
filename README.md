@@ -1,5 +1,6 @@
-# Caramel-lb1
-Caramel - Labyrinth 1 
+# Game :
+
+Labyrinths Master
 
 ## Tools :
 
@@ -11,9 +12,23 @@ Images :
 - Adobe Photoshop
 - GIMP
 
+Materials : 
+
+- Charat.me
+- Kenney.nl
+
+
 Music : 
 
-- Soon...
+- David Vitas 
+- MaouDamashii
 
 
  
+## additionnal information
+
+
+contact : bounthienglocky@gmail.com
+
+Labyrinth Master Copyright (C) 2019 Bounthieng Locky
+
