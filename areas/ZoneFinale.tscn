@@ -67,16 +67,16 @@ world_scene = "res://areas/main.tscn"
 position = Vector2( 36.4751, 190.883 )
 scale = Vector2( 1, 1 )
 
-[node name="DialogBox" parent="Player2" instance=ExtResource( 8 )]
-visible = false
-position = Vector2( -252.218, -95.3259 )
-
 [node name="Camera2D" type="Camera2D" parent="Player2"]
 position = Vector2( 1.50735, 4.52203 )
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
+
+[node name="DialogBox" parent="Player2/Camera2D" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( -253.725, -99.8479 )
 
 [node name="Button" type="Button" parent="Player2"]
 visible = false
@@ -94,11 +94,14 @@ position = Vector2( 364.739, 227.147 )
 ] instance=ExtResource( 10 )]
 position = Vector2( 219.092, 296.418 )
 
-[node name="finalBoss" parent="." instance=ExtResource( 11 )]
+[node name="finalBoss" parent="." groups=[
+"NPC",
+] instance=ExtResource( 11 )]
 position = Vector2( 664.354, 148.925 )
 
+[connection signal="pushed" from="Player2" to="." method="_on_Player2_pushed"]
 [connection signal="pressed" from="Player2/Button" to="Player2" method="_on_Button_pressed"]
 [connection signal="body_entered" from="finalBoss" to="." method="_on_finalBoss_body_entered"]
-[connection signal="body_entered" from="finalBoss" to="Player2/DialogBox" method="_on_finalBoss_body_entered"]
+[connection signal="body_entered" from="finalBoss" to="Player2/Camera2D/DialogBox" method="_on_finalBoss_body_entered"]
 [connection signal="body_exited" from="finalBoss" to="." method="_on_finalBoss_body_exited"]
-[connection signal="body_exited" from="finalBoss" to="Player2/DialogBox" method="_on_finalBoss_body_exited"]
+[connection signal="body_exited" from="finalBoss" to="Player2/Camera2D/DialogBox" method="_on_finalBoss_body_exited"]

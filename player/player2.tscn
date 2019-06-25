@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/player2.gd" type="Script" id=1]
 [ext_resource path="res://player/PLAYERSPRITE.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD/Analog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://HUD/AnalogButton.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idledown"
@@ -150,3 +151,6 @@ shape = SubResource( 9 )
 
 [node name="Analog" parent="." instance=ExtResource( 3 )]
 
+[node name="AnalogButton" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pushA" from="AnalogButton" to="." method="_on_AnalogButton_pushA"]

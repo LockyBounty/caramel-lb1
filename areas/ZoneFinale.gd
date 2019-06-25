@@ -6,7 +6,8 @@ func _ready():
 	$HUD.update_baguette(MainGlobal.cptbag) 
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
-	
+
+	#$Player2/AnalogButton.connect("pushA", self, "_on_finalBoss_body_entered")
 	#pour le boss final
 #	set_process_input(false)
 #	pass
@@ -25,13 +26,19 @@ func _ready():
 #	$HUD.update_baguette(MainGlobal.cptbag)
 #	#$HUD/GUI.updatetest(cptbag)
 
-#func _on_finalBoss_body_entered(body):
-#	set_process_input(true)
+func _on_finalBoss_body_entered(body):
+	if body.is_in_group("Players"):
+		#print("entered")
+		MainGlobal.playButtonA = true
+	
+		$Player2/AnalogButton._animPlayA()
+	
 #
-#
-#
-#
-#func _on_finalBoss_body_exited(body):
-#	set_process_input(false)
+func _on_finalBoss_body_exited(body):
+	MainGlobal.playButtonA = false
+	
+	$Player2/AnalogButton._animPlayA()
 
-
+func _on_Player2_pushed():
+	$Player2/Camera2D/DialogBox.show()
+	$Player2/Camera2D/DialogBox.loadTextFinal()

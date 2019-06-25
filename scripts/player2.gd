@@ -1,6 +1,7 @@
 
 extends "res://engine/entity.gd"
 
+signal pushed
 const MAX_ZOOM = Vector2(0.6,0.6)
 const MIN_ZOOM = Vector2(1,1)
 
@@ -73,10 +74,5 @@ func _process(delta):
 #	movedir.y = -int(UP) + int(DOWN)
 
 
-
-
-#func _on_Button_pressed():
-#	get_tree().change_scene("res://areas/main.tscn")
-#	get_tree().reload_current_scene()
-
-
+func _on_AnalogButton_pushA():
+	emit_signal("pushed")

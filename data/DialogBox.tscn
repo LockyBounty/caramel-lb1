@@ -8,10 +8,10 @@ size = 18
 font_data = ExtResource( 2 )
 
 [node name="DialogBox" type="Polygon2D"]
-position = Vector2( 103.179, 84.4503 )
-scale = Vector2( 0.707317, 0.707317 )
+position = Vector2( 102.465, 33.279 )
+scale = Vector2( 0.694447, 0.834673 )
 color = Color( 0.211765, 0.211765, 0.211765, 1 )
-polygon = PoolVector2Array( 0.773857, 302.351, 704.268, 301.123, 704.268, 401.798, 0.773857, 401.798 )
+polygon = PoolVector2Array( -1.17838, 318.223, 703.76, 319.094, 704.268, 401.798, 0.773857, 401.798 )
 script = ExtResource( 1 )
 
 [node name="DialogGetter" type="RichTextLabel" parent="."]

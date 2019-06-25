@@ -27,6 +27,12 @@ var menuSelection = load("res://titlescreen/SelectionScreen.tscn")
 var world1 = load("res://areas/main.tscn")
 var sceneSelected
 
+#Analog Button Texture:
+var buttonStateOn = load("res://HUD/ButtflatDark35.png")
+var buttonStateOff = load("res://HUD/ButttransparentDark34.png")
+
+var buttonStateDefault = buttonStateOff
+var playButtonA = false
 #character selection:
 
 #var selectedBoy = true
