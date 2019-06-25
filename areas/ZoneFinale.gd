@@ -6,7 +6,8 @@ func _ready():
 	$HUD.update_baguette(MainGlobal.cptbag) 
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
-
+	#print(MainGlobal.DialogZone)
+	
 	#$Player2/AnalogButton.connect("pushA", self, "_on_finalBoss_body_entered")
 	#pour le boss final
 #	set_process_input(false)
@@ -40,5 +41,7 @@ func _on_finalBoss_body_exited(body):
 	$Player2/AnalogButton._animPlayA()
 
 func _on_Player2_pushed():
-	$Player2/Camera2D/DialogBox.show()
-	$Player2/Camera2D/DialogBox.loadTextFinal()
+	#print(MainGlobal.DialogZone)
+	if MainGlobal.DialogZone==true:
+		$Player2/Camera2D/DialogBox.show()
+		$Player2/Camera2D/DialogBox.loadTextFinal()

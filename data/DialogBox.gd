@@ -3,7 +3,7 @@ extends Polygon2D
 #Un dico global pour stocker le parsing sur le fichier json
 var dict = {} 
 var cpt = 0
-var bossEntered = false
+
 
 func _ready():
 	var file = File.new()
@@ -16,7 +16,7 @@ func _ready():
 	#print(dict["id1"]["name"])
 	
 func _input(event):
-	if Input.is_action_just_pressed("ui_up") && bossEntered:
+	if Input.is_action_just_pressed("ui_up") && MainGlobal.DialogZone:
 	
 		$".".show()
 		loadTextFinal()
@@ -42,13 +42,13 @@ func loadTextFinal():
 	
 
 func _on_finalBoss_body_entered(body):
-	
-	bossEntered =true
-#	MainGlobal.playButtonA = true
+	if body.is_in_group("Players"):
+		MainGlobal.DialogZone =true
+#		MainGlobal.playButtonA = true
 
 func _on_finalBoss_body_exited(body):
 	$".".hide()
-	bossEntered =false
+	MainGlobal.DialogZone =false
 #	MainGlobal.playButtonA = false
 	
 	

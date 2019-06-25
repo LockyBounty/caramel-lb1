@@ -33,6 +33,10 @@ var buttonStateOff = load("res://HUD/ButttransparentDark34.png")
 
 var buttonStateDefault = buttonStateOff
 var playButtonA = false
+
+#Dialog section:
+
+var DialogZone = false
 #character selection:
 
 #var selectedBoy = true
