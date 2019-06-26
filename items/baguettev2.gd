@@ -10,15 +10,16 @@ func _ready():
 	
 var cptbagtemp = 0
 func _on_baguette2_body_entered(body):
-	if cptbagtemp == 0:
-		emit_signal("hit")
-		cptbagtemp +=1
-		print("You got the Apprentice Magic Wand!")
-		
-		#Collision A desactiver après prise sinon le joueur
-		#pourra la retoucher pendant l'animation de la prise
-		$Collisionbag2.set_disabled(true) #evite de rechoper l'objet durant l'anim1
-		effect.start()
+	if body.is_in_group("Players"):
+		if cptbagtemp == 0:
+			emit_signal("hit")
+			cptbagtemp +=1
+			print("You got the Apprentice Magic Wand!")
+			
+			#Collision A desactiver après prise sinon le joueur
+			#pourra la retoucher pendant l'animation de la prise
+			$Collisionbag2.set_disabled(true) #evite de rechoper l'objet durant l'anim1
+			effect.start()
 		
 	
 func _on_Tweenbag_tween_completed(object, key):

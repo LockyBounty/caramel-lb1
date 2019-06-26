@@ -125,7 +125,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 13.4576, 17.2703 )
+extents = Vector2( 13.4576, 15.0409 )
 
 [node name="Player2" type="KinematicBody2D"]
 position = Vector2( 1.72113, 0.318207 )
@@ -144,10 +144,11 @@ anims/walkright = SubResource( 7 )
 anims/walkup = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.448669, 1.00655 )
+position = Vector2( -0.902755, 3.27696 )
 shape = SubResource( 9 )
 
 [node name="PLAYERSPRITE" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.974802, -0.109875 )
 
 [node name="Analog" parent="." instance=ExtResource( 3 )]
 

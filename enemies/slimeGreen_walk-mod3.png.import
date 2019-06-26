@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slimeGreen-mod2.png-a75a17be8ae827da21bda4b6a6f580d4.stex"
+path="res://.import/slimeGreen_walk-mod3.png-95ae5004e0bad32328a7c7237606e076.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/slimeGreen-mod2.png"
-dest_files=[ "res://.import/slimeGreen-mod2.png-a75a17be8ae827da21bda4b6a6f580d4.stex" ]
+source_file="res://enemies/slimeGreen_walk-mod3.png"
+dest_files=[ "res://.import/slimeGreen_walk-mod3.png-95ae5004e0bad32328a7c7237606e076.stex" ]
 
 [params]
 

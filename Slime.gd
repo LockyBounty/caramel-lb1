@@ -4,24 +4,29 @@ extends "res://engine/entity.gd"
 #const SPEED = 40
 
 #le code ci-dessous va lancer une boucle pour faire deplacer le mob 
-#un certain nombre de pas, puis va lui faire changer de direction
+#un certain nombre de pas(movetimer_length), 
+#puis va lui faire changer de direction(movedir = dir.rand())
 
-var movetimer_length = 20
+var movetimer_length = 110
 var movetimer = 0
 export var speed = .1
 
 
-
+var tempx
+var tempy
 func _ready():
 	movedir = dir.rand()
-	
-	
+	#print(movedir)
+
+  
 func _physics_process(delta):
-	movement_loop()
-	print(delta)
-	
+	movement_loop() #fonction dans entity
+	#print(delta)
+	#print(movedir)
+		
 	if movedir.length() > 0:
 		movedir= movedir.normalized() * delta
+		#print(movedir)
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()

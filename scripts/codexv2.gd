@@ -14,13 +14,14 @@ func _ready():
 	
 var cptcodextemp = 0 #pour eviter que l'objet soit recompté
 func _on_codexv2_body_entered(body):
-	print("You got the codex!")
-	if cptcodextemp ==0:
-		
-		emit_signal("hit")
-		cptcodextemp +=1
-		$Collisioncodex.set_disabled(true) 
-		effect.start()
+	if body.is_in_group("Players"):
+		print("You got the codex!")
+		if cptcodextemp ==0:
+			
+			emit_signal("hit")
+			cptcodextemp +=1
+			$Collisioncodex.set_disabled(true) 
+			effect.start()
 
 
 func _on_Tweencodex_tween_completed(object, key):

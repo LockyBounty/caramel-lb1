@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Slime.gd" type="Script" id=1]
-[ext_resource path="res://enemies/slimeGreen-mod2.png" type="Texture" id=2]
-[ext_resource path="res://enemies/slimeGreen_walk-mod2.png" type="Texture" id=3]
+[ext_resource path="res://enemies/slimeGreen-mod3.png" type="Texture" id=2]
+[ext_resource path="res://enemies/slimeGreen_walk-mod3.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
