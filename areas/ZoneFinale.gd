@@ -40,5 +40,4 @@ func _on_Player2_pushed():
 	if MainGlobal.DialogZone==true:
 		$HUD/DialogBox.show()
 		$HUD/DialogBox.loadTextFinal()
-	
-		
+
