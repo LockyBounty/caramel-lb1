@@ -24,21 +24,20 @@ func _input(event):
 func loadTextFinal():
 	
 	var cptt = 0
-	for i in dict["id1"]["text1"]: 
+	for i in dict["id4"]["text"]: 
 		#compter le nb de lignes de texte ds la section (id1, text)
 		cptt +=1 
 		
 	#On envoie les infos dans la boîte à dialogue:
 	if cpt < cptt:
-		$DialogGetter.set_text(dict["id1"]["text1"][cpt])
+		$DialogGetter.set_text(dict["id4"]["text"][cpt])
 		cpt+=1
 		#print(cpt)
 	elif cpt >=cptt:
-		$DialogGetter.set_text(dict["id1"]["text2"][0])
-		
-	else:
 		$".".hide()
-		pass
+		#$DialogGetter.set_text(dict["id1"]["text2"][0])
+		
+	
 	
 
 func _on_finalBoss_body_entered(body):

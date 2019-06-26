@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/trapeze1.png" type="Texture" id=2]
@@ -7,15 +7,16 @@
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
 [ext_resource path="res://items/grimoire.png" type="Texture" id=6]
 [ext_resource path="res://HUD/menu custom.png" type="Texture" id=7]
-[ext_resource path="res://HUD/popupmenuBGv1.png" type="Texture" id=8]
-[ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=9]
-[ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=10]
-[ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=11]
-[ext_resource path="res://HUD/audio.gd" type="Script" id=12]
-[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=13]
-[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=14]
-[ext_resource path="res://HUD/customFull.png" type="Texture" id=15]
-[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=16]
+[ext_resource path="res://data/DialogBox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://HUD/popupmenuBGv1.png" type="Texture" id=9]
+[ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=10]
+[ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=11]
+[ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=12]
+[ext_resource path="res://HUD/audio.gd" type="Script" id=13]
+[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=14]
+[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=15]
+[ext_resource path="res://HUD/customFull.png" type="Texture" id=16]
+[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -169,6 +170,12 @@ margin_bottom = 109.0
 texture = ExtResource( 7 )
 stretch_mode = 4
 
+[node name="DialogBox" parent="." instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 204.07, -70.1998 )
+scale = Vector2( 0.430642, 1.09168 )
+polygon = PoolVector2Array( 664.073, 320.909, 710.175, 320.806, 710.569, 385.003, 687.19, 385.026, 687.287, 394.29, -55.6086, 394.244, -55.6086, 384.839, -79.4494, 384.839, -79.3156, 320.993, -32.9628, 320.993, -55.4124, 311.939, 687.321, 311.946 )
+
 [node name="POPUPMC" type="MarginContainer" parent="."]
 visible = false
 margin_left = 151.621
@@ -181,7 +188,7 @@ modulate = Color( 1, 1, 0.988235, 0.803922 )
 margin_right = 399.0
 margin_bottom = 200.0
 size_flags_horizontal = 3
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -189,12 +196,12 @@ __meta__ = {
 [node name="border" type="Sprite" parent="POPUPMC"]
 position = Vector2( 198.919, 100.54 )
 scale = Vector2( 0.831354, 0.995088 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="objective" type="Sprite" parent="POPUPMC"]
 position = Vector2( 154.271, 61.6309 )
 scale = Vector2( 0.611328, 0.603037 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="POPUPMC/objective"]
 margin_left = -59.4627
@@ -211,14 +218,14 @@ margin_left = -57.0
 margin_top = -52.0
 margin_right = 55.0
 margin_bottom = 51.0
-icon = ExtResource( 10 )
+icon = ExtResource( 11 )
 flat = true
 
 [node name="audioHUD" type="Sprite" parent="POPUPMC"]
 position = Vector2( 100.675, 144.276 )
 scale = Vector2( 0.635349, 0.635971 )
-texture = ExtResource( 11 )
-script = ExtResource( 12 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="Label2" type="Label" parent="POPUPMC/audioHUD"]
 margin_left = -60.0
@@ -240,7 +247,7 @@ flat = true
 [node name="reset" type="Sprite" parent="POPUPMC"]
 position = Vector2( 255.942, 61.1415 )
 scale = Vector2( 0.559485, 0.54233 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Label3" type="Label" parent="POPUPMC/reset"]
 margin_left = -54.5797
@@ -257,7 +264,7 @@ margin_left = -61.5573
 margin_top = -57.2233
 margin_right = 61.4427
 margin_bottom = 56.7767
-icon = ExtResource( 13 )
+icon = ExtResource( 14 )
 flat = true
 
 [node name="home" type="Sprite" parent="POPUPMC"]
@@ -282,7 +289,7 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 14 )
+icon = ExtResource( 15 )
 flat = true
 
 [node name="Window" type="Sprite" parent="POPUPMC"]
@@ -308,25 +315,25 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 15 )
+icon = ExtResource( 16 )
 flat = true
 
 [node name="close" type="Sprite" parent="POPUPMC"]
 position = Vector2( 355.017, 8.62626 )
 scale = Vector2( 0.453169, 0.453169 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
 [node name="Buttonclose" type="Button" parent="POPUPMC/close"]
 margin_left = -60.0222
 margin_top = -57.1756
 margin_right = 55.9778
 margin_bottom = 57.8244
-icon = ExtResource( 16 )
+icon = ExtResource( 17 )
 flat = true
 
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
-[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
+[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
 [connection signal="pressed" from="POPUPMC/home/Buttonhome" to="." method="_on_Buttonhome_pressed"]
 [connection signal="pressed" from="POPUPMC/Window/Buttonwindow" to="." method="_on_Buttonwindow_pressed"]
