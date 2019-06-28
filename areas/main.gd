@@ -6,15 +6,11 @@ func _ready():
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
 	
-	
 	#stop menu music
 	mMenu.stop()
-	print(MainGlobal.enableAudio)
-	
+	#print(MainGlobal.enableAudio)
 	if MainGlobal.enableAudio:
 		mMainZone.play()
-		
-	
 
 func _on_baguette2_hit():
 	MainGlobal.cptbag +=1
@@ -40,7 +36,6 @@ func _on_etoile2_hit():
 #	get_tree().change_scene_to(next_scene)
 
 func _on_Button_pressed():
-	
 	get_tree().reload_current_scene()
 	MainGlobal.cptbag =0
 	MainGlobal.cptcodex =0

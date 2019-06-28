@@ -41,9 +41,7 @@ var DialogZone = false
 
 #var selectedBoy = true
 #var selectedGirl = true
-#
 #var charSexSelected = selectedBoy #default
-
 
 var boolMenuSound = true
 

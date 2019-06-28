@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Slime.gd" type="Script" id=1]
 [ext_resource path="res://enemies/slimeGreen-mod3.png" type="Texture" id=2]
 [ext_resource path="res://enemies/slimeGreen_walk-mod3.png" type="Texture" id=3]
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
@@ -12,9 +12,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 7.9608
 height = 5.82095
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.456, 8.557 )
 
 [node name="Slime" type="KinematicBody2D"]
 position = Vector2( 312.391, 195.755 )
@@ -26,11 +29,17 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 animation = "left"
 
 [node name="CollisionSlime" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.169525, 0.452911 )
 rotation = 1.5708
-shape = SubResource( 4 )
+shape = SubResource( 2 )
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="collis2" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource( 3 )
 

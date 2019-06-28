@@ -1,22 +1,14 @@
 extends Control
 
 var colors = Gradient.new()
-
 var colors_array = [Color(1, .5, .5), Color(.5, .5, 1), Color(.5,.5,1)]
 var box_size = Vector2.ZERO
-
 onready var box  = $BGcolor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
-	
 	if MainGlobal.boolMenuSound && MainGlobal.enableAudio:
 		mMenu.play()
-	
-	
-		
-
 
 func _on_play_pressed():
 	$fadeIn.show()
@@ -37,9 +29,7 @@ func _on_credits_pressed():
 func _on_Buttonfull1_pressed():
 	MainGlobal.fonctionFullscreen()
 
-
 func _on_Buttonsound1_pressed():
-	
 	if MainGlobal.enableAudio == false:
 		#pause Audio
 		mMenu.set_stream_paused(MainGlobal.enableAudio)  
@@ -48,19 +38,12 @@ func _on_Buttonsound1_pressed():
 	else :
 		#unpause Audio
 		mMenu.set_stream_paused(MainGlobal.enableAudio) 
-		
-	
 	MainGlobal.enableAudio = !MainGlobal.enableAudio #(switch true false)
-
 
 #func _on_ButtonLOL_pressed():
 #	MainGlobal.charSelected = MainGlobal.textureChoice2
 #	PL.set_texture(MainGlobal.charSelected)
 
-
 func _on_fadeIn_fadeIn_finished():	
 	get_tree().change_scene_to(MainGlobal.sceneSelected)
-
-
-
 

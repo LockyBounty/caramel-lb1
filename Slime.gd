@@ -21,6 +21,7 @@ func _ready():
   
 func _physics_process(delta):
 	movement_loop() #fonction dans entity
+	knockback_loop()
 	#print(delta)
 	#print(movedir)
 		

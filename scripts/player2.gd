@@ -12,13 +12,17 @@ var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var movement = Vector2(0,0)
 
+func _init():
+	TYPE = "PLAYER"
+	#SPEED = 30
+
 func _ready():
 	screensize = get_viewport_rect().size
-	
 	
 func move_player_virtual_stick(delta):
 	movement_loop()
 	spritedir_loop()
+	knockback_loop()
 	
 	#On arrondit les valeurs x, y pour avoir des valeurs nets pour 
 	#les directions du personnage
@@ -31,13 +35,14 @@ func move_player_virtual_stick(delta):
 	
 	#On le place dans la var "movedir" déclaré dans "entity.gd"
 	movedir = vectorConverti
-	
 	position += vectorConverti * $Analog.stick_speed * 1 * delta
 	
 	if movedir != Vector2(0,0):
 		anim_switch("walk")
 	else : 
 		anim_switch("idle")
+		
+
 		
 func _process(delta):
 	move_player_virtual_stick(delta)
@@ -63,13 +68,13 @@ func _process(delta):
 
 
 #func controls_loop():
-	#control directionnel pour clavier
-##	var LEFT	= Input.is_action_pressed("ui_left")
-##	var RIGHT	= Input.is_action_pressed("ui_right")
-##	var UP		= Input.is_action_pressed("ui_up")
-##	var DOWN	= Input.is_action_pressed("ui_down")
-#
-##
+#	#control directionnel pour clavier
+#	var LEFT	= Input.is_action_pressed("ui_left")
+#	var RIGHT	= Input.is_action_pressed("ui_right")
+#	var UP		= Input.is_action_pressed("ui_up")
+#	var DOWN	= Input.is_action_pressed("ui_down")
+
+
 #	movedir.x= -int(LEFT) + int(RIGHT)
 #	movedir.y = -int(UP) + int(DOWN)
 

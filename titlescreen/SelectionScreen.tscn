@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://titlescreen/SelectionScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://titlescreen/run_george_custom_v2_opti.png" type="Texture" id=5]
 [ext_resource path="res://titlescreen/whiteCircle.png" type="Texture" id=6]
 [ext_resource path="res://titlescreen/run_betty_custom_opti.png" type="Texture" id=7]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -141,7 +142,6 @@ size_flags_vertical = 3
 show_behind_parent = true
 position = Vector2( 161.569, 179.301 )
 scale = Vector2( 0.442674, 0.442674 )
-z_index = 2
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -164,7 +164,6 @@ flat = true
 [node name="circleMale" type="Sprite" parent="mainCont/sndpart/selection1"]
 position = Vector2( 160.936, 181.323 )
 scale = Vector2( 0.55, 0.55 )
-z_index = 1
 texture = ExtResource( 6 )
 
 [node name="animMale" type="AnimationPlayer" parent="mainCont/sndpart/selection1"]
@@ -176,15 +175,9 @@ margin_right = 646.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="circleFemale" type="Sprite" parent="mainCont/sndpart/selection2"]
-position = Vector2( 157.035, 181.402 )
-scale = Vector2( 0.485, 0.485 )
-texture = ExtResource( 6 )
-
 [node name="female" type="Sprite" parent="mainCont/sndpart/selection2"]
 position = Vector2( 156.582, 178.652 )
 scale = Vector2( 0.465544, 0.457952 )
-z_index = 2
 texture = ExtResource( 7 )
 flip_h = true
 __meta__ = {
@@ -203,10 +196,19 @@ margin_bottom = 872.0
 rect_scale = Vector2( 0.4, 0.4 )
 flat = true
 
+[node name="circleFemale" type="Sprite" parent="mainCont/sndpart/selection2"]
+position = Vector2( 157.035, 181.402 )
+scale = Vector2( 0.485, 0.485 )
+texture = ExtResource( 6 )
+
 [node name="AnimFemale" type="AnimationPlayer" parent="mainCont/sndpart/selection2"]
 anims/animTurnFemale = SubResource( 4 )
+
+[node name="fadeIn" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [connection signal="pressed" from="mainCont/selectplay/Spriteplay/Buttontoplay" to="." method="_on_Buttontoplay_pressed"]
 [connection signal="pressed" from="mainCont/selectplay/Spritereturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="mainCont/sndpart/selection1/male/ButtonMale" to="." method="_on_ButtonMale_pressed"]
 [connection signal="pressed" from="mainCont/sndpart/selection2/female/ButtonFemale" to="." method="_on_ButtonFemale_pressed"]
+[connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]

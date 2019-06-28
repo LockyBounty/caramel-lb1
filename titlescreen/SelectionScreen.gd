@@ -9,7 +9,10 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Buttontoplay_pressed():
-	get_tree().change_scene_to(MainGlobal.world1)
+	$fadeIn.show()
+	$fadeIn.fade_in()
+	MainGlobal.sceneSelected = MainGlobal.world1
+	
 
 func _on_ReturnButton_pressed():
 	get_tree().change_scene_to(MainGlobal.menuTitle)
@@ -33,3 +36,7 @@ func _on_ButtonFemale_pressed():
 	$ColorBlue.hide()
 	$ColorOrange.show()
 	#print("char2")
+	
+
+func _on_fadeIn_fadeIn_finished():
+	get_tree().change_scene_to(MainGlobal.sceneSelected)
