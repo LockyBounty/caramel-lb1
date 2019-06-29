@@ -1,13 +1,21 @@
 extends KinematicBody2D
+const follow_speed = 3
 
 var zumbie = self
 var speed = 2
-onready var target = get_parent().get_node("player2")
-func _ready():
-	_fixed_process(true)
+#onready var target = $"/root/dir"
+
+func _ready():	
 	pass
 
-func _fixed_process(delta):
-	var direction = (target.get_global_pos() - zumbie.get_global_pos()).normalized()
-	#move(direction*speed) 
-	pass
+func _physics_process(delta):
+	var direction = $"../Player2".get_position()
+	var a = (direction[0]-20)
+	var b = (direction[1]+20)
+	
+	
+	var ndirection = Vector2(a,b)
+	print(ndirection)
+	
+	$".".position = $".".position.linear_interpolate(ndirection, delta * follow_speed)
+	

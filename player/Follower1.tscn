@@ -7,6 +7,7 @@
 extents = Vector2( 18.858, 21.4511 )
 
 [node name="Follower1" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 
 [node name="Mathilde" type="Sprite" parent="."]
@@ -15,5 +16,6 @@ scale = Vector2( 0.653877, 0.6757 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.698334, -2.09502 )
 shape = SubResource( 1 )
 

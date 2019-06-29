@@ -11,20 +11,21 @@ var movetimer_length = 110
 var movetimer = 0
 export var speed = .1
 
-
+var temppos
 var tempx
 var tempy
 func _ready():
 	movedir = dir.rand()
 	#print(movedir)
-
+	
   
 func _physics_process(delta):
 	movement_loop() #fonction dans entity
 	knockback_loop()
 	#print(delta)
 	#print(movedir)
-		
+#	temppos = $".".get_position()
+#	print(temppos)
 	if movedir.length() > 0:
 		movedir= movedir.normalized() * delta
 		#print(movedir)

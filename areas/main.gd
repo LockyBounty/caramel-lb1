@@ -6,6 +6,7 @@ func _ready():
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
 	
+	
 	#stop menu music
 	mMenu.stop()
 	#print(MainGlobal.enableAudio)

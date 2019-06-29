@@ -30,7 +30,7 @@ func move_player_virtual_stick(delta):
 	var y = round($Analog.stick_vector[1])
 	#print(x)
 	#print(y)
-	#On place le vector converti dans une variable
+	#On place le vector converti dans une variable:
 	var vectorConverti = Vector2(x,y)
 	
 	#On le place dans la var "movedir" déclaré dans "entity.gd"
