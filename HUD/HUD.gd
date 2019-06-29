@@ -36,7 +36,7 @@ func _on_Buttonreset_pressed():
 
 func _on_Buttonaudio_pressed():
 	
-	MainGlobal.enableAudio = !MainGlobal.enableAudio
+	MainGlobal.enableAudio = !MainGlobal.enableAudio #switch
 	
 	if MainGlobal.enableAudio == true:
 		mMainZone.set_stream_paused(false) 

@@ -70,5 +70,4 @@ __meta__ = {
 [node name="ReturnButton" parent="mainCont/rest1/returnbutton" instance=ExtResource( 4 )]
 margin_left = 1.0
 margin_right = 95.0
-
 [connection signal="pressed" from="mainCont/rest1/returnbutton/ReturnButton" to="." method="_on_ReturnButton_pressed"]

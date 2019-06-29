@@ -8,7 +8,8 @@ onready var box  = $BGcolor
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if MainGlobal.boolMenuSound && MainGlobal.enableAudio:
-		mMenu.play()
+		if !(mMenu.is_playing()):
+			mMenu.play()
 
 func _on_play_pressed():
 	$fadeIn.show()
