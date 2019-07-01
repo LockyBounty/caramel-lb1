@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://areas/main.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://items/etoile.tscn" type="PackedScene" id=9]
 [ext_resource path="res://player/player3.tscn" type="PackedScene" id=10]
 [ext_resource path="res://enemies/Slime.tscn" type="PackedScene" id=11]
-[ext_resource path="res://player/Follower1.tscn" type="PackedScene" id=12]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -31,7 +30,7 @@ world_scene = "res://areas/ZoneFinale.tscn"
 [node name="Player2" parent="." groups=[
 "Players",
 ] instance=ExtResource( 5 )]
-position = Vector2( 260.906, 108.562 )
+position = Vector2( 114.969, 92.5784 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player2"]
@@ -47,39 +46,37 @@ drag_margin_right = 0.1
 drag_margin_bottom = 0.1
 
 [node name="codexv2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 295.348, 1992.97 )
+position = Vector2( 336.401, 2026.13 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="baguette2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2616.81, 1883.29 )
+position = Vector2( 2570.25, 1890.24 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 
 [node name="etoile" parent="." instance=ExtResource( 9 )]
-position = Vector2( 297, 154 )
+position = Vector2( 290.715, 141.43 )
 
 [node name="etoile2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1054.41, 827.273 )
+position = Vector2( 1393.34, 1387.96 )
 
 [node name="etoile3" parent="." instance=ExtResource( 9 )]
-position = Vector2( -89.1162, 1430.75 )
+position = Vector2( -134.382, 1365.75 )
 
 [node name="etoile4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 756.912, 583.256 )
+position = Vector2( 976.864, 33.6187 )
 
 [node name="etoile5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 831.631, 858.895 )
+position = Vector2( 1920.51, 443.602 )
 
 [node name="npc" parent="." instance=ExtResource( 10 )]
-position = Vector2( 325.932, 190.845 )
+visible = false
+position = Vector2( -30.4738, 65.1103 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Slime" parent="." instance=ExtResource( 11 )]
-position = Vector2( 81.8737, 175.143 )
-
-[node name="Follower1" parent="." instance=ExtResource( 12 )]
-position = Vector2( 205.594, 90.8617 )
+position = Vector2( 453.016, 332.985 )
 [connection signal="hit" from="codexv2" to="." method="_on_codexv2_hit"]
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]
 [connection signal="hit" from="etoile" to="." method="_on_etoile_hit"]

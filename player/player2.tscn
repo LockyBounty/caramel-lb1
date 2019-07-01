@@ -125,7 +125,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 13.4576, 15.0409 )
+extents = Vector2( 13.81, 15.722 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 14.2695, 15.1696 )
@@ -146,21 +146,23 @@ anims/walkleft = SubResource( 6 )
 anims/walkright = SubResource( 7 )
 anims/walkup = SubResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -0.902755, 3.27696 )
-shape = SubResource( 9 )
-
 [node name="PLAYERSPRITE" parent="." instance=ExtResource( 2 )]
 position = Vector2( -0.974802, -0.109875 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.90275, 2.59584 )
+shape = SubResource( 9 )
 
 [node name="Analog" parent="." instance=ExtResource( 3 )]
 
 [node name="AnalogButton" parent="." instance=ExtResource( 4 )]
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="collis2" type="CollisionShape2D" parent="hitbox"]
+visible = false
 position = Vector2( -0.454081, 2.7245 )
 shape = SubResource( 10 )
 

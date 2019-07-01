@@ -24,7 +24,7 @@ var menuRules = load("res://titlescreen/RulesScreen.tscn")
 var menuCredits = load("res://titlescreen/CreditScreen.tscn")
 var menuCredits2 = load("res://titlescreen/CreditScreen2.tscn")
 var menuSelection = load("res://titlescreen/SelectionScreen.tscn")
-var world1 = load("res://areas/main.tscn")
+#var world1 = load("res://areas/main.tscn") #in preload at selection screen
 var sceneSelected
 
 #Analog Button Texture:

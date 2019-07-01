@@ -1,17 +1,18 @@
 extends Control
 
+var scener1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$mainCont/sndpart/selection1/animMale.play("animCircle1")
 	$mainCont/sndpart/selection2/circleFemale.hide()
 	$ColorBlue.show()
+	scener1 = preload("res://areas/main.tscn").instance() #faster with preload
 	pass # Replace with function body.
 
 func _on_Buttontoplay_pressed():
 	$fadeIn.show()
 	$fadeIn.fade_in()
-	MainGlobal.sceneSelected = MainGlobal.world1
+	#MainGlobal.sceneSelected = MainGlobal.world1
 	
 
 func _on_ReturnButton_pressed():
@@ -39,4 +40,4 @@ func _on_ButtonFemale_pressed():
 	
 
 func _on_fadeIn_fadeIn_finished():
-	get_tree().change_scene_to(MainGlobal.sceneSelected)
+	add_child(scener1)
