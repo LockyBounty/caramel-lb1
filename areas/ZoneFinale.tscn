@@ -93,7 +93,6 @@ position = Vector2( 219.092, 296.418 )
 "NPC",
 ] instance=ExtResource( 10 )]
 position = Vector2( 664.354, 148.925 )
-
 [connection signal="pushed" from="Player2" to="." method="_on_Player2_pushed"]
 [connection signal="pressed" from="Player2/Button" to="Player2" method="_on_Button_pressed"]
 [connection signal="body_entered" from="finalBoss" to="." method="_on_finalBoss_body_entered"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bridge1.png-4b80ce64937ff932a838a961bc58c8d7.stex"
+path="res://.import/bridgeRes1.png-f256ceaca8f676959a9bb257b510ea84.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/bridge1.png"
-dest_files=[ "res://.import/bridge1.png-4b80ce64937ff932a838a961bc58c8d7.stex" ]
+source_file="res://items/bridgeRes1.png"
+dest_files=[ "res://.import/bridgeRes1.png-f256ceaca8f676959a9bb257b510ea84.stex" ]
 
 [params]
 

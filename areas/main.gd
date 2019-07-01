@@ -27,10 +27,17 @@ func _on_etoile_hit():
 	MainGlobal.cptetoile+=1
 	#On lance la fonction qu'on aura ecrit dans le HUD
 	$HUD.update_etoile(MainGlobal.cptetoile)
-
 func _on_etoile2_hit():
 	MainGlobal.cptetoile+=1
-	#On lance la fonction qu'on aura ecrit dans le HUD
+	$HUD.update_etoile(MainGlobal.cptetoile)
+func _on_etoile3_hit():
+	MainGlobal.cptetoile+=1
+	$HUD.update_etoile(MainGlobal.cptetoile)
+func _on_etoile4_hit():
+	MainGlobal.cptetoile+=1
+	$HUD.update_etoile(MainGlobal.cptetoile)
+func _on_etoile5_hit():
+	MainGlobal.cptetoile+=1
 	$HUD.update_etoile(MainGlobal.cptetoile)
 
 #func _on_codexv2_body_entered(body):# test de changement de scene
@@ -42,11 +49,7 @@ func _on_Button_pressed():
 	MainGlobal.cptcodex =0
 	MainGlobal.cptetoile =0
 
-#func _on_Buttonstop_pressed():
-#	#$Music.stop()
-#	OS.window_fullscreen = !OS.window_fullscreen
-#	print("it works")
-	
+
 
 
 
