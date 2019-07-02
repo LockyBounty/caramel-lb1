@@ -165,5 +165,4 @@ visible = false
 visible = false
 position = Vector2( -0.454081, 2.7245 )
 shape = SubResource( 10 )
-
 [connection signal="pushA" from="AnalogButton" to="." method="_on_AnalogButton_pushA"]

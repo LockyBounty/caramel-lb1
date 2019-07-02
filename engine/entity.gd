@@ -4,7 +4,7 @@ const SPEED =40
 var TYPE = "ENNEMY"
 
 var movedir = Vector2(0,0)
-var spritedir = "down"
+var spritedir = "right"
 var knockdir = Vector2(0,0)
 
 var hitstun = 0

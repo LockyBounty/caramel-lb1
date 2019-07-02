@@ -44,5 +44,4 @@ anims/animButtA = SubResource( 1 )
 position = Vector2( 108.114, 299.634 )
 scale = Vector2( 0.185, 0.185 )
 texture = ExtResource( 2 )
-
 [connection signal="pressed" from="ButtonA/Buttonanalog" to="." method="_on_Buttonanalog_pressed"]

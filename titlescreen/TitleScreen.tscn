@@ -136,7 +136,7 @@ margin_bottom = 255.0
 custom_fonts/font = SubResource( 2 )
 text = "
 CARAMEL PUBLISHING
-Version 1.0"
+v 1.0"
 
 [node name="Vide" type="HBoxContainer" parent="Menu/otherParts"]
 visible = false

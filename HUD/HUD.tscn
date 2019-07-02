@@ -330,7 +330,6 @@ margin_right = 55.9778
 margin_bottom = 57.8244
 icon = ExtResource( 17 )
 flat = true
-
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]

@@ -13,10 +13,11 @@ func _ready():
 func _animPlayA():
 	if MainGlobal.playButtonA == true :
 		$circleA.show()
+		$ButtonA.show()
 		$ButtonA.set_texture(MainGlobal.buttonStateOn)
 		$animButtA.play("animButtA")
 	else :
-		$ButtonA.set_texture(MainGlobal.buttonStateOff)
+		$ButtonA.hide()
 		$circleA.hide()
 #		$animButtA.stop()
 

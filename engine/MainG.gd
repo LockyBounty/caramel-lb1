@@ -29,9 +29,9 @@ var sceneSelected
 
 #Analog Button Texture:
 var buttonStateOn = load("res://HUD/ButtflatDark35.png")
-var buttonStateOff = load("res://HUD/ButttransparentDark34.png")
+#var buttonStateOff = load("res://HUD/ButttransparentDark34.png")
 
-var buttonStateDefault = buttonStateOff
+var buttonStateDefault = buttonStateOn
 var playButtonA = false
 
 #Dialog section:
