@@ -4,4 +4,3 @@
 
 [node name="musicMenu" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
-

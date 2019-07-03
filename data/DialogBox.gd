@@ -3,9 +3,11 @@ extends Polygon2D
 #Un dico global pour stocker le parsing sur le fichier json
 var dict = {} 
 var cpt = 0
-var text1 = ["Congratulations!", "test"]
+var text1 = ["Bravo!", "You did it!"]
+var _toFinalScene
 
 func _ready():
+	_toFinalScene = load("res://areas/EndGame.tscn")
 #	var file = File.new()
 #	file.open("res://data/Dialog.json", file.READ)
 #	var text = file.get_as_text()
@@ -39,6 +41,7 @@ func loadTextFinal():
 		$".".hide()
 		cptt = 0
 		#$DialogGetter.set_text(dict["id1"]["text2"][0])
+		get_tree().change_scene_to(_toFinalScene)
 		
 	
 	

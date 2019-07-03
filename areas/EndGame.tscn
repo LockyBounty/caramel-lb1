@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://areas/EndGame.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://titlescreen/magicienv3.png" type="Texture" id=7]
 [ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=8]
 
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.498039, 0.933333, 0.905882, 1 )
+corner_radius_top_right = 180
+corner_radius_bottom_right = 170
+
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.188235, 0.611765, 0.729412, 1 )
 corner_radius_top_right = 180
@@ -18,16 +23,22 @@ corner_radius_bottom_right = 180
 bg_color = Color( 0.643137, 0.643137, 0.643137, 1 )
 corner_radius_top_left = 180
 
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.807843, 0.807843, 0.807843, 1 )
+corner_radius_top_left = 180
+
 [sub_resource type="DynamicFont" id=3]
 use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 22
+use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 22
+use_filter = true
 font_data = ExtResource( 4 )
 
 [node name="EndGame" type="Control"]
@@ -40,11 +51,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.101961, 0.0156863, 0.25098, 1 )
 
+[node name="BtBonly12" type="Button" parent="."]
+margin_left = -118.266
+margin_top = -38.4133
+margin_right = 351.734
+margin_bottom = 400.587
+custom_styles/disabled = SubResource( 7 )
+disabled = true
+
 [node name="BtBGonly" type="Button" parent="."]
-margin_left = -150.0
-margin_top = -40.0
-margin_right = 324.0
-margin_bottom = 400.0
+margin_left = -128.605
+margin_top = -37.4153
+margin_right = 345.395
+margin_bottom = 402.585
 custom_styles/disabled = SubResource( 1 )
 disabled = true
 
@@ -54,6 +73,14 @@ margin_top = 290.0
 margin_right = 750.0
 margin_bottom = 472.0
 custom_styles/disabled = SubResource( 2 )
+disabled = true
+
+[node name="BtBGOnly21" type="Button" parent="."]
+margin_left = 433.393
+margin_top = 296.33
+margin_right = 710.393
+margin_bottom = 453.33
+custom_styles/disabled = SubResource( 6 )
 disabled = true
 
 [node name="ContCenter" type="MarginContainer" parent="."]

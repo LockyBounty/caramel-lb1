@@ -5,6 +5,8 @@ var mainReset = load("res://areas/main.tscn")
 func _ready():
 	if mMainZone.is_playing():
 		mMainZone.stop()
+	mCredits.play()
+	
 
 func _on_ButBackMenu_pressed():
 	$fadeIn.show()
@@ -18,4 +20,5 @@ func _on_ButRestart_pressed():
 	selectedScene = mainReset
 	
 func _on_fadeIn_fadeIn_finished():
+	mCredits.stop()
 	get_tree().change_scene_to(selectedScene)

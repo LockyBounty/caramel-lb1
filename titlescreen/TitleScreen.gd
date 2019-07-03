@@ -47,4 +47,5 @@ func _on_Buttonsound1_pressed():
 
 func _on_fadeIn_fadeIn_finished():	
 	get_tree().change_scene_to(MainGlobal.sceneSelected)
+	
 

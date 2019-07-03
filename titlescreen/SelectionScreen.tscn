@@ -206,7 +206,6 @@ anims/animTurnFemale = SubResource( 4 )
 
 [node name="fadeIn" parent="." instance=ExtResource( 8 )]
 visible = false
-
 [connection signal="pressed" from="mainCont/selectplay/Spriteplay/Buttontoplay" to="." method="_on_Buttontoplay_pressed"]
 [connection signal="pressed" from="mainCont/selectplay/Spritereturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="mainCont/sndpart/selection1/male/ButtonMale" to="." method="_on_ButtonMale_pressed"]
