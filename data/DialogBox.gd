@@ -3,17 +3,18 @@ extends Polygon2D
 #Un dico global pour stocker le parsing sur le fichier json
 var dict = {} 
 var cpt = 0
-
+var text1 = ["Congratulations!", "test"]
 
 func _ready():
-	var file = File.new()
-	file.open("res://data/Dialog.json", file.READ)
-	var text = file.get_as_text()
-	dict = JSON.parse(text).result
-	
-	file.close()
-	
+#	var file = File.new()
+#	file.open("res://data/Dialog.json", file.READ)
+#	var text = file.get_as_text()
+#	dict = JSON.parse(text).result
+#
+#	file.close()
 	#print(dict["id1"]["name"])
+	pass
+	
 	
 func _input(event):
 	if Input.is_action_just_pressed("ui_up") && MainGlobal.DialogZone:
@@ -24,17 +25,19 @@ func _input(event):
 func loadTextFinal():
 	
 	var cptt = 0
-	for i in dict["id4"]["text"]: 
+	for i in text1: 
 		#compter le nb de lignes de texte ds la section (id1, text)
 		cptt +=1 
 		
 	#On envoie les infos dans la boîte à dialogue:
 	if cpt < cptt:
-		$DialogGetter.set_text(dict["id4"]["text"][cpt])
+#		$DialogGetter.set_text(dict["id4"]["text"][cpt])
+		$DialogGetter.set_text(text1[cpt])
 		cpt+=1
 		#print(cpt)
 	elif cpt >=cptt:
 		$".".hide()
+		cptt = 0
 		#$DialogGetter.set_text(dict["id1"]["text2"][0])
 		
 	
