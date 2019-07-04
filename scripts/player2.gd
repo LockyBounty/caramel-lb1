@@ -12,12 +12,17 @@ var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var movement = Vector2(0,0)
 
+
 func _init():
 	TYPE = "PLAYER"
 	#SPEED = 30
+	
 
 func _ready():
 	screensize = get_viewport_rect().size
+	#Pour connecter et recevoir le signal de controlSlimes:
+	$"../controlSlimes".connect("touchedFromControl", self, "onTouched")
+	
 	
 func move_player_virtual_stick(delta):
 	movement_loop()
@@ -42,11 +47,8 @@ func move_player_virtual_stick(delta):
 	else : 
 		anim_switch("idle")
 		
-
-		
 func _process(delta):
 	move_player_virtual_stick(delta)
-
 
 #func _physics_process(delta):
 #	controls_loop()
@@ -67,7 +69,6 @@ func _process(delta):
 #	else : 
 #		anim_switch("idle")
 
-
 #func controls_loop():
 #	#control directionnel pour clavier
 #	var LEFT	= Input.is_action_pressed("ui_left")
@@ -84,7 +85,14 @@ func _process(delta):
 #	else : 
 #		anim_switch("idle")
 
-
 func _on_AnalogButton_pushA():
 	emit_signal("pushed")
+	
+func onTouched():
+	
+	print("lol2")
+	
+	$etoileTouch.show()
+	$etoileTouch.playTheTouchEffect()
+	#pass
 

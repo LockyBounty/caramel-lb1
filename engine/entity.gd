@@ -38,10 +38,11 @@ func anim_switch(animation):
 		$anim.play(newanim)
 		
 func knockback_loop():
-	for body in $hitbox.get_overlapping_bodies():
-		
-		if hitstun ==0 and body.get("TYPE") == "PLAYER" :
-			pass
+	pass
+#	for body in $hitbox.get_overlapping_bodies():
+#
+#		if hitstun ==0 and body.get("TYPE") == "PLAYER" :
+#			pass
 			#print("hey")
 			#print(transform)
 			#knockdir = position.x - body.position.x

@@ -1,6 +1,6 @@
 extends "res://engine/entity.gd"
 
-
+signal touched
 #const SPEED = 40
 
 #le code ci-dessous va lancer une boucle pour faire deplacer le mob 
@@ -44,4 +44,8 @@ func _physics_process(delta):
 		movedir = dir.rand()
 		movetimer = movetimer_length
 		
-	
+func _on_hitbox_body_entered(body):
+	if body.is_in_group("Players"):
+		emit_signal("touched")
+		$".".queue_free()
+		print("touchdown!")

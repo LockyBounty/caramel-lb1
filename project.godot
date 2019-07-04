@@ -27,6 +27,7 @@ itemEntity="*res://engine/itemEntity.gd"
 mMainZone="*res://music/MusicMainZone.tscn"
 mCredits="*res://music/musicCredits.tscn"
 mMenu="*res://music/musicMenu.tscn"
+SlimeG="*res://enemies/Slime.tscn"
 
 [debug]
 
