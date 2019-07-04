@@ -20,7 +20,6 @@ func _on_baguette2_hit():
 func _on_codexv2_hit():
 	MainGlobal.cptcodex +=1
 	$HUD.update_codex(MainGlobal.cptcodex)
-	
 
 func _on_etoile_hit():
 	MainGlobal.cptetoile+=1
@@ -46,7 +45,7 @@ func _on_Button_pressed():
 	get_tree().reload_current_scene()
 	MainGlobal.cptbag =0
 	MainGlobal.cptcodex =0
-	MainGlobal.cptetoile =0
+	MainGlobal.cptetoile =3
 
 
 

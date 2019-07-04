@@ -96,11 +96,12 @@ func onTouched():
 	print(MainGlobal.cptetoile)
 	if MainGlobal.cptetoile >= 1:
 		MainGlobal.cptetoile -=1
+		$"../HUD".update_etoile(MainGlobal.cptetoile)
 		$etoileTouch.playTheTouchEffect() #effet etoile retrait
 		blinking = true
 		#print("start")
 		#creer un timer de 1 sec pdt laquelle on execute l'autre timer
-		yield(get_tree().create_timer(.6), "timeout")
+		yield(get_tree().create_timer(.2), "timeout")
 		#print("end")
 		blinking = false
 		

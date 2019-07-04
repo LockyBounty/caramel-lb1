@@ -48,4 +48,4 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group("Players"):
 		emit_signal("touched")
 		$".".queue_free()
-		print("touchdown!")
+		#print("touchdown!")

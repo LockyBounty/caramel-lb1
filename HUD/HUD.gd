@@ -20,7 +20,7 @@ func update_baguette(cptbag):
 func update_codex(cptcodex):
 	$HUDMC/MainC/H3/Codexlabel.text = str(MainGlobal.cptcodex)+"/1"
 func update_etoile(cptetoile):
-	$HUDMC/MainC/H1/Etoilelabel.text = str(MainGlobal.cptetoile)+"/5"
+	$HUDMC/MainC/H1/Etoilelabel.text = str(MainGlobal.cptetoile)+" "
 
 #Bouton du menu:
 func _on_Buttonclose_pressed():
