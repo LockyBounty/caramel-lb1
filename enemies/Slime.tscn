@@ -17,7 +17,7 @@ radius = 7.9608
 height = 5.82095
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 8.40044
+radius = 9.26378
 height = 7.29099
 
 [node name="Slime" type="KinematicBody2D"]

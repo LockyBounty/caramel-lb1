@@ -67,4 +67,4 @@ func fonctionFullscreen():
 func fonctionResetCpt():
 	cptbag =0
 	cptcodex =0
-	cptetoile =0
+	cptetoile =3
