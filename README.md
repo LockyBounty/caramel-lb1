@@ -7,13 +7,14 @@ Labyrinths Master
 Game Engine :
 - Godot 3.1
 
-Images :
+Softwares :
 
 - Adobe Photoshop
 - GIMP
 
 Materials : 
 
+- Caramel Publishing
 - Charat.me
 - Kenney.nl
 
@@ -25,10 +26,10 @@ Music :
 
 
  
-## additionnal information
+## Additionnal Information
 
 
 contact : bounthienglocky@gmail.com
 
-Labyrinth Master Copyright (C) 2019 Bounthieng Locky
+Labyrinths Master Copyright (C) 2019 Bounthieng Locky
 

@@ -13,6 +13,7 @@ var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var movement = Vector2(0,0)
 
 
+
 func _init():
 	TYPE = "PLAYER"
 	#SPEED = 30
@@ -87,12 +88,28 @@ func _process(delta):
 
 func _on_AnalogButton_pushA():
 	emit_signal("pushed")
-	
-func onTouched():
-	
-	print("lol2")
-	
-	$etoileTouch.show()
-	$etoileTouch.playTheTouchEffect()
-	#pass
 
+var blinking = false
+
+func onTouched():
+	#print("lol2")
+	print(MainGlobal.cptetoile)
+	if MainGlobal.cptetoile >= 1:
+		MainGlobal.cptetoile -=1
+		$etoileTouch.playTheTouchEffect() #effet etoile retrait
+		blinking = true
+		#print("start")
+		#creer un timer de 1 sec pdt laquelle on execute l'autre timer
+		yield(get_tree().create_timer(.5), "timeout")
+		#print("end")
+		blinking = false
+		$PLAYERSPRITE.visible
+		#print(blinking)
+		if MainGlobal.cptetoile <= 0:
+			print("YOU LOSE!")
+
+func _on_BlinkingTimer_timeout():
+	if blinking == true:
+		$".".visible  = !$".".visible
+	else :
+		$".".visible

@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/player2.gd" type="Script" id=1]
 [ext_resource path="res://player/PLAYERSPRITE.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD/Analog.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD/AnalogButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player/Timer.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idledown"
@@ -165,4 +166,10 @@ visible = false
 visible = false
 position = Vector2( -0.454081, 2.7245 )
 shape = SubResource( 10 )
+
+[node name="BlinkingTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+script = ExtResource( 5 )
 [connection signal="pushA" from="AnalogButton" to="." method="_on_AnalogButton_pushA"]
+[connection signal="timeout" from="BlinkingTimer" to="." method="_on_BlinkingTimer_timeout"]
