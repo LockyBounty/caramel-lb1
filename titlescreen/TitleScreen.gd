@@ -1,4 +1,8 @@
 extends Control
+var loader
+var wait_frames
+var time_max = 100 # msec
+var current_scene
 
 var colors = Gradient.new()
 var colors_array = [Color(1, .5, .5), Color(.5, .5, 1), Color(.5,.5,1)]
@@ -7,6 +11,8 @@ onready var box  = $BGcolor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var root = get_tree().get_root()
+	current_scene = root.get_child(root.get_child_count() -1)
 	if MainGlobal.boolMenuSound && MainGlobal.enableAudio:
 		if !(mMenu.is_playing()):
 			mMenu.play()

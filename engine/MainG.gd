@@ -24,6 +24,7 @@ var menuRules
 var menuCredits
 var menuCredits2
 var menuSelection
+var loseScene
 #var world1 = load("res://areas/main.tscn") #in preload at selection screen
 var sceneSelected
 
@@ -57,7 +58,7 @@ func _ready():
 	menuCredits = load("res://titlescreen/CreditScreen.tscn")
 	menuCredits2 = load("res://titlescreen/CreditScreen2.tscn")
 	menuSelection = load("res://titlescreen/SelectionScreen.tscn")
-	
+	loseScene = load("res://areas/LoseGame.tscn")
 	pass # Replace with function body.
 
 func fonctionFullscreen():

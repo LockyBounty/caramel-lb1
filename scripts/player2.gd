@@ -100,13 +100,15 @@ func onTouched():
 		blinking = true
 		#print("start")
 		#creer un timer de 1 sec pdt laquelle on execute l'autre timer
-		yield(get_tree().create_timer(.5), "timeout")
+		yield(get_tree().create_timer(.6), "timeout")
 		#print("end")
 		blinking = false
-		$PLAYERSPRITE.visible
+		
+		#$".".visible
 		#print(blinking)
 		if MainGlobal.cptetoile <= 0:
-			print("YOU LOSE!")
+			get_tree().change_scene_to(MainGlobal.loseScene)
+			#print("YOU LOSE!")
 
 func _on_BlinkingTimer_timeout():
 	if blinking == true:

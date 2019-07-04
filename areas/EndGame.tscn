@@ -9,34 +9,34 @@
 [ext_resource path="res://titlescreen/magicienv3.png" type="Texture" id=7]
 [ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=8]
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.498039, 0.933333, 0.905882, 1 )
 corner_radius_top_right = 180
 corner_radius_bottom_right = 170
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.188235, 0.611765, 0.729412, 1 )
 corner_radius_top_right = 180
 corner_radius_bottom_right = 180
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.643137, 0.643137, 0.643137, 1 )
 corner_radius_top_left = 180
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.807843, 0.807843, 0.807843, 1 )
 corner_radius_top_left = 180
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 use_filter = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
@@ -56,7 +56,7 @@ margin_left = -118.266
 margin_top = -38.4133
 margin_right = 351.734
 margin_bottom = 400.587
-custom_styles/disabled = SubResource( 7 )
+custom_styles/disabled = SubResource( 1 )
 disabled = true
 
 [node name="BtBGonly" type="Button" parent="."]
@@ -64,7 +64,7 @@ margin_left = -128.605
 margin_top = -37.4153
 margin_right = 345.395
 margin_bottom = 402.585
-custom_styles/disabled = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
 disabled = true
 
 [node name="BtBGOnly2" type="Button" parent="."]
@@ -72,7 +72,7 @@ margin_left = 400.0
 margin_top = 290.0
 margin_right = 750.0
 margin_bottom = 472.0
-custom_styles/disabled = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
 disabled = true
 
 [node name="BtBGOnly21" type="Button" parent="."]
@@ -80,7 +80,7 @@ margin_left = 433.393
 margin_top = 296.33
 margin_right = 710.393
 margin_bottom = 453.33
-custom_styles/disabled = SubResource( 6 )
+custom_styles/disabled = SubResource( 4 )
 disabled = true
 
 [node name="ContCenter" type="MarginContainer" parent="."]
@@ -95,7 +95,7 @@ margin_bottom = -40.0
 margin_top = 70.0
 margin_right = 600.0
 margin_bottom = 249.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Congratulations!
 You passed the labyrinth and 
 you got the items required to be 
@@ -129,7 +129,7 @@ margin_left = -64.8806
 margin_top = -50.0
 margin_right = -28.8806
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "BACK TO MENU"
 
 [node name="RestartGame" type="Sprite" parent="ContCenter"]
@@ -157,7 +157,7 @@ margin_left = -48.8947
 margin_top = -50.0
 margin_right = -45.8947
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "RESTART"
 align = 1
 
