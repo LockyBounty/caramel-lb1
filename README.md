@@ -39,6 +39,12 @@ Music :
 * Improve Dialog box
 * Export the game
     * .apk 
+      * (option1) To release on Playstore or Alternative
+      * (option2) Just put the .apk on Jean-Michel server and you'll just have to define the routes
+    * HTML5
+      * Improve the size (compress files etc.)
+      * To put on Jean-Michel server and serve directly through Django structure
+      
         
 
  
