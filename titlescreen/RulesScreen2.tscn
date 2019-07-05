@@ -7,9 +7,9 @@
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
 [ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=1]
-size = 30
-extra_spacing_bottom = 20
+[sub_resource type="DynamicFont" id=3]
+size = 34
+extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -41,8 +41,8 @@ margin_bottom = 307.0
 
 [node name="Label" type="Label" parent="MarginC/titlepart1"]
 margin_right = 620.0
-margin_bottom = 51.0
-custom_fonts/font = SubResource( 1 )
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 4
@@ -51,12 +51,13 @@ align = 1
 uppercase = true
 
 [node name="text" type="Label" parent="MarginC/titlepart1"]
-margin_top = 55.0
+margin_top = 49.0
 margin_right = 620.0
-margin_bottom = 148.0
+margin_bottom = 190.0
 custom_fonts/font = SubResource( 2 )
 text = "Find the Grimoire and the Magic Wand
-to open the portal."
+to open the portal.
+Let's go, the Great Mage is waiting!"
 align = 1
 
 [node name="codex" type="Sprite" parent="MarginC/titlepart1"]

@@ -63,3 +63,21 @@ func _on_Buttonwindow_pressed():
 
 func _on_fadeIn_fadeIn_finished():
 	get_tree().change_scene_to(selectedScene)
+
+func _on_closeButRules1_pressed():
+	$POPUPRULES.hide()
+	
+func _on_nextButton_pressed():
+	$POPUPRULES.hide()
+	$POPUPRULES2.show()
+
+func _on_closeButRules2_pressed():
+	$POPUPRULES2.hide()
+	
+func _on_prevButton_pressed():
+	$POPUPRULES2.hide()
+	$POPUPRULES.show()
+
+func _on_Buttonobj_pressed():
+	$POPUPMC.hide()
+	$POPUPRULES.show()

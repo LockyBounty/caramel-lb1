@@ -3,6 +3,7 @@ extends Control
 var scener1
 
 func _ready():
+	MainGlobal.charSelected = MainGlobal.textureChoice1
 	$mainCont/sndpart/selection1/animMale.play("animCircle1")
 	$mainCont/sndpart/selection2/circleFemale.hide()
 	$ColorBlue.show()

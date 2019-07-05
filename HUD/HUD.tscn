@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/trapeze1.png" type="Texture" id=2]
@@ -6,18 +6,21 @@
 [ext_resource path="res://items/starsCustom.png" type="Texture" id=4]
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
 [ext_resource path="res://items/grimoire.png" type="Texture" id=6]
-[ext_resource path="res://HUD/menu custom.png" type="Texture" id=7]
-[ext_resource path="res://data/DialogBox.tscn" type="PackedScene" id=8]
-[ext_resource path="res://HUD/popupmenuBGv1.png" type="Texture" id=9]
-[ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=10]
-[ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=11]
-[ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=12]
-[ext_resource path="res://HUD/audio.gd" type="Script" id=13]
-[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=14]
-[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=15]
-[ext_resource path="res://HUD/customFull.png" type="Texture" id=16]
-[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=17]
-[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=18]
+[ext_resource path="res://HUD/menucustomv2.png" type="Texture" id=7]
+[ext_resource path="res://HUD/menu custom.png" type="Texture" id=8]
+[ext_resource path="res://data/DialogBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://HUD/popupmenuBGv1.png" type="Texture" id=10]
+[ext_resource path="res://HUD/popupmenuCornerv1.png" type="Texture" id=11]
+[ext_resource path="res://HUD/Asset 40flat_@2x.png" type="Texture" id=12]
+[ext_resource path="res://HUD/Asset 43flat_@2x.png" type="Texture" id=13]
+[ext_resource path="res://HUD/audio.gd" type="Script" id=14]
+[ext_resource path="res://HUD/Asset 35flat_@2x.png" type="Texture" id=15]
+[ext_resource path="res://HUD/Asset 36flat_@2x.png" type="Texture" id=16]
+[ext_resource path="res://HUD/customFull.png" type="Texture" id=17]
+[ext_resource path="res://HUD/Asset 55flat_@2x.png" type="Texture" id=18]
+[ext_resource path="res://areas/fadeIn.tscn" type="PackedScene" id=19]
+[ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://HUD/right-arrow-96.png" type="Texture" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -33,6 +36,32 @@ radius = 49.6384
 [sub_resource type="DynamicFont" id=4]
 size = 25
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+extra_spacing_top = 14
+extra_spacing_bottom = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+extra_spacing_top = 6
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+extra_spacing_top = 14
+extra_spacing_bottom = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+extra_spacing_top = 6
+font_data = ExtResource( 20 )
+
+[sub_resource type="StreamTexture" id=9]
+flags = 4
+load_path = "res://.import/right-arrow-96.png-0761a3bca41994699ceed2c863e36e5f.stex"
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -160,7 +189,6 @@ margin_left = -59.335
 margin_top = -57.2732
 margin_right = 57.665
 margin_bottom = 57.7268
-icon = ExtResource( 7 )
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="HUDMC/MainC/menu"]
@@ -168,14 +196,14 @@ visible = false
 margin_left = 5.0
 margin_right = 110.0
 margin_bottom = 109.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 stretch_mode = 4
 
-[node name="DialogBox" parent="." instance=ExtResource( 8 )]
+[node name="DialogBox" parent="." instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 204.07, -70.1998 )
 scale = Vector2( 0.430642, 1.09168 )
-polygon = PoolVector2Array( 664.073, 320.909, 710.175, 320.806, 710.569, 385.003, 687.19, 385.026, 687.287, 394.29, -55.6086, 394.244, -55.6086, 384.839, -79.4494, 384.839, -79.3156, 320.993, -32.9628, 320.993, -55.4124, 311.939, 687.321, 311.946 )
+polygon = PoolVector2Array( 709.714, 311.906, 710.175, 320.806, 710.569, 385.003, 709.714, 394.229, 687.287, 394.29, -55.6086, 394.244, -78.817, 394.229, -79.4494, 384.839, -79.3156, 320.993, -80.1378, 311.906, -55.4124, 311.939, 687.321, 311.946 )
 
 [node name="POPUPMC" type="MarginContainer" parent="."]
 editor/display_folded = true
@@ -189,7 +217,7 @@ modulate = Color( 1, 1, 0.988235, 0.803922 )
 margin_right = 399.0
 margin_bottom = 200.0
 size_flags_horizontal = 3
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -197,12 +225,12 @@ __meta__ = {
 [node name="border" type="Sprite" parent="POPUPMC"]
 position = Vector2( 198.919, 100.54 )
 scale = Vector2( 0.831354, 0.995088 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="objective" type="Sprite" parent="POPUPMC"]
 position = Vector2( 154.271, 61.6309 )
 scale = Vector2( 0.611328, 0.603037 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="POPUPMC/objective"]
 margin_left = -59.4627
@@ -219,14 +247,14 @@ margin_left = -57.0
 margin_top = -52.0
 margin_right = 55.0
 margin_bottom = 51.0
-icon = ExtResource( 11 )
+icon = ExtResource( 12 )
 flat = true
 
 [node name="audioHUD" type="Sprite" parent="POPUPMC"]
 position = Vector2( 100.675, 144.276 )
 scale = Vector2( 0.635349, 0.635971 )
-texture = ExtResource( 12 )
-script = ExtResource( 13 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Label2" type="Label" parent="POPUPMC/audioHUD"]
 margin_left = -60.0
@@ -248,7 +276,7 @@ flat = true
 [node name="reset" type="Sprite" parent="POPUPMC"]
 position = Vector2( 255.942, 61.1415 )
 scale = Vector2( 0.559485, 0.54233 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Label3" type="Label" parent="POPUPMC/reset"]
 margin_left = -54.5797
@@ -265,7 +293,7 @@ margin_left = -61.5573
 margin_top = -57.2233
 margin_right = 61.4427
 margin_bottom = 56.7767
-icon = ExtResource( 14 )
+icon = ExtResource( 15 )
 flat = true
 
 [node name="home" type="Sprite" parent="POPUPMC"]
@@ -290,7 +318,7 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 15 )
+icon = ExtResource( 16 )
 flat = true
 
 [node name="Window" type="Sprite" parent="POPUPMC"]
@@ -316,13 +344,13 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
-icon = ExtResource( 16 )
+icon = ExtResource( 17 )
 flat = true
 
 [node name="close" type="Sprite" parent="POPUPMC"]
 position = Vector2( 355.017, 8.62626 )
 scale = Vector2( 0.453169, 0.453169 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="Buttonclose" type="Button" parent="POPUPMC/close"]
 anchor_right = 1.0
@@ -333,9 +361,151 @@ margin_right = -52.0
 margin_bottom = -54.5
 flat = true
 
-[node name="fadeIn" parent="." instance=ExtResource( 18 )]
+[node name="fadeIn" parent="." instance=ExtResource( 19 )]
 visible = false
+
+[node name="POPUPRULES" type="MarginContainer" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 121.136
+margin_top = 87.864
+margin_right = 583.136
+margin_bottom = 342.864
+
+[node name="ColorRect" type="ColorRect" parent="POPUPRULES"]
+margin_right = 462.0
+margin_bottom = 255.0
+color = Color( 0.0235294, 0.65098, 0.298039, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="POPUPRULES"]
+margin_right = 462.0
+margin_bottom = 255.0
+
+[node name="titre" type="Label" parent="POPUPRULES/VBoxContainer"]
+margin_right = 462.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+text = "Rules"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="text1" type="Label" parent="POPUPRULES/VBoxContainer"]
+margin_top = 59.0
+margin_right = 462.0
+margin_bottom = 204.0
+custom_fonts/font = SubResource( 6 )
+text = "Try to find your way through the labyrinth. 
+Collect the Stars as much as 
+you can but be aware, the enemies
+can steal your Stars!"
+align = 1
+
+[node name="closeBut" type="Sprite" parent="POPUPRULES"]
+position = Vector2( 434.947, 24.7685 )
+scale = Vector2( 0.336537, 0.336537 )
+texture = ExtResource( 18 )
+
+[node name="closeButRules1" type="Button" parent="POPUPRULES/closeBut"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -52.0
+margin_top = -54.5
+margin_right = -52.0
+margin_bottom = -54.5
+flat = true
+
+[node name="nextBut" type="Sprite" parent="POPUPRULES"]
+position = Vector2( 35.2632, 219.474 )
+scale = Vector2( 0.703947, 0.725876 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="nextButton" type="Button" parent="POPUPRULES/nextBut"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_top = -48.0
+margin_right = -48.0
+margin_bottom = -48.0
+flat = true
+
+[node name="POPUPRULES2" type="MarginContainer" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 121.136
+margin_top = 87.864
+margin_right = 583.136
+margin_bottom = 342.864
+
+[node name="ColorRect" type="ColorRect" parent="POPUPRULES2"]
+margin_right = 462.0
+margin_bottom = 255.0
+color = Color( 0.0235294, 0.65098, 0.298039, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="POPUPRULES2"]
+margin_right = 462.0
+margin_bottom = 255.0
+
+[node name="titre" type="Label" parent="POPUPRULES2/VBoxContainer"]
+margin_right = 462.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+text = "Rules"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="text1" type="Label" parent="POPUPRULES2/VBoxContainer"]
+margin_top = 59.0
+margin_right = 462.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 7 )
+text = "Find the Grimoire and the Magic Wand
+to open the portal."
+align = 1
+
+[node name="closeBut" type="Sprite" parent="POPUPRULES2"]
+position = Vector2( 434.947, 24.7685 )
+scale = Vector2( 0.336537, 0.336537 )
+texture = ExtResource( 18 )
+
+[node name="closeButRules2" type="Button" parent="POPUPRULES2/closeBut"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -52.0
+margin_top = -54.5
+margin_right = -52.0
+margin_bottom = -54.5
+flat = true
+
+[node name="previoustBut" type="Sprite" parent="POPUPRULES2"]
+position = Vector2( 36.3159, 218.421 )
+scale = Vector2( 0.703947, 0.725876 )
+texture = SubResource( 9 )
+flip_h = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="prevButton" type="Button" parent="POPUPRULES2/previoustBut"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_top = -48.0
+margin_right = -48.0
+margin_bottom = -48.0
+flat = true
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
+[connection signal="pressed" from="POPUPMC/objective/Buttonobj" to="." method="_on_Buttonobj_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
@@ -343,3 +513,7 @@ visible = false
 [connection signal="pressed" from="POPUPMC/Window/Buttonwindow" to="." method="_on_Buttonwindow_pressed"]
 [connection signal="pressed" from="POPUPMC/close/Buttonclose" to="." method="_on_Buttonclose_pressed"]
 [connection signal="fadeIn_finished" from="fadeIn" to="." method="_on_fadeIn_fadeIn_finished"]
+[connection signal="pressed" from="POPUPRULES/closeBut/closeButRules1" to="." method="_on_closeButRules1_pressed"]
+[connection signal="pressed" from="POPUPRULES/nextBut/nextButton" to="." method="_on_nextButton_pressed"]
+[connection signal="pressed" from="POPUPRULES2/closeBut/closeButRules2" to="." method="_on_closeButRules2_pressed"]
+[connection signal="pressed" from="POPUPRULES2/previoustBut/prevButton" to="." method="_on_prevButton_pressed"]

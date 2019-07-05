@@ -8,7 +8,7 @@
 [ext_resource path="res://titlescreen/ReturnButtonRight.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
+size = 34
 extra_spacing_bottom = 20
 font_data = ExtResource( 2 )
 
@@ -41,7 +41,7 @@ margin_bottom = 344.0
 
 [node name="title" type="Label" parent="mainCont/titlepart"]
 margin_right = 603.0
-margin_bottom = 51.0
+margin_bottom = 55.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
 custom_constants/shadow_offset_x = 2
@@ -56,9 +56,9 @@ scale = Vector2( 0.669173, 0.669173 )
 texture = ExtResource( 3 )
 
 [node name="text1" type="Label" parent="mainCont/titlepart"]
-margin_top = 55.0
+margin_top = 59.0
 margin_right = 603.0
-margin_bottom = 244.0
+margin_bottom = 248.0
 custom_fonts/font = SubResource( 2 )
 text = "Try to find your way through the labyrinth. 
 Collect the Stars as much as 
