@@ -2,6 +2,13 @@
 
 Labyrinths Master
 
+# Game Presentation : 
+
+You were selected by the Great Mage to become his apprentice, but first you have a test to pass...
+A labyrinth where you have to collect items which will give you the right to access the "High Magical Area" where the Great Mage is waiting.
+What are you waiting for? Let's go!
+
+
 ## Tools :
 
 Game Engine :
@@ -22,8 +29,17 @@ Materials :
 Music : 
 
 - David Vitas 
-- MaouDamashii
+- Morita Kouichi (MaouDamashii)
 
+
+## What left to do
+
+* Check for bugs
+* Add some sounds effects (optionnal)
+* Improve Dialog box
+* Export the game
+    * .apk 
+        
 
  
 ## Additionnal Information
@@ -31,5 +47,5 @@ Music :
 
 contact : bounthienglocky@gmail.com
 
-Labyrinths Master Copyright (C) 2019 Bounthieng Locky
+Labyrinths Master Copyright (C) 2019 Caramel Publishing
 
