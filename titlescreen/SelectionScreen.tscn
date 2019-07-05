@@ -101,21 +101,22 @@ size_flags_vertical = 0
 position = Vector2( 301.81, 322.863 )
 
 [node name="Buttontoplay" type="Button" parent="mainCont/selectplay/Spriteplay"]
-margin_left = -34.5264
-margin_top = -8.94736
-margin_right = 104.474
-margin_bottom = 39.0526
+margin_left = -43.018
+margin_top = -10.7598
+margin_right = 95.9824
+margin_bottom = 37.2402
 
 [node name="play" type="Label" parent="mainCont/selectplay/Spriteplay"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -34.0
-margin_top = -5.0
-margin_right = 107.0
-margin_bottom = 37.0
+margin_left = -43.018
+margin_top = -10.7598
+margin_right = 94.982
+margin_bottom = 35.2402
 custom_fonts/font = SubResource( 2 )
 text = "play"
 align = 1
+valign = 1
 uppercase = true
 
 [node name="Spritereturn" type="Sprite" parent="mainCont/selectplay"]

@@ -35,6 +35,7 @@ func _on_finalBoss_body_exited(body):
 func _on_Player2_pushed():
 	#print(MainGlobal.DialogZone)
 	if MainGlobal.DialogZone==true:
+		$finalBoss/KinematicBody2D/finalBoss1/emote_excla1.hide()
 		$HUD/DialogBox.show()
 		$HUD/DialogBox.loadTextFinal()
 

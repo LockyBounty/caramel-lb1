@@ -89,8 +89,8 @@ func _process(delta):
 func _on_AnalogButton_pushA():
 	emit_signal("pushed")
 
+#Faire clignoter le joueur lorsqu'il se prend un ennemi
 var blinking = false
-
 func onTouched():
 	#print("lol2")
 	print(MainGlobal.cptetoile)
@@ -104,8 +104,6 @@ func onTouched():
 		yield(get_tree().create_timer(.2), "timeout")
 		#print("end")
 		blinking = false
-		
-		#$".".visible
 		#print(blinking)
 		if MainGlobal.cptetoile <= 0:
 			get_tree().change_scene_to(MainGlobal.loseScene)

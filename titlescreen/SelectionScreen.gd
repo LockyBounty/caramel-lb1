@@ -16,7 +16,7 @@ func _on_Buttontoplay_pressed():
 	
 
 func _on_ReturnButton_pressed():
-	add_child(MainGlobal.menuTitle)
+	get_tree().change_scene_to(MainGlobal.menuTitle)
 
 func _on_ButtonMale_pressed():
 	MainGlobal.charSelected = MainGlobal.textureChoice1

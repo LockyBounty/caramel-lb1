@@ -34,7 +34,7 @@ world_scene = "res://areas/ZoneFinale.tscn"
 [node name="Player2" parent="." groups=[
 "Players",
 ] instance=ExtResource( 5 )]
-position = Vector2( 123.6, 1301.89 )
+position = Vector2( 123.6, 95.5541 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="etoileTouch" parent="Player2" instance=ExtResource( 6 )]
@@ -77,6 +77,7 @@ position = Vector2( 976.864, 33.6187 )
 
 [node name="etoile5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1920.51, 443.602 )
+z_index = 4
 
 [node name="npc" parent="." instance=ExtResource( 11 )]
 visible = false
@@ -86,6 +87,7 @@ scale = Vector2( 0.7, 0.7 )
 [node name="controlSlimes" type="Node2D" parent="." groups=[
 "Slimes",
 ]]
+editor/display_folded = true
 position = Vector2( -30.4738, 65.1103 )
 scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 12 )

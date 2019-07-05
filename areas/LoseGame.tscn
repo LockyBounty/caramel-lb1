@@ -12,12 +12,12 @@
 size = 23
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=3]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
@@ -46,7 +46,7 @@ margin_right = 571.0
 margin_bottom = 266.0
 custom_fonts/font = SubResource( 1 )
 text = "Oh no, you lost all your stars!
-They are needed to show your bravour 
+They are needed to show your valor
 to the Great Mage!
 Be careful and try to avoid the enemies.
 "
@@ -78,7 +78,7 @@ margin_left = -64.8806
 margin_top = -50.0
 margin_right = -28.8806
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "BACK TO MENU"
 
 [node name="RestartGame" type="Sprite" parent="MarginC"]
@@ -106,7 +106,7 @@ margin_left = -48.8947
 margin_top = -50.0
 margin_right = -45.8947
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "RESTART"
 align = 1
 

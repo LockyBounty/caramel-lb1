@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tower1.png-fca41671cde7f4eb6936cdfaf60a12fa.stex"
+path="res://.import/right-arrow-96.png-62701843baf3a6e77849d931ed774275.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/tower1.png"
-dest_files=[ "res://.import/tower1.png-fca41671cde7f4eb6936cdfaf60a12fa.stex" ]
+source_file="res://items/right-arrow-96.png"
+dest_files=[ "res://.import/right-arrow-96.png-62701843baf3a6e77849d931ed774275.stex" ]
 
 [params]
 

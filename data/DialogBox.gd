@@ -3,7 +3,7 @@ extends Polygon2D
 #Un dico global pour stocker le parsing sur le fichier json
 var dict = {} 
 var cpt = 0
-var text1 = ["Bravo!", "You did it!"]
+var text1 = ["Bravo!", "You did it!", "I'm proud of you!"]
 var _toFinalScene
 
 func _ready():
@@ -22,10 +22,11 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_up") && MainGlobal.DialogZone:
 	
 		$".".show()
+		
 		loadTextFinal()
 		
+
 func loadTextFinal():
-	
 	var cptt = 0
 	for i in text1: 
 		#compter le nb de lignes de texte ds la section (id1, text)
@@ -41,10 +42,8 @@ func loadTextFinal():
 		$".".hide()
 		cptt = 0
 		#$DialogGetter.set_text(dict["id1"]["text2"][0])
-		get_tree().change_scene_to(_toFinalScene)
 		
-	
-	
+		get_tree().change_scene_to(_toFinalScene)
 
 func _on_finalBoss_body_entered(body):
 	if body.is_in_group("Players"):
@@ -82,6 +81,8 @@ func _on_finalBoss_body_exited(body):
 #    print("Error Line: ", result_json.error_line)
 #    print("Error String: ", result_json.error_string)
 
-
+########################
+#NOTE : Lors de l'exportation en .exe le fichier json n'est pas lu...
+#####################################
 
 
