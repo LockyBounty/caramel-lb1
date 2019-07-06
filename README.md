@@ -21,16 +21,17 @@ Softwares :
 
 Materials : 
 
-- Caramel Publishing
-- Charat.me
-- Kenney.nl
+- Caramel Publishing (Items)
+- Charat.me (Selection Char)
+- Kenney.nl (Map elements)
+- Radomir Dopieralski (Sprites)
 - ...
 
 
 Music : 
 
 - David Vitas 
-- Morita Kouichi (MaouDamashii)
+- Kouichi Morita (MaouDamashii)
 
 
 ## What left to do
@@ -57,7 +58,7 @@ Music :
 contact : bounthienglocky@gmail.com
 
 
-If you got inspired by my code, please credit me in your work. (Bounthieng Locky)
+If you got inspired by my code, It would be nice to credit me in your work. (Bounthieng Locky)
 
 
 Labyrinths Master Copyright (C) 2019 Caramel Publishing
