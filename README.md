@@ -49,7 +49,14 @@ Music :
 * Make a short video of gameplay (if possible with montage) and add it to the game presentation page (made by Michel, and added by Silvia on her Django structure)
 
       
-        
+## Special Thanks (Brainstorming & ideation)
+
+
+Silvia B., Michel D.,... (BeCode)
+
+Jean-Michel D., Mathilde B., Killian B., Tania D., Cécile M. (Caramel Publishing)
+
+Colienne D., Loïc S., Lisanne M.,Quentin B., Mannon G., Maeva T. (FromScratch)
 
  
 ## Additionnal Informations
