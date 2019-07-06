@@ -23,7 +23,7 @@ Materials :
 
 - Caramel Publishing (Items)
 - Charat.me (Selection Char)
-- Kenney.nl (Map elements)
+- Kenney Vleugels (Map / elements)
 - Radomir Dopieralski (Sprites)
 - ...
 
