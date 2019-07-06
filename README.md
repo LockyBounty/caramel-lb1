@@ -24,6 +24,7 @@ Materials :
 - Caramel Publishing
 - Charat.me
 - Kenney.nl
+- ...
 
 
 Music : 
@@ -44,14 +45,20 @@ Music :
     * HTML5
       * Improve the size (compress files etc.)
       * To put on Jean-Michel server and serve directly through Django structure
+* Make a short video of gameplay (if possible with montage) and add it to the game presentation page (made by Michel, and added by Silvia on her Django structure)
+
       
         
 
  
-## Additionnal Information
+## Additionnal Informations
 
 
 contact : bounthienglocky@gmail.com
+
+
+If you got inspired by my code, please credit me in your work. (Bounthieng Locky)
+
 
 Labyrinths Master Copyright (C) 2019 Caramel Publishing
 
