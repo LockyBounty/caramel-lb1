@@ -34,12 +34,13 @@ Music :
 - Kouichi Morita (MaouDamashii)
 
 
-## What left to do
+## What left to do:
 
-* Improve the title style
+### On the game:
+* Improve the title style (You can also change the title ex: Caramel's Labyrinth)
 * Check for bugs
 * Add some sounds effects (optionnal)
-* Improve game loading 
+* Improve game loading time
 * Export the game
     * .apk 
       * (option1) To release on Playstore or Alternative
@@ -47,10 +48,11 @@ Music :
     * HTML5
       * Improve the size (compress files etc.)
       * To put on Jean-Michel server and serve directly through Django structure
-* Make a short video of gameplay (if possible with montage) and add it to the game presentation page (made by Michel, and added by Silvia on her Django structure) and improve it
+### For the game presentation page (made by Michel, and added by Silvia on her Django structure): 
+* Make a short video of gameplay (if possible with montage) and add it to the game presentation page (ex: Steam template)
 
 
-      
+
 ## Special Thanks (Brainstorming & ideation)
 
 
