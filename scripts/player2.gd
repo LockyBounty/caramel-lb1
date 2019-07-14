@@ -12,12 +12,9 @@ var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var movement = Vector2(0,0)
 
-
-
 func _init():
 	TYPE = "PLAYER"
 	#SPEED = 30
-	
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -77,7 +74,6 @@ func _process(delta):
 #	var UP		= Input.is_action_pressed("ui_up")
 #	var DOWN	= Input.is_action_pressed("ui_down")
 #
-#
 #	movedir.x= -int(LEFT) + int(RIGHT)
 #	movedir.y = -int(UP) + int(DOWN)
 #
@@ -86,6 +82,7 @@ func _process(delta):
 #	else : 
 #		anim_switch("idle")
 
+#Bouton qui envoie le signal pour dialoguer
 func _on_AnalogButton_pushA():
 	emit_signal("pushed")
 
@@ -101,9 +98,10 @@ func onTouched():
 		blinking = true
 		#print("start")
 		#creer un timer de 1 sec pdt laquelle on execute l'autre timer
-		yield(get_tree().create_timer(.2), "timeout")
+		yield(get_tree().create_timer(.3), "timeout")
+		blinking = false #remettre le perso en état visible après timer
 		#print("end")
-		blinking = false
+		
 		#print(blinking)
 		if MainGlobal.cptetoile <= 0:
 			get_tree().change_scene_to(MainGlobal.loseScene)
@@ -113,4 +111,5 @@ func _on_BlinkingTimer_timeout():
 	if blinking == true:
 		$".".visible  = !$".".visible
 	else :
-		$".".visible
+		$".".set_visible(true)
+	

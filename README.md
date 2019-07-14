@@ -36,9 +36,10 @@ Music :
 
 ## What left to do
 
+* Improve the title style
 * Check for bugs
 * Add some sounds effects (optionnal)
-* Improve Dialog box
+* Improve game loading 
 * Export the game
     * .apk 
       * (option1) To release on Playstore or Alternative
@@ -46,7 +47,8 @@ Music :
     * HTML5
       * Improve the size (compress files etc.)
       * To put on Jean-Michel server and serve directly through Django structure
-* Make a short video of gameplay (if possible with montage) and add it to the game presentation page (made by Michel, and added by Silvia on her Django structure)
+* Make a short video of gameplay (if possible with montage) and add it to the game presentation page (made by Michel, and added by Silvia on her Django structure) and improve it
+
 
       
 ## Special Thanks (Brainstorming & ideation)

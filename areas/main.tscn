@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://areas/main.gd" type="Script" id=1]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://items/baguettev2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://areas/Overworld_Theme.ogg" type="AudioStream" id=9]
 [ext_resource path="res://items/etoile.tscn" type="PackedScene" id=10]
-[ext_resource path="res://player/player3.tscn" type="PackedScene" id=11]
-[ext_resource path="res://areas/controlSlimes.gd" type="Script" id=12]
-[ext_resource path="res://enemies/Slime.tscn" type="PackedScene" id=13]
+[ext_resource path="res://player/caramelBoss.tscn" type="PackedScene" id=11]
+[ext_resource path="res://player/player3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://areas/controlSlimes.gd" type="Script" id=13]
+[ext_resource path="res://enemies/Slime.tscn" type="PackedScene" id=14]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -20,8 +21,6 @@ script = ExtResource( 1 )
 [node name="HUD" parent="." instance=ExtResource( 2 )]
 
 [node name="Maze1v2" parent="." instance=ExtResource( 3 )]
-texture = null
-generate = false
 
 [node name="BackgroundStaticObjects" type="Node2D" parent="."]
 
@@ -79,90 +78,96 @@ position = Vector2( 976.864, 33.6187 )
 position = Vector2( 1920.51, 443.602 )
 z_index = 4
 
-[node name="npc" parent="." instance=ExtResource( 11 )]
+[node name="caramelBoss" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2483.71, 728.477 )
+scale = Vector2( 0.7, 0.7 )
+z_index = 2
+
+[node name="npc" parent="." instance=ExtResource( 12 )]
 visible = false
-position = Vector2( -30.4738, 65.1103 )
+position = Vector2( -3.6624, 69.6457 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="controlSlimes" type="Node2D" parent="." groups=[
 "Slimes",
 ]]
 editor/display_folded = true
-position = Vector2( -30.4738, 65.1103 )
+position = Vector2( -28.9644, 60.5821 )
 scale = Vector2( 0.7, 0.7 )
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
-[node name="Slime" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 690.7, 382.678 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime2" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime2" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 2871.73, 1107 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime3" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime3" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 2370.37, 412.259 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime4" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime4" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 1709.67, 545.681 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime5" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime5" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 369.346, 2791.36 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime6" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime6" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 1211.27, 1104.88 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime7" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime7" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 363.045, 2844.92 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime8" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime8" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3660.82, 2465.7 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime9" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime9" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3898.64, 2804.33 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime10" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime10" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3842.02, 2612.79 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime11" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime11" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3402.78, 2843.84 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime12" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime12" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3686.71, 101.058 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime13" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime13" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 1171.07, 1486.65 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime14" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime14" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 1875.22, 1719.47 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime15" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime15" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 3022.31, 1674.04 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime16" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime16" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( 2255.69, 2690.52 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime17" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime17" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( -196.841, 1835.71 )
 scale = Vector2( 1.14286, 1.14286 )
 
-[node name="Slime18" parent="controlSlimes" instance=ExtResource( 13 )]
+[node name="Slime18" parent="controlSlimes" instance=ExtResource( 14 )]
 position = Vector2( -249.827, 1915.19 )
 scale = Vector2( 1.14286, 1.14286 )
+[connection signal="pushed" from="Player2" to="." method="_on_Player2_pushed"]
 [connection signal="hit" from="codexv2" to="." method="_on_codexv2_hit"]
 [connection signal="hit" from="baguette2" to="." method="_on_baguette2_hit"]
 [connection signal="hit" from="etoile" to="." method="_on_etoile_hit"]
@@ -170,6 +175,8 @@ scale = Vector2( 1.14286, 1.14286 )
 [connection signal="hit" from="etoile3" to="." method="_on_etoile3_hit"]
 [connection signal="hit" from="etoile4" to="." method="_on_etoile4_hit"]
 [connection signal="hit" from="etoile5" to="." method="_on_etoile5_hit"]
+[connection signal="body_entered" from="caramelBoss" to="." method="_on_caramelBoss_body_entered"]
+[connection signal="body_exited" from="caramelBoss" to="." method="_on_caramelBoss_body_exited"]
 [connection signal="touched" from="controlSlimes/Slime" to="controlSlimes" method="_on_Slime_touched"]
 [connection signal="touched" from="controlSlimes/Slime2" to="controlSlimes" method="_on_Slime2_touched"]
 [connection signal="touched" from="controlSlimes/Slime3" to="controlSlimes" method="_on_Slime3_touched"]

@@ -49,6 +49,7 @@ tracks/2/keys = {
 
 [node name="baguette2" type="Area2D"]
 position = Vector2( -0.487656, 0.975342 )
+z_index = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -73,6 +74,5 @@ autoplay = "baguettemove"
 anims/baguettemove = SubResource( 2 )
 
 [node name="Tweenbag" type="Tween" parent="."]
-
 [connection signal="body_entered" from="." to="." method="_on_baguette2_body_entered"]
 [connection signal="tween_completed" from="Tweenbag" to="." method="_on_Tweenbag_tween_completed"]

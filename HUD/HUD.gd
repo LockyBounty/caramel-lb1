@@ -66,18 +66,17 @@ func _on_fadeIn_fadeIn_finished():
 
 func _on_closeButRules1_pressed():
 	$POPUPRULES.hide()
-	
+	$POPUPBG.hide()
 func _on_nextButton_pressed():
 	$POPUPRULES.hide()
 	$POPUPRULES2.show()
-
 func _on_closeButRules2_pressed():
 	$POPUPRULES2.hide()
-	
+	$POPUPBG.hide()
 func _on_prevButton_pressed():
 	$POPUPRULES2.hide()
 	$POPUPRULES.show()
-
 func _on_Buttonobj_pressed():
+	$POPUPBG.show()
 	$POPUPMC.hide()
 	$POPUPRULES.show()

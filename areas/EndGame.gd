@@ -3,9 +3,10 @@ var selectedScene
 var mainReset = load("res://areas/main.tscn")
 
 func _ready():
-	if mMainZone.is_playing():
-		mMainZone.stop()
-	mCredits.play()
+	if MainGlobal.boolMenuSound && MainGlobal.enableAudio:
+		if mMainZone.is_playing():
+			mMainZone.stop()
+		mCredits.play()
 	
 
 func _on_ButBackMenu_pressed():

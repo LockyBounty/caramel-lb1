@@ -149,6 +149,7 @@ anims/walkup = SubResource( 8 )
 
 [node name="PLAYERSPRITE" parent="." instance=ExtResource( 2 )]
 position = Vector2( -0.974802, -0.109875 )
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -168,7 +169,7 @@ position = Vector2( -0.454081, 2.7245 )
 shape = SubResource( 10 )
 
 [node name="BlinkingTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.05
 autostart = true
 script = ExtResource( 5 )
 [connection signal="pushA" from="AnalogButton" to="." method="_on_AnalogButton_pushA"]

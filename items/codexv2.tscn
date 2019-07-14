@@ -49,6 +49,7 @@ tracks/2/keys = {
 }
 
 [node name="codexv2" type="Area2D"]
+z_index = 2
 script = ExtResource( 1 )
 
 [node name="codex" type="Sprite" parent="."]
@@ -70,6 +71,5 @@ autoplay = "animcodexv2"
 anims/animcodexv2 = SubResource( 2 )
 
 [node name="Tweencodex" type="Tween" parent="."]
-
 [connection signal="body_entered" from="." to="." method="_on_codexv2_body_entered"]
 [connection signal="tween_completed" from="Tweencodex" to="." method="_on_Tweencodex_tween_completed"]

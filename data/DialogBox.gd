@@ -20,12 +20,9 @@ func _ready():
 	
 func _input(event):
 	if Input.is_action_just_pressed("ui_up") && MainGlobal.DialogZone:
-	
 		$".".show()
-		
 		loadTextFinal()
 		
-
 func loadTextFinal():
 	var cptt = 0
 	for i in text1: 
@@ -42,18 +39,17 @@ func loadTextFinal():
 		$".".hide()
 		cptt = 0
 		#$DialogGetter.set_text(dict["id1"]["text2"][0])
-		
 		get_tree().change_scene_to(_toFinalScene)
 
-func _on_finalBoss_body_entered(body):
-	if body.is_in_group("Players"):
-		MainGlobal.DialogZone =true
-#		MainGlobal.playButtonA = true
-
-func _on_finalBoss_body_exited(body):
-	$".".hide()
-	MainGlobal.DialogZone =false
-#	MainGlobal.playButtonA = false
+#func _on_finalBoss_body_entered(body):
+#	if body.is_in_group("Players"):
+#		MainGlobal.DialogZone =true
+##		MainGlobal.playButtonA = true
+#
+#func _on_finalBoss_body_exited(body):
+#	$".".hide()
+#	MainGlobal.DialogZone =false
+##	MainGlobal.playButtonA = false
 	
 	
 
@@ -82,7 +78,7 @@ func _on_finalBoss_body_exited(body):
 #    print("Error String: ", result_json.error_string)
 
 ########################
-#NOTE : Lors de l'exportation en .exe le fichier json n'est pas lu...
+#NOTE : Bug lors d'une exportation en .exe : le fichier json n'est pas lu...
 #####################################
 
 

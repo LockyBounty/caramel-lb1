@@ -46,11 +46,29 @@ func _on_Button_pressed():
 	MainGlobal.cptbag =0
 	MainGlobal.cptcodex =0
 	MainGlobal.cptetoile =3
+	
+###############################################
+#Dialog on main zone
+#############################################
+
+func _on_caramelBoss_body_entered(body):
+	if body.is_in_group("Players"):
+		#print("entered")
+		MainGlobal.DialogZone =true
+		MainGlobal.playButtonA = true
+	
+		$Player2/AnalogButton._animPlayA()
 
 
+func _on_caramelBoss_body_exited(body):
+	MainGlobal.DialogZone = false
+	MainGlobal.playButtonA = false
+	$HUD/DialogCaramel.hide()
+	$Player2/AnalogButton._animPlayA()
 
-
-
-
-
-
+func _on_Player2_pushed():
+	#print(MainGlobal.DialogZone)
+	if MainGlobal.DialogZone==true:
+		$caramelBoss/KinematicBody2D/caramelBoss_sp/emote_pop.hide()
+		$HUD/DialogCaramel.show()
+		$HUD/DialogCaramel.loadTextCaramel()
