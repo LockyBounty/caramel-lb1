@@ -1,5 +1,8 @@
 extends Area2D
 
+#Ce module sert à représenter l'étoile que le perso perd
+#lorsqu'il se fait toucher par un ennemi.
+
 onready var effect = get_node("TweenTouch")
 onready var sprite = get_node("etoileTouch1")
 

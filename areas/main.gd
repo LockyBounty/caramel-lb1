@@ -5,6 +5,8 @@ func _ready():
 	$HUD.update_baguette(MainGlobal.cptbag) 
 	$HUD.update_codex(MainGlobal.cptcodex) 
 	$HUD.update_etoile(MainGlobal.cptetoile) 
+	$HUD/POPUPBG.show()
+	$HUD/POPUPRULES.show()
 
 	#stop menu music
 	mMenu.stop()
