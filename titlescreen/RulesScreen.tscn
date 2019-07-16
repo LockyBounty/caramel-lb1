@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://titlescreen/RulesScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
@@ -16,6 +16,10 @@ font_data = ExtResource( 2 )
 size = 28
 extra_spacing_top = 6
 font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
 
 [node name="RulesScreen" type="Control"]
 anchor_right = 1.0
@@ -79,11 +83,13 @@ __meta__ = {
 [node name="ReturnButton" parent="mainCont/rest1/returnbutton" instance=ExtResource( 5 )]
 margin_left = 1.0
 margin_right = 95.0
+custom_styles/focus = SubResource( 3 )
 
 [node name="ReturnButton2" parent="mainCont/rest1/returnbutton" instance=ExtResource( 6 )]
 margin_left = 702.427
 margin_top = 75.4832
 margin_right = 780.427
 margin_bottom = 142.483
+custom_styles/focus = SubResource( 4 )
 [connection signal="pressed" from="mainCont/rest1/returnbutton/ReturnButton" to="." method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="mainCont/rest1/returnbutton/ReturnButton2" to="." method="_on_ReturnButton2_pressed"]

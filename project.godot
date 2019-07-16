@@ -43,8 +43,8 @@ window/size/width=704
 window/size/height=400
 window/size/test_width=704
 window/size/test_height=400
-window/vsync/use_vsync=false
 window/per_pixel_transparency/enabled=true
+window/handheld/orientation="sensor_landscape"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -76,5 +76,6 @@ quality/directional_shadow/size.mobile=256
 quality/shadow_atlas/size=256
 quality/shadow_atlas/size.mobile=256
 quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx.mobile=true
 quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"

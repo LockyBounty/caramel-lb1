@@ -55,3 +55,8 @@ func _on_fadeIn_fadeIn_finished():
 	get_tree().change_scene_to(MainGlobal.sceneSelected)
 	
 
+#Confirmation pour quitter le jeu : Fenetre + action sur ok
+func _on_ButtonExit_pressed():
+	$ConfirmClose/ConfirmationDialog.show()
+func _on_ConfirmationDialog_confirmed():
+	get_tree().quit()

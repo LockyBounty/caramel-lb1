@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://HUD/trapeze1.png" type="Texture" id=2]
@@ -38,6 +38,18 @@ radius = 49.6384
 size = 25
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
 [sub_resource type="DynamicFont" id=5]
 size = 30
 extra_spacing_top = 14
@@ -48,6 +60,10 @@ font_data = ExtResource( 3 )
 size = 20
 extra_spacing_top = 6
 font_data = ExtResource( 21 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
 
 [sub_resource type="DynamicFont" id=7]
 size = 30
@@ -63,6 +79,8 @@ font_data = ExtResource( 21 )
 [sub_resource type="StreamTexture" id=9]
 flags = 4
 load_path = "res://.import/right-arrow-96.png-0761a3bca41994699ceed2c863e36e5f.stex"
+
+[sub_resource type="StyleBoxEmpty" id=18]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -211,7 +229,6 @@ polygon = PoolVector2Array( 653.527, 313.966, 653.527, 398.872, 10.0497, 398.872
 visible = false
 
 [node name="POPUPMC" type="MarginContainer" parent="."]
-editor/display_folded = true
 visible = false
 margin_left = 151.621
 margin_top = 116.217
@@ -253,6 +270,7 @@ margin_left = -57.0
 margin_top = -52.0
 margin_right = 55.0
 margin_bottom = 51.0
+custom_styles/focus = SubResource( 10 )
 icon = ExtResource( 13 )
 flat = true
 
@@ -277,6 +295,7 @@ margin_left = -58.0884
 margin_top = -51.9568
 margin_right = 55.9116
 margin_bottom = 51.0432
+custom_styles/focus = SubResource( 11 )
 flat = true
 
 [node name="reset" type="Sprite" parent="POPUPMC"]
@@ -299,6 +318,7 @@ margin_left = -61.5573
 margin_top = -57.2233
 margin_right = 61.4427
 margin_bottom = 56.7767
+custom_styles/focus = SubResource( 12 )
 icon = ExtResource( 16 )
 flat = true
 
@@ -324,10 +344,12 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
+custom_styles/focus = SubResource( 13 )
 icon = ExtResource( 17 )
 flat = true
 
 [node name="Window" type="Sprite" parent="POPUPMC"]
+visible = false
 position = Vector2( 205.91, 142.817 )
 scale = Vector2( 0.599208, 0.565656 )
 __meta__ = {
@@ -350,6 +372,7 @@ margin_left = -63.0
 margin_top = -56.0
 margin_right = 58.0
 margin_bottom = 59.0
+custom_styles/focus = SubResource( 14 )
 icon = ExtResource( 18 )
 flat = true
 
@@ -365,12 +388,14 @@ margin_left = -52.0
 margin_top = -54.5
 margin_right = -52.0
 margin_bottom = -54.5
+custom_styles/focus = SubResource( 15 )
 flat = true
 
 [node name="fadeIn" parent="." instance=ExtResource( 20 )]
 visible = false
 
 [node name="POPUPBG" type="MarginContainer" parent="."]
+editor/display_folded = true
 visible = false
 margin_left = 114.0
 margin_top = 80.0
@@ -437,10 +462,11 @@ margin_left = -52.0
 margin_top = -54.5
 margin_right = -52.0
 margin_bottom = -54.5
+custom_styles/focus = SubResource( 16 )
 flat = true
 
 [node name="nextBut" type="Sprite" parent="POPUPRULES"]
-position = Vector2( 35.2632, 219.474 )
+position = Vector2( 69.3903, 219.504 )
 scale = Vector2( 0.703947, 0.725876 )
 texture = ExtResource( 22 )
 __meta__ = {
@@ -454,6 +480,7 @@ margin_left = -48.0
 margin_top = -48.0
 margin_right = -48.0
 margin_bottom = -48.0
+custom_styles/focus = SubResource( 17 )
 flat = true
 
 [node name="POPUPRULES2" type="MarginContainer" parent="."]
@@ -524,11 +551,12 @@ margin_left = -48.0
 margin_top = -48.0
 margin_right = -48.0
 margin_bottom = -48.0
+custom_styles/focus = SubResource( 18 )
 flat = true
 [connection signal="pressed" from="HUDMC/MainC/menu/Spritemenu/Buttonopenmenu" to="." method="_on_Buttonopenmenu_pressed"]
 [connection signal="pressed" from="POPUPMC/objective/Buttonobj" to="." method="_on_Buttonobj_pressed"]
-[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="POPUPMC/audioHUD" method="_on_Buttonaudio_pressed"]
+[connection signal="pressed" from="POPUPMC/audioHUD/Buttonaudio" to="." method="_on_Buttonaudio_pressed"]
 [connection signal="pressed" from="POPUPMC/reset/Buttonreset" to="." method="_on_Buttonreset_pressed"]
 [connection signal="pressed" from="POPUPMC/home/Buttonhome" to="." method="_on_Buttonhome_pressed"]
 [connection signal="pressed" from="POPUPMC/Window/Buttonwindow" to="." method="_on_Buttonwindow_pressed"]

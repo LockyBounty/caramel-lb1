@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://areas/LoseGame.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Renner_ 400 Book.ttf" type="DynamicFontData" id=2]
@@ -12,12 +12,16 @@
 size = 23
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
 size = 22
 use_filter = true
 font_data = ExtResource( 4 )
@@ -68,6 +72,7 @@ margin_left = -50.0
 margin_top = -50.0
 margin_right = -50.0
 margin_bottom = -50.0
+custom_styles/focus = SubResource( 2 )
 flat = true
 
 [node name="BACK" type="Label" parent="MarginC/BackMenu"]
@@ -78,7 +83,7 @@ margin_left = -64.8806
 margin_top = -50.0
 margin_right = -28.8806
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "BACK TO MENU"
 
 [node name="RestartGame" type="Sprite" parent="MarginC"]
@@ -96,6 +101,7 @@ margin_left = -50.0
 margin_top = -50.0
 margin_right = -50.0
 margin_bottom = -50.0
+custom_styles/focus = SubResource( 4 )
 flat = true
 
 [node name="RESTART" type="Label" parent="MarginC/RestartGame"]
@@ -106,7 +112,7 @@ margin_left = -48.8947
 margin_top = -50.0
 margin_right = -45.8947
 margin_bottom = -29.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "RESTART"
 align = 1
 

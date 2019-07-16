@@ -40,7 +40,6 @@ z_index = 1
 [node name="etoileTouch" parent="Player2" instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 53.5247, -4.65431 )
-scale = Vector2( 1, 1 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player2"]
 position = Vector2( -1.42859, 1.89081 )

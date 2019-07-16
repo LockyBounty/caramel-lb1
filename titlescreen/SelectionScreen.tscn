@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://titlescreen/SelectionScreen.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
@@ -14,14 +14,17 @@ size = 30
 extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 18
 extra_spacing_top = 10
 extra_spacing_bottom = 10
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "animCircle1"
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="Animation" id=6]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -37,8 +40,9 @@ tracks/0/keys = {
 "values": [ Vector2( 0.47, 0.47 ), Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "animTurnFemale"
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="Animation" id=8]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -113,7 +117,7 @@ margin_left = -43.018
 margin_top = -10.7598
 margin_right = 94.982
 margin_bottom = 35.2402
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "play"
 align = 1
 valign = 1
@@ -129,6 +133,7 @@ margin_left = -28.0
 margin_top = -24.0
 margin_right = 67.0
 margin_bottom = 51.0
+custom_styles/focus = SubResource( 4 )
 
 [node name="sndpart" type="HBoxContainer" parent="mainCont"]
 margin_right = 646.0
@@ -160,6 +165,7 @@ margin_top = -206.0
 margin_right = 240.0
 margin_bottom = 250.0
 rect_scale = Vector2( 0.4, 0.4 )
+custom_styles/focus = SubResource( 5 )
 flat = true
 
 [node name="circleMale" type="Sprite" parent="mainCont/sndpart/selection1"]
@@ -168,7 +174,7 @@ scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 6 )
 
 [node name="animMale" type="AnimationPlayer" parent="mainCont/sndpart/selection1"]
-anims/animCircle1 = SubResource( 3 )
+anims/animCircle1 = SubResource( 6 )
 
 [node name="selection2" type="HBoxContainer" parent="mainCont/sndpart"]
 margin_left = 325.0
@@ -195,6 +201,7 @@ margin_top = -211.0
 margin_right = 875.0
 margin_bottom = 872.0
 rect_scale = Vector2( 0.4, 0.4 )
+custom_styles/focus = SubResource( 7 )
 flat = true
 
 [node name="circleFemale" type="Sprite" parent="mainCont/sndpart/selection2"]
@@ -203,7 +210,7 @@ scale = Vector2( 0.485, 0.485 )
 texture = ExtResource( 6 )
 
 [node name="AnimFemale" type="AnimationPlayer" parent="mainCont/sndpart/selection2"]
-anims/animTurnFemale = SubResource( 4 )
+anims/animTurnFemale = SubResource( 8 )
 
 [node name="fadeIn" parent="." instance=ExtResource( 8 )]
 visible = false

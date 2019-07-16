@@ -45,9 +45,10 @@ Music :
     * .apk 
       * (option1) To release on Playstore or Alternative
       * (option2) Just put the .apk on Jean-Michel server and you'll just have to define the routes (Django Structure)
-      * Also for the apk version, hide the fullscreen buttons and change the default game logo by a new one
+      * Also for the apk version, hide the "fullscreen" buttons (those should only appear for the html version) and change the default game logo by a new one
+    * .ios (if the boss want the game for iphones...)
     * HTML5
-      * Improve the size (compress files etc.)
+      * Improve the size (compress files etc.) for web play
       * To put on Jean-Michel server and serve directly through Django structure
 ### For the game presentation page (made by Michel, and added by Silvia on her Django structure): 
 * Make a short video of gameplay (if possible with montage) and add it to the game presentation page (ex: Steam template)

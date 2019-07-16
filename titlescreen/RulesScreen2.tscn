@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://titlescreen/RulesScreen2.gd" type="Script" id=1]
 [ext_resource path="res://fonts/LuckiestGuy.ttf" type="DynamicFontData" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://items/magicRod1.png" type="Texture" id=5]
 [ext_resource path="res://titlescreen/ReturnButton.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 34
 extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
@@ -16,6 +16,8 @@ font_data = ExtResource( 2 )
 size = 28
 extra_spacing_top = 6
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="RulesScreen2" type="Control"]
 anchor_right = 1.0
@@ -42,7 +44,7 @@ margin_bottom = 307.0
 [node name="Label" type="Label" parent="MarginC/titlepart1"]
 margin_right = 620.0
 margin_bottom = 45.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0.305882, 0.305882, 0.305882, 0.831373 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 4
@@ -81,4 +83,5 @@ margin_left = 9.0
 margin_top = -1.0
 margin_right = 97.0
 margin_bottom = 70.0
+custom_styles/focus = SubResource( 3 )
 [connection signal="pressed" from="MarginC/rest/butReturn/ReturnButton" to="." method="_on_ReturnButton_pressed"]
