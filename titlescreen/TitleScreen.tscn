@@ -22,21 +22,21 @@ size = 60
 extra_spacing_bottom = 5
 font_data = ExtResource( 5 )
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 9 )
+
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
 [sub_resource type="StyleBoxEmpty" id=8]
-
-[sub_resource type="DynamicFont" id=2]
-size = 20
-font_data = ExtResource( 9 )
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -129,7 +129,7 @@ margin_top = 18.0
 margin_right = 305.0
 margin_bottom = 66.0
 size_flags_horizontal = 3
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 2 )
 script = null
 
 [node name="rules" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 7 )]
@@ -137,7 +137,7 @@ margin_top = 70.0
 margin_right = 305.0
 margin_bottom = 118.0
 size_flags_horizontal = 3
-custom_styles/focus = SubResource( 7 )
+custom_styles/focus = SubResource( 3 )
 script = null
 
 [node name="credits" parent="Menu/otherParts/ButtonsList/ls" instance=ExtResource( 8 )]
@@ -145,14 +145,14 @@ margin_top = 122.0
 margin_right = 305.0
 margin_bottom = 170.0
 size_flags_horizontal = 3
-custom_styles/focus = SubResource( 8 )
+custom_styles/focus = SubResource( 4 )
 script = null
 
 [node name="version" type="Label" parent="Menu/otherParts/ButtonsList/ls"]
 margin_top = 174.0
 margin_right = 305.0
 margin_bottom = 255.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 text = "
 CARAMEL PUBLISHING
 2019 v.1.0"
@@ -206,7 +206,7 @@ margin_left = -64.0
 margin_top = -64.0
 margin_right = -64.0
 margin_bottom = -64.0
-custom_styles/focus = SubResource( 4 )
+custom_styles/focus = SubResource( 6 )
 flat = true
 
 [node name="fullscreen1" type="Sprite" parent="Menu/otherParts/secondzone"]
@@ -225,7 +225,7 @@ margin_left = -128.0
 margin_top = -128.0
 margin_right = -128.0
 margin_bottom = -128.0
-custom_styles/focus = SubResource( 5 )
+custom_styles/focus = SubResource( 7 )
 flat = true
 
 [node name="exit" type="Sprite" parent="Menu/otherParts/secondzone"]
@@ -243,7 +243,7 @@ margin_left = -66.9473
 margin_top = -64.842
 margin_right = -66.9473
 margin_bottom = -64.842
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 8 )
 flat = true
 
 [node name="fadeIn" parent="." instance=ExtResource( 15 )]
