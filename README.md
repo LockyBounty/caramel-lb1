@@ -40,11 +40,13 @@ Music :
 * Improve the title style (You can also change the title ex: Caramel's Labyrinth)
 * Check for bugs
 * Add some sounds effects (optionnal)
-* Improve game loading time
+* Improve dialog boxes in game (optionnal)
+* Improve exit game box in game (optionnal)
+* Improve game loading time (for web play)
 * Export the game
     * .apk 
       * (option1) To release on Playstore or Alternative
-      * (option2) Just put the .apk on Jean-Michel server and you'll just have to define the routes (Django Structure)
+      * (option2) Just put the .apk on Jean-Michel server and link it to the html page (game presentation page)
       * Also for the apk version, hide the "fullscreen" buttons (those should only appear for the html version) and change the default game logo by a new one
     * .ios (if the boss want the game for iphones...)
     * HTML5
