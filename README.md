@@ -62,9 +62,9 @@ Music :
 
 Silvia B., Michel D.,... (BeCode)
 
-Jean-Michel D., Mathilde B., Killian B., Tania D., Cécile M. (Caramel Publishing)
+Jean-Michel D., Mathilde B., Killian B., Tania D., Cécile M., Jean-Luc D., Nancy, Fred (Caramel Publishing)
 
-Colienne D., Loïc S., Lisanne M.,Quentin B., Mannon G., Maeva T. (FromScratch)
+Colienne D., Loïc S., Lisanne M.,Quentin B., Mannon G., Maeva T., Coralie B., Michaela S. (FromScratch)
 
  
 ## Additionnal Informations
