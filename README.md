@@ -46,7 +46,7 @@ Music :
 * Export the game
     * .apk 
       * (option1) To release on Playstore or Alternative
-      * (option2) Just put the .apk on Jean-Michel server and link it to the html page (game presentation page)
+      * (option2) Just put the .apk on Jean-Michel server and link it to the html page : /caramel-lb1/exportedApk/index.html
       * Also for the apk version, hide the "fullscreen" buttons (those should only appear for the html version) and change the default game logo by a new one
     * .ios (if the boss want the game for iphones...)
     * HTML5
